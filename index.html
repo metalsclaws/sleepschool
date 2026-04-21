@@ -316,30 +316,36 @@
     /* Scroll indicator */
     .scroll-indicator {
       position: absolute;
-      bottom: 32px;
+      bottom: 28px;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 8px;
-      color: var(--text-muted);
-      font-size: 0.7rem;
-      letter-spacing: 0.15em;
+      gap: 10px;
+      color: var(--text-secondary);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      opacity: 0.6;
-      animation: scroll-bounce 2s ease-in-out infinite;
+      opacity: 0.85;
+      animation: scroll-bounce 2.2s ease-in-out infinite;
+      text-decoration: none;
+      transition: opacity 0.3s ease, color 0.3s ease;
+    }
+    .scroll-indicator:hover {
+      opacity: 1;
+      color: var(--accent);
     }
     .scroll-indicator svg {
-      width: 20px;
-      height: 20px;
+      width: 28px;
+      height: 28px;
       stroke: currentColor;
-      stroke-width: 1.5;
+      stroke-width: 1.8;
       fill: none;
     }
     @keyframes scroll-bounce {
       0%, 100% { transform: translateX(-50%) translateY(0); }
-      50% { transform: translateX(-50%) translateY(8px); }
+      50% { transform: translateX(-50%) translateY(10px); }
     }
     .cover-wrap {
       position: relative;
