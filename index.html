@@ -264,7 +264,7 @@
       font-size: 1.05rem;
       color: var(--text-secondary);
       line-height: 1.75;
-      max-width: 52ch;
+      max-width: 55ch;
       margin-bottom: 44px;
     }
     .hero-actions {
@@ -309,8 +309,37 @@
     .hero-visual {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
+    }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-muted);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0.6;
+      animation: scroll-bounce 2s ease-in-out infinite;
+    }
+    .scroll-indicator svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      fill: none;
+    }
+    @keyframes scroll-bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
     }
     .cover-wrap {
       position: relative;
@@ -488,7 +517,7 @@
       font-size: 1rem;
       color: var(--text-secondary);
       line-height: 1.85;
-      max-width: 60ch;
+      max-width: 62ch;
       margin-bottom: 40px;
     }
     .feature-list {
@@ -671,6 +700,7 @@
       font-size: 0.88rem;
       color: var(--text-secondary);
       line-height: 1.7;
+      max-width: 45ch;
     }
     .step-duration {
       font-size: 0.72rem;
@@ -702,7 +732,9 @@
       font-size: 1rem;
       color: var(--text-secondary);
       line-height: 1.75;
-      margin-bottom: 44px;
+      max-width: 55ch;
+      margin: 0 auto 44px;
+      text-align: center;
     }
     .subscribe-platforms {
       display: flex;
@@ -893,6 +925,12 @@
             <p class="player-hint fade-up fade-up-delay-4">Preview a sleep sample</p>
           </div>
         </div>
+
+        <!-- Scroll indicator -->
+        <a href="#about" class="scroll-indicator">
+          <span>Scroll</span>
+          <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </a>
       </div>
     </section>
 
