@@ -285,10 +285,16 @@
       font-weight: 400;
       letter-spacing: 0.06em;
       border-radius: 3px;
-      transition: opacity 0.25s ease, transform 0.2s ease;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.25s ease;
     }
-    .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
-    .btn-primary:active { transform: translateY(0) scale(0.98); }
+    .btn-primary:hover { opacity: 0.88; }
+    .btn-primary:not(.magnetic-active):active { transform: translateY(0) scale(0.98); }
+    .btn-primary.btn-plain {
+      gap: 0;
+      justify-content: center;
+    }
     .btn-ghost {
       display: inline-flex;
       align-items: center;
@@ -818,8 +824,65 @@
       .episodes-grid { grid-template-columns: 1fr; }
       .format-inner { grid-template-columns: 1fr; gap: 48px; }
       .episodes-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .episodes-header p { text-align: left; }
       .footer-inner { flex-direction: column; gap: 12px; text-align: center; }
+      .subscribe-form { flex-direction: column; align-items: stretch; }
+      .subscribe-form input { max-width: 100%; }
     }
+    @media (max-width: 480px) {
+      .cover-wrap { width: 180px; height: 180px; }
+      .hero-title { font-size: 2rem; }
+      .section-heading { font-size: 1.5rem; }
+      .nebula-a, .nebula-b, .nebula-c, .nebula-d, .nebula-e, .nebula-f, .nebula-g {
+        transform: scale(0.5);
+        transform-origin: center;
+      }
+      .platform-row { flex-direction: column; align-items: stretch; }
+      .platform-pill { justify-content: center; }
+    }
+    .scroll-progress-bar {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: 2px; z-index: 200;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+      transform-origin: left;
+      transform: scaleX(0);
+      transition: transform 0.05s linear;
+    }
+
+    .magnetic-btn {
+      transition: transform 0.3s cubic-bezier(0.23,1,0.32,1);
+    }
+
+    .episode-card-row {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .episode-card-row.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .subscribe-form {
+      display: flex; gap: 12px; justify-content: center;
+      margin-bottom: 40px;
+    }
+    .subscribe-form input {
+      flex: 1; max-width: 300px; padding: 14px 20px;
+      background: rgba(8,10,28,0.6); border: 1px solid var(--glass-border);
+      border-radius: 10px; color: var(--text-primary);
+      font-family: 'Outfit', system-ui, sans-serif; font-size: 0.9rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .subscribe-form input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(167,139,202,0.15);
+    }
+    .subscribe-form .btn {
+      white-space: nowrap;
+    }
+
   </style>
 </head>
 <body>
@@ -977,7 +1040,7 @@
             <p class="section-label fade-up">The series</p>
             <h2 class="section-heading fade-up fade-up-delay-1">Twenty <em>nights</em> of learning</h2>
           </div>
-          <p class="fade-up fade-up-delay-2" style="font-size:0.82rem; color: var(--text-muted); max-width: 42ch; text-align: right; line-height: 1.6; white-space: nowrap;">
+          <p class="fade-up fade-up-delay-2" style="font-size:0.82rem; color: var(--text-muted); max-width: 42ch; text-align: right; line-height: 1.6;">
             Season one. New episodes released as they're ready.
           </p>
         </div>
@@ -1276,7 +1339,11 @@
           <p class="subscribe-desc fade-up fade-up-delay-1">
             Sleep School launches soon. Follow on your preferred platform to be notified when the first episode drops.
           </p>
-          <div class="subscribe-platforms fade-up fade-up-delay-2">
+          <div class="subscribe-form fade-up fade-up-delay-2">
+            <input type="email" placeholder="Enter your email" aria-label="Email address">
+            <button class="btn btn-primary magnetic-btn btn-plain">Notify me</button>
+          </div>
+          <div class="subscribe-platforms fade-up fade-up-delay-3">
             <a href="#" class="subscribe-pill">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
               Apple Podcasts
@@ -1721,6 +1788,77 @@
       });
       audio.addEventListener('timeupdate', updateTime);
       audio.addEventListener('loadedmetadata', updateTime);
+    })();
+
+    // ─── SCROLL PROGRESS BAR ──────────────────────────────────
+    (function() {
+      const bar = document.createElement('div');
+      bar.className = 'scroll-progress-bar';
+      document.body.appendChild(bar);
+
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+        bar.style.transform = `scaleX(${progress})`;
+      }, { passive: true });
+    })();
+
+    // ─── MAGNETIC BUTTONS ────────────────────────────────────
+    (function() {
+      const magneticTargets = document.querySelectorAll('.magnetic-btn, .btn-primary, .btn-outline, .subscribe-pill');
+      magneticTargets.forEach(btn => {
+        let targetX = 0, targetY = 0;
+        let currentX = 0, currentY = 0;
+        let rafId = null;
+
+        function lerp() {
+          currentX += (targetX - currentX) * 0.12;
+          currentY += (targetY - currentY) * 0.12;
+          btn.style.transform = `translate(${currentX}px, ${currentY}px)`;
+          if (Math.abs(targetX - currentX) > 0.01 || Math.abs(targetY - currentY) > 0.01) {
+            rafId = requestAnimationFrame(lerp);
+          } else {
+            rafId = null;
+          }
+        }
+
+        btn.addEventListener('mousemove', (e) => {
+          const rect = btn.getBoundingClientRect();
+          targetX = (e.clientX - rect.left - rect.width / 2) * 0.2;
+          targetY = (e.clientY - rect.top - rect.height / 2) * 0.2;
+          btn.classList.add('magnetic-active');
+          if (!rafId) rafId = requestAnimationFrame(lerp);
+        });
+
+        btn.addEventListener('mouseleave', () => {
+          targetX = 0;
+          targetY = 0;
+          btn.classList.remove('magnetic-active');
+          if (!rafId) rafId = requestAnimationFrame(lerp);
+        });
+      });
+    })();
+
+    // ─── STAGGERED EPISODE CARD ENTRANCE ────────────────────
+    (function() {
+      const cards = document.querySelectorAll('.episode-card');
+      cards.forEach(card => {
+        card.classList.add('episode-card-row');
+        const rowIdx = Math.floor(Array.from(cards).indexOf(card) / 5);
+        card.style.transitionDelay = `${rowIdx * 0.15}s`;
+      });
+
+      const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            cardObserver.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      cards.forEach(card => cardObserver.observe(card));
     })();
 
     // ─── FADE-UP OBSERVER ─────────────────────────────────────
