@@ -819,6 +819,11 @@
       .container { padding: 0 20px; }
       nav { padding: 16px 20px; }
       .nav-links { display: none; }
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero-text { align-items: center; text-align: center; }
+      .hero-text .hero-eyebrow { align-self: center; }
+      .hero-text .hero-actions { justify-content: center; }
+      .hero-visual { align-items: center; }
       .cover-wrap { width: 220px; height: 220px; }
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
       .episodes-grid { grid-template-columns: 1fr; }
@@ -830,6 +835,11 @@
       .subscribe-form input { max-width: 100%; }
     }
     @media (max-width: 480px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+      .hero-text { align-items: center; text-align: center; }
+      .hero-text .hero-eyebrow { align-self: center; }
+      .hero-text .hero-actions { justify-content: center; }
+      .hero-visual { align-items: center; }
       .cover-wrap { width: 180px; height: 180px; }
       .hero-title { font-size: 2rem; }
       .section-heading { font-size: 1.5rem; }

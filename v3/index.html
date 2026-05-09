@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SleepSchool — Learn While You Sleep</title>
+  <meta name="description" content="Educational stories narrated to put you to sleep. Science, history, nature, and wonder — delivered softly.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Starfield background -->
+  <canvas id="starfield"></canvas>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">A podcast for the curious and the tired</p>
+      <h1 class="hero-title">Fall asleep<br>learning something<br>worth knowing</h1>
+      <p class="hero-sub">Educational stories narrated in a voice designed for sleep. Science, history, nature, and wonder — delivered softly, no cliffhangers, no jarring moments.</p>
+      <div class="hero-cta">
+        <a href="#listen" class="btn btn-primary">Listen Now</a>
+        <a href="#episodes" class="btn btn-ghost">Browse Episodes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-heading">Not a lecture.<br>A lullaby for the mind.</h2>
+          <p>Each episode begins with a gentle breathing ritual — the same every time — training your body to recognize it's time to rest. Then a story unfolds. Not performed, not excited. Just told, softly, with room to drift.</p>
+          <p>Every story is genuinely interesting. We believe sleep content should respect your intelligence, not bore you into unconsciousness. The difference matters.</p>
+        </div>
+        <div class="about-format">
+          <div class="format-card">
+            <span class="format-icon">🌙</span>
+            <h3>The Ritual</h3>
+            <p>A familiar body scan and breathing exercise. Same every episode. Your signal to let go.</p>
+          </div>
+          <div class="format-card">
+            <span class="format-icon">📖</span>
+            <h3>The Story</h3>
+            <p>45 minutes of genuine education. No tension, no cliffhangers. Sensory, slow, with room to drift.</p>
+          </div>
+          <div class="format-card">
+            <span class="format-icon">✨</span>
+            <h3>The Drift</h3>
+            <p>The story revisits itself, slower each time. Natural padding that helps you slip away.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Episodes -->
+  <section class="section episodes" id="episodes">
+    <div class="container">
+      <p class="section-eyebrow">20 stories, one destination</p>
+      <h2 class="section-heading">Episodes</h2>
+      <div class="episode-grid">
+        <!-- Episodes injected by build script -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Listen / Platforms -->
+  <section class="section platforms" id="listen">
+    <div class="container">
+      <p class="section-eyebrow">Wherever you rest</p>
+      <h2 class="section-heading">Listen on your platform</h2>
+      <div class="platform-links">
+        <a href="#" class="platform-card" id="link-apple">
+          <span class="platform-icon">🎙️</span>
+          <span class="platform-name">Apple Podcasts</span>
+        </a>
+        <a href="#" class="platform-card" id="link-spotify">
+          <span class="platform-icon">🎵</span>
+          <span class="platform-name">Spotify</span>
+        </a>
+        <a href="#" class="platform-card" id="link-youtube">
+          <span class="platform-icon">▶️</span>
+          <span class="platform-name">YouTube</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subscribe / Newsletter -->
+  <section class="section subscribe" id="subscribe">
+    <div class="container">
+      <p class="section-eyebrow">Never miss a story</p>
+      <h2 class="section-heading">New episodes every week</h2>
+      <p class="subscribe-text">Get notified when a new episode drops. No spam, no noise — just a gentle nudge when there's something worth hearing.</p>
+      <form class="subscribe-form" onsubmit="return handleSubscribe(event)">
+        <input type="email" placeholder="your@email.com" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">
+        <span class="footer-logo">🌙 SleepSchool</span>
+        <p class="footer-tagline">Learn something worth knowing. Then drift off.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#episodes">Episodes</a>
+        <a href="#listen">Listen</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="starfield.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
