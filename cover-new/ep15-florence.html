@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><style>body{margin:0;padding:0;background:#0a0a08;display:flex;align-items:center;justify-content:center;height:100vh;}</style></head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1400" width="1400" height="1400">
+  <defs>
+    <radialGradient id="bg15" cx="50%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#12120e"/>
+      <stop offset="100%" stop-color="#0a0a08"/>
+    </radialGradient>
+    <filter id="domeglow">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softcopper">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="1400" fill="url(#bg15)"/>
+
+  <!-- Brunelleschi's dome — a single iconic shape against void -->
+  <!-- Rendered as thin copper-patina outline, architectural, precise, like a blueprint -->
+
+  <g filter="url(#domeglow)">
+    <!-- The dome outline — the main shape -->
+    <!-- Octagonal dome: starts wide, curves up to the lantern -->
+    <path d="M 420,850 
+             L 420,700 
+             Q 420,500 530,380 
+             Q 600,300 660,260 
+             Q 690,240 700,230 
+             Q 710,240 740,260 
+             Q 800,300 870,380 
+             Q 980,500 980,700 
+             L 980,850"
+          fill="none" stroke="#5a8a7a" stroke-width="1.8" opacity="0.8"/>
+
+    <!-- The drum/base — horizontal band -->
+    <line x1="420" y1="850" x2="980" y2="850" stroke="#5a8a7a" stroke-width="1.5" opacity="0.6"/>
+    <line x1="420" y1="820" x2="980" y2="820" stroke="#5a8a7a" stroke-width="0.8" opacity="0.35"/>
+    <line x1="420" y1="700" x2="980" y2="700" stroke="#5a8a7a" stroke-width="0.5" opacity="0.15"/>
+
+    <!-- Interior ribs — the famous rib structure -->
+    <!-- Left rib -->
+    <path d="M 460,820 Q 460,600 580,380 Q 650,290 680,250" 
+          fill="none" stroke="#5a8a7a" stroke-width="0.8" opacity="0.3"/>
+    <!-- Right rib -->
+    <path d="M 940,820 Q 940,600 820,380 Q 750,290 720,250" 
+          fill="none" stroke="#5a8a7a" stroke-width="0.8" opacity="0.3"/>
+    <!-- Center rib -->
+    <path d="M 700,850 L 700,230" 
+          fill="none" stroke="#5a8a7a" stroke-width="0.6" opacity="0.2"/>
+
+    <!-- Horizontal bands on the dome (the marble ribs) -->
+    <path d="M 435,700 Q 500,690 700,680 Q 900,690 965,700" 
+          fill="none" stroke="#5a8a7a" stroke-width="0.5" opacity="0.2"/>
+    <path d="M 450,600 Q 520,590 700,580 Q 880,590 950,600" 
+          fill="none" stroke="#5a8a7a" stroke-width="0.5" opacity="0.18"/>
+    <path d="M 480,500 Q 550,490 700,480 Q 850,490 920,500" 
+          fill="none" stroke="#5a8a7a" stroke-width="0.5" opacity="0.15"/>
+
+    <!-- Lantern at the top -->
+    <rect x="690" y="210" width="20" height="30" fill="none" stroke="#5a8a7a" stroke-width="1.2" opacity="0.7"/>
+    <!-- Lantern dome -->
+    <path d="M 690,210 Q 690,195 700,185 Q 710,195 710,210" fill="none" stroke="#5a8a7a" stroke-width="0.8" opacity="0.6"/>
+    <!-- Ball on top -->
+    <circle cx="700" cy="182" r="4" fill="none" stroke="#5a8a7a" stroke-width="0.8" opacity="0.6"/>
+  </g>
+
+  <!-- Faint construction lines — blueprint feel -->
+  <g stroke="#5a8a7a" stroke-width="0.3" opacity="0.08" stroke-dasharray="4,8">
+    <line x1="350" y1="850" x2="1050" y2="850"/>
+    <!-- Vertical center axis -->
+    <line x1="700" y1="850" x2="700" y2="100"/>
+  </g>
+
+  <!-- Very subtle patina fill suggestion -->
+  <path d="M 420,850 L 420,700 Q 420,500 530,380 Q 600,300 660,260 Q 690,240 700,230 Q 710,240 740,260 Q 800,300 870,380 Q 980,500 980,700 L 980,850 Z"
+        fill="#5a8a7a" opacity="0.02"/>
+</svg>
+</body>
+</html>

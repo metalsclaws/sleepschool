@@ -1,0 +1,69 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box;}</style></head><body>
+<svg viewBox="0 0 1400 1400" width="1400" height="1400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="bg" cx="50%" cy="30%" r="70%"><stop offset="0%" stop-color="#0e0a1a"/><stop offset="50%" stop-color="#080612"/><stop offset="100%" stop-color="#030308"/></radialGradient>
+<filter id="hb" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="50"/></filter>
+<filter id="mb" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="sg" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1400" height="1400" fill="url(#bg)"/>
+
+<!-- Heavy cloud layer -->
+<ellipse cx="300" cy="200" rx="400" ry="120" fill="#0e0a18" opacity="0.4" filter="url(#hb)"/>
+<ellipse cx="800" cy="150" rx="500" ry="100" fill="#0e0a18" opacity="0.35" filter="url(#hb)"/>
+<ellipse cx="1100" cy="250" rx="350" ry="90" fill="#0e0a18" opacity="0.3" filter="url(#hb)"/>
+
+<!-- Lightning flash glow -->
+<ellipse cx="700" cy="400" rx="300" ry="150" fill="#e8e0ff" opacity="0.03" filter="url(#hb)"/>
+
+<!-- LIGHTNING BOLT — central, dramatic fork -->
+<g filter="url(#gl)">
+<path d="M 700,100 L 695,200 L 710,200 L 700,350 L 715,350 L 690,600 L 705,600 L 695,750 L 710,750 L 700,900" stroke="#e8e0ff" stroke-width="3" fill="none" opacity="0.9"/>
+<path d="M 700,100 L 695,200 L 710,200 L 700,350 L 715,350 L 690,600 L 705,600 L 695,750 L 710,750 L 700,900" stroke="#fff" stroke-width="1.5" fill="none" opacity="0.95"/>
+</g>
+<!-- Glow around main bolt -->
+<path d="M 700,100 L 695,200 L 710,200 L 700,350 L 715,350 L 690,600 L 705,600 L 695,750 L 710,750 L 700,900" stroke="#8a80c0" stroke-width="15" fill="none" opacity="0.1" filter="url(#mb)"/>
+
+<!-- Fork left (from 600px point) -->
+<path d="M 690,600 L 600,680 L 610,680 L 530,780" stroke="#e8e0ff" stroke-width="2" fill="none" opacity="0.7" filter="url(#gl)"/>
+<path d="M 690,600 L 600,680 L 610,680 L 530,780" stroke="#fff" stroke-width="0.8" fill="none" opacity="0.8"/>
+
+<!-- Fork right (from 750px point) -->
+<path d="M 710,750 L 800,820 L 790,820 L 880,920" stroke="#e8e0ff" stroke-width="2" fill="none" opacity="0.7" filter="url(#gl)"/>
+<path d="M 710,750 L 800,820 L 790,820 L 880,920" stroke="#fff" stroke-width="0.8" fill="none" opacity="0.8"/>
+
+<!-- Small sub-forks -->
+<path d="M 700,350 L 650,380 L 655,380 L 620,430" stroke="#c8c0e0" stroke-width="1" fill="none" opacity="0.4"/>
+<path d="M 695,750 L 640,800 L 645,800 L 600,870" stroke="#c8c0e0" stroke-width="1" fill="none" opacity="0.3"/>
+
+<!-- Horizon line / ground -->
+<path d="M 0,1000 Q 200,990 400,1000 Q 600,1010 800,995 Q 1000,985 1200,1000 Q 1350,1005 1400,1000" stroke="#4a4a6a" stroke-width="0.8" fill="none" opacity="0.2"/>
+
+<!-- Ground illumination from lightning -->
+<rect x="0" y="1000" width="1400" height="400" fill="#080614" opacity="0.5"/>
+<ellipse cx="700" cy="1000" rx="400" ry="50" fill="#e8e0ff" opacity="0.03" filter="url(#hb)"/>
+
+<!-- Distant trees/buildings silhouettes -->
+<g fill="#06050e" opacity="0.8">
+<path d="M 0,1000 L 30,970 L 50,1000 Z"/><path d="M 80,1000 L 100,960 L 110,950 L 120,960 L 140,1000 Z"/>
+<path d="M 200,1000 L 230,975 L 250,1000 Z"/><path d="M 300,1000 L 320,965 L 340,1000 Z"/>
+<path d="M 400,1000 L 440,955 L 450,950 L 460,955 L 500,1000 Z"/>
+<path d="M 550,1000 L 570,985 L 590,1000 Z"/><path d="M 650,1000 L 670,975 L 690,1000 Z"/>
+<path d="M 800,1000 L 830,965 L 840,960 L 850,965 L 880,1000 Z"/>
+<path d="M 950,1000 L 970,980 L 990,1000 Z"/><path d="M 1050,1000 L 1080,970 L 1100,1000 Z"/>
+<path d="M 1200,1000 L 1230,955 L 1240,950 L 1250,955 L 1280,1000 Z"/>
+<path d="M 1350,1000 L 1370,980 L 1400,1000 Z"/>
+</g>
+
+<!-- Rain -->
+<g stroke="#6a70a0" fill="none" opacity="0.08">
+<line x1="100" y1="0" x2="95" y2="1000" stroke-width="0.5"/><line x1="250" y1="50" x2="245" y2="1000" stroke-width="0.4"/>
+<line x1="400" y1="0" x2="395" y2="1000" stroke-width="0.6"/><line x1="550" y1="30" x2="545" y2="1000" stroke-width="0.4"/>
+<line x1="850" y1="0" x2="845" y2="1000" stroke-width="0.5"/><line x1="1000" y1="80" x2="995" y2="1000" stroke-width="0.4"/>
+<line x1="1150" y1="0" x2="1145" y2="1000" stroke-width="0.5"/><line x1="1300" y1="50" x2="1295" y2="1000" stroke-width="0.4"/>
+</g>
+
+<!-- Bottom -->
+<rect x="0" y="1200" width="1400" height="200" fill="#030308" opacity="0.4"/>
+</svg></body></html>

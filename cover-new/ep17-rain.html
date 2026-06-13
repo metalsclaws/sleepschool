@@ -1,0 +1,114 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box;}</style></head><body>
+<svg viewBox="0 0 1400 1400" width="1400" height="1400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0e1e"/><stop offset="60%" stop-color="#060a14"/><stop offset="100%" stop-color="#03040d"/></linearGradient>
+<radialGradient id="cloud" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#1a2035"/><stop offset="50%" stop-color="#0e1320"/><stop offset="100%" stop-color="#03040d"/></radialGradient>
+<radialGradient id="warmglow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#c4a043" stop-opacity="0.4"/><stop offset="40%" stop-color="#c4a043" stop-opacity="0.1"/><stop offset="100%" stop-color="#c4a043" stop-opacity="0"/></radialGradient>
+<filter id="hb" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="40"/></filter>
+<filter id="mb" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="sg" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1400" height="1400" fill="url(#bg)"/>
+<!-- Distant ambient glow behind clouds -->
+<ellipse cx="700" cy="300" rx="500" ry="200" fill="#0c1220" opacity="0.3" filter="url(#hb)"/>
+<!-- BIG RAIN CLOUD — overhead, massive, filling top half -->
+<g fill="url(#cloud)">
+<ellipse cx="350" cy="200" rx="280" ry="120"/>
+<ellipse cx="650" cy="150" rx="320" ry="140"/>
+<ellipse cx="950" cy="180" rx="260" ry="110"/>
+<ellipse cx="1150" cy="220" rx="200" ry="100"/>
+<ellipse cx="200" cy="250" rx="180" ry="90"/>
+<ellipse cx="500" cy="280" rx="220" ry="100"/>
+<ellipse cx="800" cy="260" rx="250" ry="110"/>
+<ellipse cx="1300" cy="260" rx="150" ry="80"/>
+</g>
+<!-- Cloud edges — gold catching -->
+<g stroke="#c4a043" stroke-width="1" fill="none" opacity="0.2">
+<path d="M150,250 Q280,150 450,180"/>
+<path d="M450,180 Q600,100 800,130"/>
+<path d="M800,130 Q1000,80 1150,140"/>
+<path d="M200,300 Q350,320 500,300"/>
+<path d="M700,280 Q850,300 1000,270"/>
+</g>
+<!-- Cloud underbelly darkness -->
+<ellipse cx="700" cy="350" rx="600" ry="80" fill="#03040d" opacity="0.5" filter="url(#mb)"/>
+<!-- Heavy rain streaks — frame filling, diagonal -->
+<g stroke="#2a3a5a" stroke-width="1" opacity="0.25">
+<path d="M100,250 L130,1400"/><path d="M180,250 L230,1400"/><path d="M260,250 L330,1400"/>
+<path d="M340,250 L430,1400"/><path d="M420,250 L530,1400"/><path d="M500,250 L630,1400"/>
+<path d="M580,250 L730,1400"/><path d="M660,250 L830,1400"/><path d="M740,250 L930,1400"/>
+<path d="M820,250 L1030,1400"/><path d="M900,250 L1130,1400"/><path d="M980,250 L1230,1400"/>
+<path d="M1060,250 L1330,1400"/><path d="M1140,250 L1400,1400"/><path d="M1220,250 L1450,1400"/>
+<path d="M50,300 L60,1400"/><path d="M1280,280 L1400,1400"/>
+</g>
+<!-- Thicker, brighter rain -->
+<g stroke="#3a4a70" stroke-width="1.5" opacity="0.15">
+<path d="M220,280 L280,1400"/><path d="M380,280 L460,1400"/><path d="M540,280 L640,1400"/>
+<path d="M700,280 L820,1400"/><path d="M860,280 L1000,1400"/><path d="M1020,280 L1180,1400"/>
+</g>
+<!-- Heavy downpour — near cloud -->
+<g stroke="#1a2840" stroke-width="2" opacity="0.12">
+<path d="M480,320 L570,1400"/><path d="M620,320 L730,1400"/><path d="M760,320 L890,1400"/><path d="M900,320 L1050,1400"/>
+</g>
+<!-- Distant rain — lighter, shorter -->
+<g stroke="#3a4a5a" stroke-width="0.6" opacity="0.1">
+<path d="M300,300 L340,900"/><path d="M450,280 L490,850"/><path d="M650,280 L690,850"/>
+<path d="M850,300 L890,900"/><path d="M1000,280 L1040,850"/><path d="M1150,290 L1190,880"/>
+</g>
+<!-- Raindrops — bright spots in rain -->
+<g fill="#4a6080" opacity="0.2">
+<circle cx="200" cy="500" r="2"/><circle cx="350" cy="700" r="1.5"/><circle cx="500" cy="400" r="2"/>
+<circle cx="650" cy="600" r="2.5"/><circle cx="800" cy="800" r="1.5"/><circle cx="950" cy="500" r="2"/>
+<circle cx="1100" cy="700" r="2.5"/><circle cx="1250" cy="900" r="1.5"/><circle cx="700" cy="1100" r="2"/>
+</g>
+<!-- Lightning flash — very subtle -->
+<path d="M500,320 L520,380 L500,370 L540,460 L510,450" stroke="#3a5080" stroke-width="2" fill="none" opacity="0.08" filter="url(#sg)"/>
+<!-- Window frame — centered bottom, warm amber glow -->
+<g transform="translate(500, 950)">
+<!-- Window glow background -->
+<rect x="-40" y="-40" width="480" height="380" fill="url(#warmglow)" filter="url(#mb)"/>
+<!-- Window glass — warm amber -->
+<rect x="20" y="20" width="360" height="260" fill="#1a1008" stroke="#c4a043" stroke-width="4" opacity="0.7"/>
+<rect x="20" y="20" width="360" height="260" fill="#2a1810" opacity="0.4"/>
+<!-- Window pane dividers -->
+<path d="M20,150 L380,150" stroke="#c4a043" stroke-width="2" opacity="0.4"/>
+<path d="M200,20 L200,280" stroke="#c4a043" stroke-width="2" opacity="0.4"/>
+<!-- Warm light streaming from within -->
+<rect x="20" y="20" width="360" height="260" fill="#c4a043" opacity="0.06"/>
+<!-- Candle glow inside window — soft center -->
+<circle cx="200" cy="150" r="60" fill="#c4a043" opacity="0.08" filter="url(#mb)"/>
+<circle cx="200" cy="150" r="25" fill="#c4a043" opacity="0.12" filter="url(#sg)"/>
+<!-- Window frame outer -->
+<rect x="0" y="0" width="400" height="300" fill="none" stroke="#c4a043" stroke-width="6" opacity="0.5"/>
+</g>
+<!-- Rain splashes on ground — bottom edge -->
+<!-- Ground plane -->
+<rect x="0" y="1250" width="1400" height="150" fill="#06080c"/>
+<!-- Puddle reflections — warm amber from window -->
+<ellipse cx="700" cy="1320" rx="200" ry="20" fill="#c4a043" opacity="0.08"/>
+<ellipse cx="700" cy="1325" rx="160" ry="15" fill="#c4a043" opacity="0.05"/>
+<ellipse cx="700" cy="1330" rx="120" ry="10" fill="#c4a043" opacity="0.03"/>
+<ellipse cx="400" cy="1350" rx="100" ry="12" fill="#304060" opacity="0.06"/>
+<ellipse cx="1000" cy="1350" rx="80" ry="10" fill="#304060" opacity="0.05"/>
+<!-- Puddle ripples -->
+<g stroke="#c4a043" stroke-width="0.8" fill="none" opacity="0.1">
+<ellipse cx="700" cy="1320" rx="180" ry="18"/><ellipse cx="700" cy="1320" rx="140" ry="14"/>
+<ellipse cx="400" cy="1350" rx="80" ry="10"/><ellipse cx="1000" cy="1350" rx="60" ry="8"/>
+</g>
+<!-- Rain hitting puddle — splash dots -->
+<g stroke="#4a6080" stroke-width="1" fill="none" opacity="0.15">
+<circle cx="550" cy="1315" r="3"/><circle cx="650" cy="1322" r="2.5"/><circle cx="750" cy="1318" r="3"/>
+<circle cx="850" cy="1325" r="2"/><circle cx="350" cy="1342" r="2.5"/><circle cx="1050" cy="1340" r="2"/>
+</g>
+<!-- Ground reflections of rain -->
+<g stroke="#2a4060" stroke-width="0.5" opacity="0.08">
+<line x1="600" y1="1270" x2="605" y2="1250"/><line x1="750" y1="1260" x2="755" y2="1240"/><line x1="450" y1="1275" x2="455" y2="1255"/>
+<line x1="900" y1="1265" x2="905" y2="1245"/><line x1="300" y1="1280" x2="305" y2="1260"/><line x1="1100" y1="1270" x2="1105" y2="1250"/>
+</g>
+<!-- Stars barely visible through clouds -->
+<g fill="#c4a043" opacity="0.08">
+<circle cx="300" cy="100" r="1"/><circle cx="700" cy="80" r="0.8"/><circle cx="1000" cy="90" r="1"/>
+<circle cx="1200" cy="110" r="0.8"/><circle cx="500" cy="60" r="1"/><circle cx="900" cy="50" r="0.8"/>
+</g>
+</svg></body></html>

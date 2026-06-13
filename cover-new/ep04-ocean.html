@@ -1,0 +1,56 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box;}</style></head><body>
+<svg viewBox="0 0 1400 1400" width="1400" height="1400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="deep" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#0a1830"/><stop offset="40%" stop-color="#050d20"/><stop offset="100%" stop-color="#020510"/></radialGradient>
+<filter id="hb" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="40"/></filter>
+<filter id="mb" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="sg" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1400" height="1400" fill="url(#deep)"/>
+<!-- Sparse bioluminescent particles — upper area -->
+<g fill="#6ab0d0" opacity="0.4"><circle cx="150" cy="120" r="1.5"/><circle cx="400" cy="80" r="2"/><circle cx="650" cy="150" r="1.8"/><circle cx="900" cy="100" r="2.2"/><circle cx="1150" cy="140" r="1.6"/><circle cx="80" cy="280" r="1.8"/><circle cx="320" cy="240" r="1.4"/><circle cx="580" cy="300" r="2"/><circle cx="820" cy="260" r="1.6"/><circle cx="1080" cy="290" r="2"/><circle cx="1300" cy="220" r="1.8"/><circle cx="200" cy="400" r="1.5"/><circle cx="500" cy="380" r="2.2"/><circle cx="780" cy="420" r="1.7"/><circle cx="1000" cy="360" r="2"/><circle cx="1250" cy="410" r="1.4"/>
+</g>
+<g fill="#80c8e0" opacity="0.25"><circle cx="250" cy="180" r="2.5" filter="url(#sg)"/><circle cx="550" cy="120" r="3" filter="url(#sg)"/><circle cx="800" cy="200" r="2.8" filter="url(#sg)"/><circle cx="1050" cy="170" r="3.2" filter="url(#sg)"/><circle cx="1300" cy="350" r="2.5" filter="url(#sg)"/><circle cx="350" cy="320" r="3" filter="url(#sg)"/><circle cx="700" cy="350" r="2.8" filter="url(#sg)"/>
+</g>
+<!-- BIG JELLYFISH — dominates center, massive -->
+<g transform="translate(700, 650)">
+<!-- Bell glow -->
+<radialGradient id="bell" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#a0d0f0" stop-opacity="0.5"/><stop offset="50%" stop-color="#70b0e0" stop-opacity="0.3"/><stop offset="100%" stop-color="#4080b0" stop-opacity="0"/></radialGradient>
+<circle cx="0" cy="-50" r="280" fill="url(#bell)"/>
+<!-- Bell outline -->
+<path d="M -240,0 Q -240,-120 -120,-180 Q 0,-220 120,-180 Q 240,-120 240,0" stroke="#80c0e0" stroke-width="2" fill="none" opacity="0.6"/>
+<path d="M -240,0 Q -240,-120 -120,-180 Q 0,-220 120,-180 Q 240,-120 240,0" stroke="#a0d8f0" stroke-width="0.8" fill="none" opacity="0.8"/>
+<!-- Inner bell rings -->
+<g stroke="#6ab0d0" stroke-width="0.6" fill="none" opacity="0.3"><ellipse cx="0" cy="-80" rx="160" ry="40"/><ellipse cx="0" cy="-120" rx="100" ry="28"/><ellipse cx="0" cy="-150" rx="50" ry="15"/>
+</g>
+<!-- Tentacles — long, flowing, dramatic -->
+<g stroke="#60a0c0" stroke-width="1.5" fill="none" opacity="0.5">
+<path d="M -180,0 Q -200,150 -160,350 Q -140,450 -150,550"/><path d="M -120,0 Q -140,200 -100,400 Q -80,500 -100,620"/><path d="M -60,0 Q -80,180 -40,380 Q -20,480 -50,650"/><path d="M 0,0 Q -20,220 20,420 Q 40,520 0,700"/><path d="M 60,0 Q 40,180 80,380 Q 100,480 60,620"/><path d="M 120,0 Q 100,200 140,400 Q 160,500 120,650"/><path d="M 180,0 Q 160,150 200,350 Q 220,450 190,550"/>
+</g>
+<!-- Tentacle glow -->
+<g stroke="#80c8e0" stroke-width="0.6" fill="none" opacity="0.25">
+<path d="M -150,0 Q -170,120 -140,280"/><path d="M -90,0 Q -110,150 -70,320"/><path d="M -30,0 Q -50,130 -10,280"/><path d="M 30,0 Q 10,130 50,280"/><path d="M 90,0 Q 70,150 110,320"/><path d="M 150,0 Q 130,120 160,280"/>
+</g>
+<!-- Oral arms / center detail -->
+<g stroke="#a0d8f0" stroke-width="1" fill="none" opacity="0.4"><path d="M -30,0 Q -25,80 -20,180 Q -15,280 -25,380"/><path d="M 0,0 Q 0,100 5,200 Q 10,300 0,420"/><path d="M 30,0 Q 25,80 20,180 Q 15,280 25,380"/>
+</g>
+</g>
+<!-- Smaller jellyfish in bg — depth -->
+<g opacity="0.35" transform="translate(300, 350) scale(0.6)">
+<circle cx="0" cy="-50" r="200" fill="url(#bell)"/><path d="M -170,0 Q -170,-85 -85,-130 Q 0,-160 85,-130 Q 170,-85 170,0" stroke="#80c0e0" stroke-width="1.5" fill="none"/>
+<g stroke="#60a0c0" stroke-width="1" fill="none"><path d="M -120,0 Q -130,100 -100,220"/><path d="M -60,0 Q -70,80 -40,180"/><path d="M 0,0 Q -10,100 20,220"/><path d="M 60,0 Q 50,80 80,180"/><path d="M 120,0 Q 110,100 130,220"/>
+</g>
+</g>
+<g opacity="0.25" transform="translate(1100, 450) scale(0.45)">
+<circle cx="0" cy="-50" r="200" fill="url(#bell)"/><path d="M -170,0 Q -170,-85 -85,-130 Q 0,-160 85,-130 Q 170,-85 170,0" stroke="#80c0e0" stroke-width="1.5" fill="none"/>
+</g>
+<!-- Tiny jellyfish far bg -->
+<g opacity="0.15" transform="translate(500, 200) scale(0.25)"><circle cx="0" cy="-50" r="200" fill="url(#bell)"/><path d="M -170,0 Q -170,-85 -85,-130 Q 0,-160 85,-130 Q 170,-85 170,0" stroke="#80c0e0" stroke-width="1.5" fill="none"/></g>
+<g opacity="0.12" transform="translate(900, 280) scale(0.2)"><circle cx="0" cy="-50" r="200" fill="url(#bell)"/><path d="M -170,0 Q -170,-85 -85,-130 Q 0,-160 85,-130 Q 170,-85 170,0" stroke="#80c0e0" stroke-width="1.5" fill="none"/></g>
+<!-- Deep water particles — sparse, lower -->
+<g fill="#4080a0" opacity="0.15"><circle cx="100" cy="900" r="1"/><circle cx="350" cy="950" r="0.8"/><circle cx="600" cy="880" r="1.2"/><circle cx="850" cy="920" r="0.9"/><circle cx="1100" cy="860" r="1.1"/><circle cx="1300" cy="940" r="0.7"/><circle cx="250" cy="1050" r="1"/><circle cx="500" cy="1100" r="0.8"/><circle cx="750" cy="1000" r="1.2"/><circle cx="1000" cy="1080" r="0.9"/><circle cx="1200" cy="1150" r="1.1"/><circle cx="200" cy="1200" r="0.8"/><circle cx="450" cy="1250" r="1"/><circle cx="700" cy="1180" r="0.9"/><circle cx="950" cy="1230" r="1.1"/><circle cx="1150" cy="1300" r="0.8"/>
+</g>
+<!-- Bottom darkness gradient -->
+<rect x="0" y="1200" width="1400" height="200" fill="#02040a" opacity="0.6"/>
+</svg></body></html>

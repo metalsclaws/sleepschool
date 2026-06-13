@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><style>body{margin:0;padding:0;background:#040406;display:flex;align-items:center;justify-content:center;height:100vh;}</style></head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1400" width="1400" height="1400">
+  <defs>
+    <radialGradient id="bg17" cx="50%" cy="10%" r="80%">
+      <stop offset="0%" stop-color="#0a0a12"/>
+      <stop offset="100%" stop-color="#040406"/>
+    </radialGradient>
+    <filter id="leaderglow">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="branched">
+      <feGaussianBlur stdDeviation="1" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="tipglow">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="1400" fill="url(#bg17)"/>
+
+  <!-- Stepped leader — the invisible path lightning takes before it strikes -->
+  <!-- NOT a lightning bolt. A branching dendritic pattern descending from top, never completing -->
+  
+  <!-- Main trunk of the stepped leader -->
+  <g filter="url(#leaderglow)">
+    <!-- Starting point at top center -->
+    <path d="M 700,0 L 700,80" fill="none" stroke="#e0e8ff" stroke-width="1.2" opacity="0.6"/>
+    
+    <!-- First step -->
+    <path d="M 700,80 L 700,140 L 720,180 L 710,240" fill="none" stroke="#e0e8ff" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Step to the left -->
+    <path d="M 710,240 L 690,280 L 680,340 L 660,380" fill="none" stroke="#e0e8ff" stroke-width="0.9" opacity="0.45"/>
+    
+    <!-- Continuing down -->
+    <path d="M 660,380 L 670,420 L 650,460 L 640,500" fill="none" stroke="#e0e8ff" stroke-width="0.8" opacity="0.4"/>
+    
+    <!-- Step right -->
+    <path d="M 640,500 L 660,540 L 680,580 L 670,620" fill="none" stroke="#e0e8ff" stroke-width="0.7" opacity="0.35"/>
+    
+    <!-- Continuing -->
+    <path d="M 670,620 L 690,660 L 680,700 L 700,740" fill="none" stroke="#e0e8ff" stroke-width="0.6" opacity="0.3"/>
+    
+    <!-- Final descent — fading, never reaching bottom -->
+    <path d="M 700,740 L 710,780 L 690,820 L 695,860" fill="none" stroke="#e0e8ff" stroke-width="0.5" opacity="0.22"/>
+    <path d="M 695,860 L 710,900 L 700,930" fill="none" stroke="#e0e8ff" stroke-width="0.4" opacity="0.15"/>
+    <path d="M 700,930 L 705,950" fill="none" stroke="#e0e8ff" stroke-width="0.3" opacity="0.08"/>
+  </g>
+
+  <!-- Branches — forking and splitting -->
+  <g filter="url(#branched)">
+    <!-- First branch — going left -->
+    <path d="M 720,180 L 760,210 L 800,250 L 820,300" fill="none" stroke="#e0e8ff" stroke-width="0.7" opacity="0.3"/>
+    <path d="M 800,250 L 830,280 L 860,320" fill="none" stroke="#e0e8ff" stroke-width="0.5" opacity="0.2"/>
+    <path d="M 860,320 L 880,360" fill="none" stroke="#e0e8ff" stroke-width="0.3" opacity="0.12"/>
+
+    <!-- Second branch — going right from the main -->
+    <path d="M 680,340 L 640,360 L 600,400 L 580,450" fill="none" stroke="#e0e8ff" stroke-width="0.7" opacity="0.28"/>
+    <path d="M 600,400 L 560,420 L 530,460" fill="none" stroke="#e0e8ff" stroke-width="0.5" opacity="0.18"/>
+    <path d="M 530,460 L 510,500" fill="none" stroke="#e0e8ff" stroke-width="0.3" opacity="0.1"/>
+
+    <!-- Third branch from mid-section -->
+    <path d="M 680,580 L 720,600 L 760,640 L 780,680" fill="none" stroke="#e0e8ff" stroke-width="0.6" opacity="0.22"/>
+    <path d="M 760,640 L 790,660 L 810,700" fill="none" stroke="#e0e8ff" stroke-width="0.4" opacity="0.14"/>
+
+    <!-- Fourth branch — left again lower -->
+    <path d="M 680,700 L 640,720 L 610,760 L 590,800" fill="none" stroke="#e0e8ff" stroke-width="0.5" opacity="0.18"/>
+    <path d="M 610,760 L 580,780 L 560,820" fill="none" stroke="#e0e8ff" stroke-width="0.3" opacity="0.1"/>
+
+    <!-- Sub-branches -->
+    <path d="M 820,300 L 840,340 L 860,380" fill="none" stroke="#e0e8ff" stroke-width="0.4" opacity="0.15"/>
+    <path d="M 580,450 L 550,480 L 540,520" fill="none" stroke="#e0e8ff" stroke-width="0.4" opacity="0.12"/>
+    <path d="M 780,680 L 800,720" fill="none" stroke="#e0e8ff" stroke-width="0.3" opacity="0.1"/>
+    
+    <!-- Tiny sub-branches -->
+    <path d="M 760,250 L 780,270" fill="none" stroke="#e0e8ff" stroke-width="0.3" opacity="0.15"/>
+    <path d="M 640,360 L 620,380 L 600,410" fill="none" stroke="#e0e8ff" stroke-width="0.3" opacity="0.12"/>
+    <path d="M 720,600 L 740,620" fill="none" stroke="#e0e8ff" stroke-width="0.3" opacity="0.1"/>
+  </g>
+
+  <!-- Tip glow — the leading edge, the potential -->
+  <circle cx="705" cy="950" r="8" fill="#e0e8ff" opacity="0.08" filter="url(#tipglow)">
+    <animate attributeName="opacity" values="0.08;0.15;0.08" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="880" cy="360" r="4" fill="#e0e8ff" opacity="0.04" filter="url(#tipglow)">
+    <animate attributeName="opacity" values="0.04;0.08;0.04" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="560" cy="820" r="3" fill="#e0e8ff" opacity="0.03" filter="url(#tipglow)">
+    <animate attributeName="opacity" values="0.03;0.06;0.03" dur="4s" repeatCount="indefinite"/>
+  </circle>
+</svg>
+</body>
+</html>

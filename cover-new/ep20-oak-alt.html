@@ -1,0 +1,78 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box;}</style></head><body>
+<svg viewBox="0 0 1400 1400" width="1400" height="1400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="bg" cx="50%" cy="60%" r="70%"><stop offset="0%" stop-color="#0a1208"/><stop offset="50%" stop-color="#060a06"/><stop offset="100%" stop-color="#020502"/></radialGradient>
+<radialGradient id="canopyG" cx="50%" cy="100%" r="60%"><stop offset="0%" stop-color="#1a4020" stop-opacity="0.2"/><stop offset="100%" stop-color="#1a4020" stop-opacity="0"/></radialGradient>
+<filter id="hb" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="45"/></filter>
+<filter id="mb" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="sg" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1400" height="1400" fill="url(#bg)"/>
+<circle cx="700" cy="1400" r="600" fill="url(#canopyG)"/>
+
+<!-- Stars through canopy gaps -->
+<g fill="#fff" opacity="0.15">
+<circle cx="300" cy="100" r="0.8"/><circle cx="600" cy="80" r="0.6"/><circle cx="900" cy="120" r="0.9"/><circle cx="1150" cy="90" r="0.7"/>
+<circle cx="200" cy="250" r="0.6"/><circle cx="500" cy="200" r="0.8"/><circle cx="800" cy="230" r="0.5"/><circle cx="1100" cy="210" r="0.7"/>
+</g>
+
+<!-- MOONLIGHT through canopy -->
+<circle cx="500" cy="200" r="100" fill="#e8d080" opacity="0.04" filter="url(#hb)"/>
+<circle cx="500" cy="200" r="30" fill="#ffe8b0" opacity="0.1" filter="url(#mb)"/>
+
+<!-- Tree trunks — dark vertical masses -->
+<g fill="#0a0e08" opacity="0.95">
+<rect x="50" y="0" width="80" height="1400" rx="5"/><rect x="180" y="200" width="60" height="1200" rx="4"/><rect x="300" y="100" width="90" height="1300" rx="5"/>
+<rect x="500" y="0" width="70" height="1400" rx="4"/><rect x="620" y="300" width="50" height="1100" rx="3"/>
+<rect x="800" y="150" width="80" height="1250" rx="5"/><rect x="950" y="50" width="70" height="1350" rx="4"/>
+<rect x="1080" y="250" width="60" height="1150" rx="4"/><rect x="1200" y="0" width="90" height="1400" rx="5"/><rect x="1340" y="100" width="60" height="1300" rx="4"/>
+</g>
+
+<!-- Canopy mass (top) -->
+<ellipse cx="700" cy="100" rx="800" ry="200" fill="#0a0e08" opacity="0.7" filter="url(#hb)"/>
+
+<!-- Bark texture lines -->
+<g stroke="#1a2010" stroke-width="0.3" fill="none" opacity="0.3">
+<line x1="80" y1="300" x2="85" y2="500"/><line x1="95" y1="600" x2="98" y2="800"/><line x1="75" y1="900" x2="78" y2="1100"/>
+<line x1="340" y1="400" x2="345" y2="600"/><line x1="355" y1="700" x2="358" y2="900"/>
+<line x1="830" y1="500" x2="835" y2="700"/><line x1="845" y1="800" x2="848" y2="1000"/>
+<line x1="980" y1="400" x2="985" y2="600"/><line x1="990" y1="700" x2="993" y2="900"/>
+<line x1="1235" y1="300" x2="1240" y2="500"/><line x1="1250" y1="600" x2="1253" y2="800"/>
+</g>
+
+<!-- Light shaft through gap -->
+<g opacity="0.06">
+<rect x="380" y="0" width="100" height="1400" fill="#e8d080" transform="rotate(-2,430,700)"/>
+<rect x="700" y="0" width="80" height="1400" fill="#e8d080" transform="rotate(3,740,700)"/>
+</g>
+
+<!-- Undergrowth — ferns and small plants at base -->
+<g fill="#1a4020" opacity="0.5">
+<path d="M 100,1350 Q 80,1300 60,1320 Q 80,1280 100,1300 Q 120,1280 140,1320 Q 120,1300 100,1350"/>
+<path d="M 250,1370 Q 230,1320 210,1340 Q 230,1300 250,1320 Q 270,1300 290,1340 Q 270,1320 250,1370"/>
+<path d="M 430,1360 Q 410,1310 390,1330 Q 410,1290 430,1310 Q 450,1290 470,1330 Q 450,1310 430,1360"/>
+<path d="M 700,1355 Q 680,1305 660,1325 Q 680,1285 700,1305 Q 720,1285 740,1325 Q 720,1305 700,1355"/>
+<path d="M 900,1365 Q 880,1315 860,1335 Q 880,1295 900,1315 Q 920,1295 940,1335 Q 920,1315 900,1365"/>
+<path d="M 1150,1350 Q 1130,1300 1110,1320 Q 1130,1280 1150,1300 Q 1170,1280 1190,1320 Q 1170,1300 1150,1350"/>
+</g>
+
+<!-- Fireflies -->
+<g filter="url(#sg)">
+<circle cx="400" cy="600" r="2" fill="#c4a043" opacity="0.6"><animate attributeName="opacity" values="0.6;0.05;0.6" dur="3s" repeatCount="indefinite"/></circle>
+<circle cx="650" cy="450" r="1.5" fill="#e8d080" opacity="0.5"><animate attributeName="opacity" values="0.5;0.03;0.5" dur="4s" repeatCount="indefinite"/></circle>
+<circle cx="750" cy="700" r="1.8" fill="#c4a043" opacity="0.55"><animate attributeName="opacity" values="0.55;0.05;0.55" dur="2.5s" repeatCount="indefinite"/></circle>
+<circle cx="500" cy="800" r="1.3" fill="#e8d080" opacity="0.4"><animate attributeName="opacity" values="0.4;0.03;0.4" dur="5s" repeatCount="indefinite"/></circle>
+<circle cx="350" cy="900" r="1.5" fill="#c4a043" opacity="0.45"><animate attributeName="opacity" values="0.45;0.04;0.45" dur="3.5s" repeatCount="indefinite"/></circle>
+<circle cx="900" cy="550" r="1.2" fill="#e8d080" opacity="0.35"><animate attributeName="opacity" values="0.35;0.03;0.35" dur="4.5s" repeatCount="indefinite"/></circle>
+</g>
+
+<!-- Roots across ground -->
+<g stroke="#1a2010" stroke-width="2" fill="none" opacity="0.4">
+<path d="M 50,1400 Q 100,1380 150,1390 Q 200,1400 250,1390"/><path d="M 300,1400 Q 350,1380 400,1390 Q 450,1400 500,1390"/>
+<path d="M 800,1400 Q 850,1380 900,1390 Q 950,1400 1000,1390"/><path d="M 1200,1400 Q 1250,1380 1300,1390 Q 1350,1400 1400,1390"/>
+</g>
+
+<!-- Bottom -->
+<rect x="0" y="1300" width="1400" height="100" fill="#020502" opacity="0.5"/>
+</svg></body></html>

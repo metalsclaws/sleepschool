@@ -1,0 +1,91 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box;}</style></head><body>
+<svg viewBox="0 0 1400 1400" width="1400" height="1400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="bg" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#0c1228"/><stop offset="50%" stop-color="#060a18"/><stop offset="100%" stop-color="#03040d"/></radialGradient>
+<radialGradient id="core" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#0e1a30"/><stop offset="50%" stop-color="#060c18"/><stop offset="100%" stop-color="#03040d"/></radialGradient>
+<filter id="hb" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="40"/></filter>
+<filter id="mb" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="sg" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1400" height="1400" fill="url(#bg)"/>
+<!-- Ambient glow center -->
+<ellipse cx="700" cy="550" rx="400" ry="350" fill="#0c1a30" opacity="0.3" filter="url(#hb)"/>
+<ellipse cx="700" cy="550" rx="300" ry="250" fill="#0a1530" opacity="0.2" filter="url(#mb)"/>
+<!-- Brain silhouette — large, centered, dark -->
+<g fill="#080c18">
+<!-- Left hemisphere outer -->
+<path d="M500,350 Q400,400 380,500 Q360,600 380,700 Q400,800 450,850 Q500,880 550,860 Q580,840 580,800 L580,700 L550,650 L580,550 Q590,450 580,380 Q560,320 500,350Z"/>
+<!-- Right hemisphere outer -->
+<path d="M900,350 Q1000,400 1020,500 Q1040,600 1020,700 Q1000,800 950,850 Q900,880 850,860 Q820,840 820,800 L820,700 L850,650 L820,550 Q810,450 820,380 Q840,320 900,350Z"/>
+<!-- Brain stem -->
+<path d="M640,800 Q660,850 640,900 Q620,950 640,1000 L760,1000 Q780,950 760,900 Q740,850 760,800Z"/>
+</g>
+<!-- Brain inner detail — subtle fold lines -->
+<g stroke="#c4a043" stroke-width="1" fill="none" opacity="0.1">
+<path d="M500,380 Q450,450 420,550 Q400,650 430,750"/>
+<path d="M580,380 Q530,450 510,550 Q490,650 520,750"/>
+<path d="M900,380 Q950,450 980,550 Q1000,650 970,750"/>
+<path d="M820,380 Q870,450 890,550 Q910,650 880,750"/>
+<path d="M500,450 Q550,480 580,520"/>
+<path d="M900,450 Q850,480 820,520"/>
+<path d="M450,600 Q500,620 540,640"/>
+<path d="M950,600 Q900,620 860,640"/>
+</g>
+<!-- Gold seam between hemispheres — subtle —>
+<path d="M700,330 L700,800" stroke="#c4a043" stroke-width="1.5" opacity="0.15" filter="url(#sg)"/>
+<!-- Corpus callosum glow -->
+<ellipse cx="700" cy="550" rx="30" ry="150" fill="#c4a043" opacity="0.06" filter="url(#sg)"/>
+<!-- Dissolving particles — LEFT side, drifting off -->
+<g fill="#c4a043">
+<!-- Layer 1: brightest, closest to brain -->
+<circle cx="320" cy="400" r="3" opacity="0.35"/><circle cx="280" cy="450" r="2.5" opacity="0.3"/><circle cx="250" cy="500" r="4" opacity="0.25"/>
+<circle cx="290" cy="550" r="2" opacity="0.35"/><circle cx="260" cy="600" r="3.5" opacity="0.2"/><circle cx="310" cy="650" r="2" opacity="0.3"/>
+<circle cx="240" cy="700" r="3" opacity="0.2"/><circle cx="280" cy="750" r="2.5" opacity="0.25"/><circle cx="330" cy="800" r="2" opacity="0.2"/>
+<circle cx="1080" cy="380" r="2.5" opacity="0.3"/><circle cx="1120" cy="420" r="3" opacity="0.25"/><circle cx="1150" cy="480" r="2" opacity="0.2"/>
+<circle cx="1110" cy="540" r="3.5" opacity="0.2"/><circle cx="1160" cy="590" r="2.5" opacity="0.18"/><circle cx="1090" cy="660" r="3" opacity="0.2"/>
+<circle cx="1140" cy="720" r="2" opacity="0.15"/><circle cx="1080" cy="780" r="2.5" opacity="0.18"/><circle cx="1130" cy="830" r="2" opacity="0.12"/>
+<!-- Layer 2: mid-distance, smaller -->
+<circle cx="180" cy="350" r="2" opacity="0.2"/><circle cx="150" cy="420" r="1.5" opacity="0.15"/><circle cx="200" cy="500" r="2" opacity="0.18"/>
+<circle cx="170" cy="580" r="1.5" opacity="0.12"/><circle cx="210" cy="680" r="2" opacity="0.15"/><circle cx="160" cy="760" r="1.5" opacity="0.1"/>
+<circle cx="1200" cy="350" r="2" opacity="0.18"/><circle cx="1250" cy="430" r="1.5" opacity="0.12"/><circle cx="1220" cy="520" r="2" opacity="0.15"/>
+<circle cx="1190" cy="620" r="1.5" opacity="0.1"/><circle cx="1240" cy="700" r="2" opacity="0.12"/><circle cx="1210" cy="800" r="1.5" opacity="0.08"/>
+<!-- Layer 3: far drift, tiny -->
+<circle cx="80" cy="380" r="1" opacity="0.12"/><circle cx="100" cy="480" r="1.2" opacity="0.1"/><circle cx="60" cy="600" r="1" opacity="0.08"/>
+<circle cx="90" cy="720" r="1.2" opacity="0.07"/><circle cx="50" cy="800" r="1" opacity="0.06"/>
+<circle cx="1320" cy="380" r="1" opacity="0.1"/><circle cx="1350" cy="480" r="1.2" opacity="0.08"/><circle cx="1290" cy="580" r="1" opacity="0.07"/>
+<circle cx="1330" cy="700" r="1.2" opacity="0.06"/><circle cx="1300" cy="820" r="1" opacity="0.05"/>
+</g>
+<!-- Dissolving edge blur patches — soft organic dissolve -->
+<ellipse cx="340" cy="420" rx="60" ry="40" fill="#080c18" opacity="0.4" filter="url(#sg)"/>
+<ellipse cx="290" cy="530" rx="80" ry="50" fill="#080c18" opacity="0.35" filter="url(#sg)"/>
+<ellipse cx="330" cy="680" rx="70" ry="55" fill="#080c18" opacity="0.3" filter="url(#sg)"/>
+<ellipse cx="1070" cy="400" rx="60" ry="40" fill="#080c18" opacity="0.35" filter="url(#sg)"/>
+<ellipse cx="1120" cy="550" rx="75" ry="50" fill="#080c18" opacity="0.3" filter="url(#sg)"/>
+<ellipse cx="1080" cy="720" rx="65" ry="50" fill="#080c18" opacity="0.25" filter="url(#sg)"/>
+<!-- Dust clouds — blurred mist -->
+<ellipse cx="200" cy="500" rx="120" ry="80" fill="#0a1020" opacity="0.15" filter="url(#mb)"/>
+<ellipse cx="1200" cy="520" rx="100" ry="90" fill="#0a1020" opacity="0.12" filter="url(#mb)"/>
+<!-- Memory fragments — faint shapes drifting -->
+<g stroke="#c4a043" fill="none" opacity="0.08">
+<rect x="150" y="420" width="20" height="15" transform="rotate(15 160 427)"/>
+<rect x="130" y="560" width="18" height="12" transform="rotate(-20 139 566)"/>
+<rect x="180" y="680" width="22" height="16" transform="rotate(10 191 688)"/>
+<rect x="1240" y="440" width="16" height="12" transform="rotate(25 1248 446)"/>
+<rect x="1260" y="580" width="20" height="14" transform="rotate(-15 1270 587)"/>
+</g>
+<!-- Text fragments — faded words -->
+<g fill="#c4a043" opacity="0.04" font-family="Georgia,serif" font-size="12">
+<text x="100" y="500">name...</text>
+<text x="1200" y="460" transform="rotate(5 1200 460)">...face</text>
+<text x="180" y="620">where...</text>
+<text x="1280" y="640" transform="rotate(-8 1280 640)">...day...</text>
+</g>
+<!-- Stars above — distant, faint -->
+<g fill="#c4a043" opacity="0.15">
+<circle cx="200" cy="120" r="1.2"/><circle cx="500" cy="80" r="1"/><circle cx="800" cy="100" r="1.5"/>
+<circle cx="1100" cy="70" r="1"/><circle cx="1300" cy="140" r="1.2"/><circle cx="700" cy="50" r="0.8"/>
+</g>
+<!-- Bottom vignette — grounding darkness -->
+<ellipse cx="700" cy="1200" rx="600" ry="200" fill="#03040d" opacity="0.5" filter="url(#mb)"/>
+</svg></body></html>

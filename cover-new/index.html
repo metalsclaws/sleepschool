@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SleepSchool — Cover Art Review</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #08080e; color: #d0c8b8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif; }
+.header { text-align: center; padding: 30px 20px 20px; border-bottom: 1px solid #1a1a28; }
+.header h1 { font-family: Georgia, serif; font-size: 24px; color: #c4a043; letter-spacing: 1px; }
+.header p { color: #666; font-size: 13px; margin-top: 6px; }
+.grid { max-width: 1600px; margin: 0 auto; padding: 20px; }
+.ep { margin-bottom: 40px; border-bottom: 1px solid #1a1a28; padding-bottom: 30px; }
+.ep h2 { font-family: Georgia, serif; font-size: 16px; color: #c4a043; margin-bottom: 12px; letter-spacing: 0.5px; }
+.ep .variants { display: flex; gap: 12px; flex-wrap: wrap; }
+.ep .card { flex: 1; min-width: 280px; max-width: 420px; }
+.ep .card img { width: 100%; height: auto; border-radius: 6px; display: block; background: #0c0c14; }
+.ep .card .tag { display: inline-block; margin-top: 6px; padding: 2px 8px; border-radius: 3px; font-size: 11px; font-family: monospace; }
+.ep .card .tag.orig { background: #1a1a28; color: #888; }
+.ep .card .tag.v2 { background: #1a2028; color: #6a8fa5; }
+.ep .card .tag.v3 { background: #1a1a20; color: #a08cc4; }
+.ep .card .tag.alt { background: #1a1a18; color: #c4a043; }
+.ep .card .tag.new { background: #281a0a; color: #c4a043; border: 1px solid #c4a04344; }
+</style>
+</head>
+<body>
+<div class="header">
+<h1>SleepSchool Cover Art</h1>
+<p>Original designs &amp; alternates — click any image to view full size</p>
+</div>
+<div class="grid" id="gallery"></div>
+<script>
+const episodes = [
+  { num: '01', name: 'Your Brain on Sleep', motif: 'brain', variants: [
+    { file: 'ep01-brain', tag: 'ORIG', cls: 'orig' },
+    { file: 'ep01-brain-v2', tag: 'V2', cls: 'v2' },
+    { file: 'ep01-brain-v3-closeup', tag: 'V3 CLOSEUP', cls: 'v3' },
+    { file: 'ep01-brain-alt', tag: 'ALT ★', cls: 'alt new' },
+  ]},
+  { num: '02', name: 'The Trees That Remember', motif: 'trees', variants: [
+    { file: 'ep02-trees', tag: 'ORIG', cls: 'orig' },
+    { file: 'ep02-trees-v2', tag: 'V2', cls: 'v2' },
+    { file: 'ep02-trees-v3-gold', tag: 'V3 GOLD', cls: 'v3' },
+    { file: 'ep02-trees-alt', tag: 'ALT ★', cls: 'alt new' },
+  ]},
+  { num: '03', name: "The Nile's Memory", motif: 'nile', variants: [
+    { file: 'ep03-nile', tag: 'ORIG', cls: 'orig' },
+    { file: 'ep03-nile-alt', tag: 'ALT ★', cls: 'alt new' },
+  ]},
+  { num: '04', name: "The Ocean's Lullaby", motif: 'ocean', variants: [
+    { file: 'ep04-ocean', tag: 'ORIG', cls: 'orig' },
+    { file: 'ep04-ocean-alt', tag: 'ALT ★', cls: 'alt new' },
+  ]},
+  { num: '05', name: 'Stars Like Grains of Sand', motif: 'stars', variants: [
+    { file: 'ep05-stars', tag: 'ORIG', cls: 'orig' },
+    { file: 'ep05-stars-v2', tag: 'V2', cls: 'v2' },
+    { file: 'ep05-stars-v3-horizon', tag: 'V3 HORIZON', cls: 'v3' },
+    { file: 'ep05-stars-alt', tag: 'ALT ★', cls: 'alt new' },
+  ]},
+  { num: '06', name: 'The Hive Mind', motif: 'beehive', variants: [
+    { file: 'ep06-beehive', tag: 'ORIG', cls: 'orig' },
+    { file: 'ep06-beehive-alt', tag: 'ALT ★', cls: 'alt new' },
+  ]},
+  { num: '06', name: 'Circadian Rhythm', motif: 'clocks', variants: [
+    { file: 'ep06-clocks', tag: 'ORIG', cls: 'orig' },
+    { file: 'ep06-clocks-alt', tag: 'ALT ★', cls: 'alt new' },
+  ]},
+  { num: '07', name: 'The Library of Sleep', motif: 'library', variants: [
+    { file: 'ep07-library', tag: 'ORIG', cls: 'orig' },
+    { file: 'ep07-library-alt', tag: 'ALT ★', cls: 'alt new' },
+  ]},
+  { num: '07', name: 'Serengeti Sunset', motif: 'serengeti', variants: [
+    { file: 'ep07-serengeti', tag: 'ORIG', cls: 'orig' },
+  ]},
+  { num: '08', name: 'Aurora Borealis', motif: 'aurora', variants: [
+    { file: 'ep08-aurora', tag: 'ORIG', cls: 'orig' },
+    { file: 'ep08-aurora-alt', tag: 'ALT ★', cls: 'alt new' },
+  ]},
+  { num: '09', name: 'The Silk Road', motif: 'silkroad', variants: [
+    { file: 'ep09-silkroad', tag: 'ORIG', cls: 'orig' },
+    { file: 'ep09-silkroad-alt', tag: 'ALT ★', cls: 'alt new' },
+  ]},
+  { num: '10', name: 'Bamboo', motif: 'bamboo', variants: [
+    { file: 'ep10-bamboo', tag: 'ORIG', cls: 'orig' },
+    { file: 'ep10-bamboo-alt', tag: 'ALT ★', cls: 'alt new' },
+  ]},
+  { num: '11', name: 'The Butterfly Effect', motif: 'butterfly', variants: [
+    { file: 'ep11-butterfly', tag: 'ORIG', cls: 'orig' },
+    { file: 'ep11-butterfly-alt', tag: 'ALT ★', cls: 'alt new' },
+  ]},
+  { num: '11', name: 'The Lighthouse', motif: 'lighthouse', variants: [
+    { file: 'ep11-lighthouse', tag: 'ORIG', cls: 'orig' },
+  ]},
+  { num: '12', name: 'The Bread of Life', motif: 'bread', variants: [
+    { file: 'ep12-bread', tag: 'ORIG', cls: 'orig' },
+    { file: 'ep12-bread-alt', tag: 'ALT ★', cls: 'alt new' },
+  ]},
+  { num: '12', name: 'Dinosaurs', motif: 'dinosaurs', variants: [
+    { file: 'ep12-dinosaurs', tag: 'ORIG', cls: 'orig' },
+  ]},
+  { num: '13', name: 'Coral Dreams', motif: 'coral', variants: [
+    { file: 'ep13-coral', tag: 'ORIG', cls: 'orig' },
+    { file: 'ep13-coral-alt', tag: 'ALT ★', cls: 'alt new' },
+  ]},
+  { num: '13', name: 'Zen Garden', motif: 'zengarden', variants: [
+    { file: 'ep13-zengarden', tag: 'ORIG', cls: 'orig' },
+  ]},
+  { num: '14', name: 'The Library at Night', motif: 'library2', variants: [
+    { file: 'ep14-library', tag: 'ORIG', cls: 'orig' },
+    { file: 'ep14-library-alt', tag: 'ALT ★', cls: 'alt new' },
+  ]},
+  { num: '14', name: 'Moonrise', motif: 'moon', variants: [
+    { file: 'ep14-moon', tag: 'ORIG', cls: 'orig' },
+  ]},
+  { num: '15', name: 'Dreams', motif: 'dreams', variants: [
+    { file: 'ep15-dreams', tag: 'ORIG', cls: 'orig' },
+  ]},
+  { num: '15', name: 'Florence', motif: 'florence', variants: [
+    { file: 'ep15-florence', tag: 'ORIG', cls: 'orig' },
+    { file: 'ep15-florence-alt', tag: 'ALT ★', cls: 'alt new' },
+  ]},
+  { num: '16', name: 'The Art of Forgetting', motif: 'forgetting', variants: [
+    { file: 'ep16-forgetting', tag: 'ORIG', cls: 'orig' },
+  ]},
+  { num: '16', name: 'Tea Ceremony', motif: 'tea', variants: [
+    { file: 'ep16-tea', tag: 'ORIG', cls: 'orig' },
+  ]},
+  { num: '17', name: 'Lightning', motif: 'lightning', variants: [
+    { file: 'ep17-lightning', tag: 'ORIG', cls: 'orig' },
+    { file: 'ep17-lightning-alt', tag: 'ALT ★', cls: 'alt new' },
+  ]},
+  { num: '17', name: 'Rain', motif: 'rain', variants: [
+    { file: 'ep17-rain', tag: 'ORIG', cls: 'orig' },
+    { file: 'ep17-rain-alt', tag: 'ALT ★', cls: 'alt new' },
+  ]},
+  { num: '18', name: 'Voyager', motif: 'voyager', variants: [
+    { file: 'ep18-voyager', tag: 'ORIG', cls: 'orig' },
+    { file: 'ep18-voyager-alt', tag: 'ALT ★', cls: 'alt new' },
+  ]},
+  { num: '18', name: 'The Writing on the Wall', motif: 'writing', variants: [
+    { file: 'ep18-writing', tag: 'ORIG', cls: 'orig' },
+  ]},
+  { num: '19', name: 'Glacier', motif: 'glacier', variants: [
+    { file: 'ep19-glacier', tag: 'ORIG', cls: 'orig' },
+    { file: 'ep19-glacier-alt', tag: 'ALT ★', cls: 'alt new' },
+  ]},
+  { num: '19', name: 'Ice', motif: 'ice', variants: [
+    { file: 'ep19-ice', tag: 'ORIG', cls: 'orig' },
+  ]},
+  { num: '20', name: 'The End', motif: 'end', variants: [
+    { file: 'ep20-end', tag: 'ORIG', cls: 'orig' },
+  ]},
+  { num: '20', name: 'The Oak', motif: 'oak', variants: [
+    { file: 'ep20-oak', tag: 'ORIG', cls: 'orig' },
+    { file: 'ep20-oak-alt', tag: 'ALT ★', cls: 'alt new' },
+  ]},
+];
+
+const gallery = document.getElementById('gallery');
+episodes.forEach(ep => {
+  const div = document.createElement('div');
+  div.className = 'ep';
+  let html = `<h2>Ep ${ep.num}: ${ep.name}</h2><div class="variants">`;
+  ep.variants.forEach(v => {
+    html += `<div class="card">
+      <a href="${v.file}.html" target="_blank"><img src="${v.file}.png" alt="Ep ${ep.num} ${v.tag}" loading="lazy"></a>
+      <span class="tag ${v.cls}">${v.tag}</span>
+    </div>`;
+  });
+  html += '</div>';
+  div.innerHTML = html;
+  gallery.appendChild(div);
+});
+</script>
+</body>
+</html>

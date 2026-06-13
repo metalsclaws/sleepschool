@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><style>body{margin:0;padding:0;background:#030304;display:flex;align-items:center;justify-content:center;height:100vh;}</style></head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1400" width="1400" height="1400">
+  <defs>
+    <filter id="moonedge">
+      <feGaussianBlur stdDeviation="1.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="crescentglow">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="horizglow">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="moonfill" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c0c0c0" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#c0c0c0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1400" height="1400" fill="#030304"/>
+
+  <!-- Faint moon glow -->
+  <circle cx="700" cy="480" r="180" fill="url(#moonfill)"/>
+
+  <!-- Thin crescent — the lit edge -->
+  <g filter="url(#crescentglow)">
+    <!-- Crescent: thin arc on the right side of an implied circle -->
+    <!-- Full moon circle (implied, very faint) -->
+    <circle cx="700" cy="480" r="80" fill="none" stroke="#c0c0c0" stroke-width="0.3" opacity="0.06"/>
+    
+    <!-- The crescent — a thin bright arc -->
+    <!-- Right edge of the crescent (the lit limb) -->
+    <path d="M 760,405 A 80,80 0 0,1 760,555" fill="none" stroke="#e0e0e0" stroke-width="2" opacity="0.9" filter="url(#moonedge)"/>
+    
+    <!-- Slightly broader crescent fill -->
+    <path d="M 758,410 A 78,78 0 0,1 758,550 Q 748,520 748,480 Q 748,440 758,410 Z"
+          fill="#c0c0c0" opacity="0.15"/>
+  </g>
+
+  <!-- The crescent thin bright edge — the sharp cold line -->
+  <path d="M 760,405 A 80,80 0 0,1 760,555" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.95"/>
+
+  <!-- Horizon / atmosphere line at bottom -->
+  <line x1="200" y1="1050" x2="1200" y2="1050" stroke="#c0c0c0" stroke-width="0.5" opacity="0.15" filter="url(#horizglow)"/>
+  
+  <!-- Atmosphere gradient above horizon -->
+  <rect x="200" y="1000" width="1000" height="50" fill="#030304" opacity="0">
+    <!-- This is just for structure -->
+  </rect>
+  <line x1="300" y1="1050" x2="1100" y2="1050" stroke="#1a1a20" stroke-width="0.3" opacity="0.2"/>
+
+  <!-- Tiny star hints -->
+  <g fill="#c0c0c0" opacity="0.15">
+    <circle cx="200" cy="200" r="0.6"/>
+    <circle cx="1100" cy="150" r="0.8"/>
+    <circle cx="300" cy="600" r="0.5"/>
+    <circle cx="1200" cy="400" r="0.7"/>
+    <circle cx="150" cy="800" r="0.4"/>
+    <circle cx="1250" cy="700" r="0.5"/>
+    <circle cx="400" cy="300" r="0.3"/>
+    <circle cx="1050" cy="250" r="0.4"/>
+  </g>
+</svg>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box;}</style></head><body>
+<svg viewBox="0 0 1400 1400" width="1400" height="1400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="bg" cx="50%" cy="60%" r="70%"><stop offset="0%" stop-color="#0a0815"/><stop offset="50%" stop-color="#060510"/><stop offset="100%" stop-color="#030308"/></radialGradient>
+<filter id="hb" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="45"/></filter>
+<filter id="mb" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="sg" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1400" height="1400" fill="url(#bg)"/>
+
+<!-- Stars -->
+<g fill="#fff" opacity="0.2">
+<circle cx="200" cy="80" r="0.7"/><circle cx="450" cy="100" r="0.9"/><circle cx="700" cy="60" r="1.1"/><circle cx="950" cy="90" r="0.8"/><circle cx="1200" cy="70" r="0.7"/><circle cx="100" cy="200" r="0.8"/><circle cx="400" cy="180" r="0.6"/><circle cx="800" cy="220" r="0.9"/><circle cx="1100" cy="200" r="0.7"/>
+</g>
+
+<!-- RAIN — vertical streaks across entire canvas -->
+<g stroke="#4a6fa5" fill="none" opacity="0.15">
+<line x1="50" y1="0" x2="40" y2="1400" stroke-width="0.8"/><line x1="120" y1="0" x2="110" y2="1400" stroke-width="0.6"/><line x1="200" y1="100" x2="190" y2="1400" stroke-width="0.7"/>
+<line x1="280" y1="0" x2="270" y2="1400" stroke-width="0.5"/><line x1="370" y1="50" x2="360" y2="1400" stroke-width="0.8"/><line x1="440" y1="0" x2="430" y2="1400" stroke-width="0.6"/>
+<line x1="520" y1="200" x2="510" y2="1400" stroke-width="0.7"/><line x1="590" y1="0" x2="580" y2="1400" stroke-width="0.5"/><line x1="660" y1="100" x2="650" y2="1400" stroke-width="0.8"/>
+<line x1="740" y1="0" x2="730" y2="1400" stroke-width="0.6"/><line x1="810" y1="150" x2="800" y2="1400" stroke-width="0.7"/><line x1="880" y1="0" x2="870" y2="1400" stroke-width="0.5"/>
+<line x1="960" y1="80" x2="950" y2="1400" stroke-width="0.8"/><line x1="1030" y1="0" x2="1020" y2="1400" stroke-width="0.6"/><line x1="1110" y1="200" x2="1100" y2="1400" stroke-width="0.7"/>
+<line x1="1180" y1="0" x2="1170" y2="1400" stroke-width="0.5"/><line x1="1260" y1="100" x2="1250" y2="1400" stroke-width="0.8"/><line x1="1340" y1="0" x2="1330" y2="1400" stroke-width="0.6"/>
+</g>
+
+<!-- Heavier rain drops (brighter) -->
+<g stroke="#6a8fc5" fill="none" opacity="0.08">
+<line x1="300" y1="0" x2="285" y2="1400" stroke-width="1.2"/><line x1="550" y1="300" x2="535" y2="1400" stroke-width="1"/><line x1="780" y1="0" x2="765" y2="1400" stroke-width="1.1"/>
+<line x1="1050" y1="100" x2="1035" y2="1400" stroke-width="1.2"/><line x1="1300" y1="0" x2="1285" y2="1400" stroke-width="1"/><line x1="150" y1="200" x2="135" y2="1400" stroke-width="0.9"/>
+</g>
+
+<!-- PUDDLE REFLECTIONS — horizontal lines at bottom -->
+<rect x="0" y="1050" width="1400" height="350" fill="#080612" opacity="0.6"/>
+<g stroke="#4a6fa5" stroke-width="0.4" fill="none" opacity="0.12">
+<path d="M 50,1080 Q 200,1075 350,1080"/><path d="M 500,1085 Q 650,1080 800,1085"/><path d="M 950,1082 Q 1100,1077 1250,1082"/>
+<path d="M 100,1110 Q 250,1105 400,1110"/><path d="M 550,1115 Q 700,1110 850,1115"/><path d="M 1000,1112 Q 1150,1107 1300,1112"/>
+<path d="M 50,1140 Q 200,1135 350,1140"/><path d="M 500,1135 Q 650,1130 800,1135"/>
+<path d="M 200,1170 Q 400,1165 600,1170"/><path d="M 700,1168 Q 900,1163 1100,1168"/>
+</g>
+
+<!-- Neon signs reflected in puddle (abstract rectangles) -->
+<g fill="#c4a043" opacity="0.04" filter="url(#mb)">
+<rect x="200" y="1080" width="30" height="80"/><rect x="600" y="1075" width="25" height="60"/><rect x="900" y="1082" width="35" height="70"/>
+</g>
+
+<!-- UMBRELLA — small, central figure -->
+<g transform="translate(700, 750)" opacity="0.8">
+<!-- Umbrella dome -->
+<path d="M -80,0 Q -80,-50 -40,-70 Q 0,-85 40,-70 Q 80,-50 80,0" fill="#141020" stroke="#c4a043" stroke-width="1.2" opacity="0.7"/>
+<!-- Ribs -->
+<path d="M 0,-75 L -70,0" stroke="#c4a043" stroke-width="0.5" opacity="0.3"/><path d="M 0,-75 L -35,-20 L 0,0" stroke="#c4a043" stroke-width="0.3" opacity="0.2"/>
+<path d="M 0,-75 L 0,0" stroke="#c4a043" stroke-width="0.3" opacity="0.2"/><path d="M 0,-75 L 35,-20 L 70,0" stroke="#c4a043" stroke-width="0.3" opacity="0.2"/>
+<!-- Handle -->
+<line x1="0" y1="0" x2="0" y2="120" stroke="#c4a043" stroke-width="1" opacity="0.5"/>
+<path d="M 0,120 Q 0,135 -15,135" stroke="#c4a043" stroke-width="1" fill="none" opacity="0.5"/>
+<!-- Figure (minimal) -->
+<circle cx="0" cy="30" r="5" fill="#141020" stroke="#c4a043" stroke-width="0.5" opacity="0.4"/>
+<line x1="0" y1="35" x2="0" y2="90" stroke="#c4a043" stroke-width="0.8" opacity="0.3"/>
+</g>
+
+<!-- Rain splash circles at figure's feet -->
+<g fill="none" stroke="#4a6fa5" stroke-width="0.5" opacity="0.15">
+<circle cx="700" cy="880" r="5"><animate attributeName="r" values="5;15;5" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.15;0;0.15" dur="2s" repeatCount="indefinite"/></circle>
+<circle cx="685" cy="885" r="3"><animate attributeName="r" values="3;10;3" dur="2.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0;0.1" dur="2.5s" repeatCount="indefinite"/></circle>
+<circle cx="715" cy="882" r="4"><animate attributeName="r" values="4;12;4" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.12;0;0.12" dur="3s" repeatCount="indefinite"/></circle>
+</g>
+
+<!-- Bottom fade -->
+<rect x="0" y="1200" width="1400" height="200" fill="#030308" opacity="0.5"/>
+</svg></body></html>

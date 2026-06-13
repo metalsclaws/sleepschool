@@ -1,0 +1,70 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box;}</style></head><body>
+<svg viewBox="0 0 1400 1400" width="1400" height="1400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="bg" cx="50%" cy="50%" r="70%"><stop offset="0%" stop-color="#1a0a18"/><stop offset="50%" stop-color="#0e0610"/><stop offset="100%" stop-color="#050306"/></radialGradient>
+<filter id="hb" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="45"/></filter>
+<filter id="mb" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="sg" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1400" height="1400" fill="url(#bg)"/>
+
+<!-- Stars -->
+<g fill="#fff" opacity="0.3">
+<circle cx="120" cy="80" r="0.8"/><circle cx="350" cy="50" r="1"/><circle cx="580" cy="100" r="0.7"/><circle cx="800" cy="60" r="1.2"/><circle cx="1050" cy="90" r="0.8"/><circle cx="1280" cy="70" r="0.9"/><circle cx="200" cy="200" r="0.7"/><circle cx="450" cy="180" r="0.9"/><circle cx="700" cy="220" r="0.6"/><circle cx="950" cy="190" r="1"/><circle cx="1150" cy="210" r="0.7"/>
+</g>
+
+<!-- Central glow -->
+<circle cx="700" cy="700" r="250" fill="#c4a043" opacity="0.05" filter="url(#hb)"/>
+
+<!-- CHRYSALIS — abstract cocoon shape, vertical -->
+<g transform="translate(700, 700)">
+<!-- Outer cocoon shape -->
+<path d="M 0,-280 Q 120,-260 180,-180 Q 230,-100 230,0 Q 230,100 180,180 Q 120,260 0,280 Q -120,260 -180,180 Q -230,100 -230,0 Q -230,-100 -180,-180 Q -120,-260 0,-280" fill="none" stroke="#c4a043" stroke-width="2" opacity="0.7" filter="url(#gl)"/>
+<path d="M 0,-280 Q 120,-260 180,-180 Q 230,-100 230,0 Q 230,100 180,180 Q 120,260 0,280 Q -120,260 -180,180 Q -230,100 -230,0 Q -230,-100 -180,-180 Q -120,-260 0,-280" fill="#c4a043" opacity="0.03"/>
+
+<!-- Inner texture lines (silk threads wrapping) -->
+<g stroke="#c4a043" stroke-width="0.5" fill="none" opacity="0.25">
+<path d="M 0,-260 Q 100,-240 160,-170 Q 210,-90 210,0 Q 210,90 160,170 Q 100,240 0,260"/>
+<path d="M 0,-260 Q -100,-240 -160,-170 Q -210,-90 -210,0 Q -210,90 -160,170 Q -100,240 0,260"/>
+<path d="M 0,-240 Q 80,-220 130,-160 Q 180,-80 180,0 Q 180,80 130,160 Q 80,220 0,240"/>
+<path d="M 0,-240 Q -80,-220 -130,-160 Q -180,-80 -180,0 Q -180,80 -130,160 Q -80,220 0,240"/>
+<path d="M 0,-220 Q 60,-200 100,-150 Q 140,-70 140,0 Q 140,70 100,150 Q 60,200 0,220"/>
+<path d="M 0,-220 Q -60,-200 -100,-150 Q -140,-70 -140,0 Q -140,70 -100,150 Q -60,200 0,220"/>
+</g>
+
+<!-- Diagonal silk threads -->
+<g stroke="#e8d080" stroke-width="0.3" fill="none" opacity="0.2">
+<path d="M -180,-180 Q 0,-50 180,180"/><path d="M -180,180 Q 0,50 180,-180"/>
+<path d="M -200,-100 Q 0,20 200,100"/><path d="M -200,100 Q 0,-20 200,-100"/>
+<path d="M -100,-240 Q 20,0 100,240"/><path d="M 100,-240 Q -20,0 -100,240"/>
+<path d="M -150,-210 Q 30,0 150,210"/><path d="M 150,-210 Q -30,0 -150,210"/>
+<path d="M -50,-260 Q 0,0 50,260"/><path d="M 50,-260 Q 0,0 -50,260"/>
+<path d="M -220,0 Q 0,30 220,0"/><path d="M -220,0 Q 0,-30 220,0"/>
+<path d="M -170,-180 Q 0,-10 170,180"/><path d="M 170,-180 Q 0,10 -170,180"/>
+</g>
+
+<!-- Transformation glow — from within -->
+<ellipse cx="0" cy="0" rx="80" ry="120" fill="#e8d080" opacity="0.06" filter="url(#mb)"/>
+<ellipse cx="0" cy="0" rx="30" ry="50" fill="#f5ecc0" opacity="0.1" filter="url(#gl)"/>
+
+<!-- Emerging wing shapes (faint, barely visible) -->
+<path d="M -30,-20 Q -80,-80 -60,-150 Q -40,-180 -20,-120 Q -10,-80 -30,-20" fill="#e8d080" opacity="0.08" filter="url(#sg)"/>
+<path d="M 30,-20 Q 80,-80 60,-150 Q 40,-180 20,-120 Q 10,-80 30,-20" fill="#e8d080" opacity="0.08" filter="url(#sg)"/>
+
+<!-- Small golden particles escaping -->
+<g fill="#e8d080" filter="url(#sg)">
+<circle cx="-40" cy="-200" r="2" opacity="0.6"><animate attributeName="cy" values="-200;-260;-200" dur="4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;0.1;0.6" dur="4s" repeatCount="indefinite"/></circle>
+<circle cx="30" cy="-220" r="1.5" opacity="0.5"><animate attributeName="cy" values="-220;-290;-220" dur="5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0.05;0.5" dur="5s" repeatCount="indefinite"/></circle>
+<circle cx="-10" cy="-250" r="1.8" opacity="0.4"><animate attributeName="cy" values="-250;-330;-250" dur="6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.4;0.05;0.4" dur="6s" repeatCount="indefinite"/></circle>
+<circle cx="50" cy="-180" r="1.2" opacity="0.45"><animate attributeName="cy" values="-180;-240;-180" dur="3.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.45;0.08;0.45" dur="3.5s" repeatCount="indefinite"/></circle>
+<circle cx="-60" cy="-150" r="1" opacity="0.35"><animate attributeName="cy" values="-150;-210;-150" dur="4.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.35;0.05;0.35" dur="4.5s" repeatCount="indefinite"/></circle>
+</g>
+</g>
+
+<!-- Bottom accent -->
+<g stroke="#c4a043" stroke-width="0.4" fill="none" opacity="0.1">
+<path d="M 0,1200 Q 200,1195 400,1200 Q 600,1205 800,1198 Q 1000,1192 1200,1200 Q 1350,1205 1400,1200"/>
+</g>
+<rect x="0" y="1200" width="1400" height="200" fill="#050306" opacity="0.4"/>
+</svg></body></html>

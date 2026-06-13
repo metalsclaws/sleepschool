@@ -1,0 +1,61 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box;}</style></head><body>
+<svg viewBox="0 0 1400 1400" width="1400" height="1400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="bg" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#1a1510"/><stop offset="60%" stop-color="#0e0b08"/><stop offset="100%" stop-color="#050402"/></radialGradient>
+<filter id="hb" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="40"/></filter>
+<filter id="mb" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="sg" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1400" height="1400" fill="url(#bg)"/>
+<!-- Stars — warm, few -->
+<g fill="#c4a043" opacity="0.4"><circle cx="120" cy="60" r="0.8"/><circle cx="350" cy="40" r="1"/><circle cx="650" cy="80" r="0.7"/><circle cx="950" cy="50" r="1.2"/><circle cx="1250" cy="90" r="0.9"/><circle cx="200" cy="180" r="0.8"/><circle cx="500" cy="160" r="1.1"/><circle cx="850" cy="200" r="0.9"/><circle cx="1100" cy="170" r="1"/><circle cx="1350" cy="220" r="0.8"/>
+</g>
+<!-- BIG GEAR — left, massive -->
+<g transform="translate(400, 700)">
+<circle cx="0" cy="0" r="300" stroke="#c4a043" stroke-width="3" fill="none" opacity="0.6"/>
+<circle cx="0" cy="0" r="260" stroke="#c4a043" stroke-width="1.5" fill="none" opacity="0.3"/>
+<circle cx="0" cy="0" r="220" stroke="#c4a043" stroke-width="1" fill="none" opacity="0.2"/>
+<circle cx="0" cy="0" r="80" stroke="#c4a043" stroke-width="2" fill="none" opacity="0.5"/>
+<circle cx="0" cy="0" r="40" fill="#c4a043" opacity="0.15"/>
+<!-- Teeth -->
+<g stroke="#c4a043" stroke-width="2.5" fill="none">
+<path d="M 0,-300 L 0,-340"/><path d="M 0,300 L 0,340"/><path d="M -300,0 L -340,0"/><path d="M 300,0 L 340,0"/>
+<path d="M 212,-212 L 240,-240"/><path d="M -212,-212 L -240,-240"/><path d="M 212,212 L 240,240"/><path d="M -212,212 L -240,240"/>
+<path d="M 106,-280 L 120,-315"/><path d="M -106,-280 L -120,-315"/><path d="M 106,280 L 120,315"/><path d="M -106,280 L -120,315"/><path d="M 280,-106 L 315,-120"/><path d="M -280,-106 L -315,-120"/><path d="M 280,106 L 315,120"/><path d="M -280,106 L -315,120"/>
+</g>
+<!-- Spokes -->
+<g stroke="#c4a043" stroke-width="1.5" fill="none" opacity="0.3"><line x1="0" y1="-80" x2="0" y2="-220"/><line x1="0" y1="80" x2="0" y2="220"/><line x1="-80" y1="0" x2="-220" y2="0"/><line x1="80" y1="0" x2="220" y2="0"/><line x1="-56" y1="-56" x2="-155" y2="-155"/><line x1="56" y1="-56" x2="155" y2="-155"/><line x1="-56" y1="56" x2="-155" y2="155"/><line x1="56" y1="56" x2="155" y2="155"/>
+</g>
+<!-- Center nut -->
+<circle cx="0" cy="0" r="15" fill="#c4a043" opacity="0.8"/><circle cx="0" cy="0" r="8" fill="#1a1510"/>
+</g>
+<!-- SECOND GEAR — right, overlapping, smaller -->
+<g transform="translate(950, 650)">
+<circle cx="0" cy="0" r="180" stroke="#c4a043" stroke-width="2.5" fill="none" opacity="0.45"/>
+<circle cx="0" cy="0" r="150" stroke="#c4a043" stroke-width="1" fill="none" opacity="0.2"/>
+<circle cx="0" cy="0" r="50" stroke="#c4a043" stroke-width="1.5" fill="none" opacity="0.4"/>
+<g stroke="#c4a043" stroke-width="2" fill="none"><path d="M 0,-180 L 0,-210"/><path d="M 0,180 L 0,210"/><path d="M -180,0 L -210,0"/><path d="M 180,0 L 210,0"/><path d="M 127,-127 L 148,-148"/><path d="M -127,-127 L -148,-148"/><path d="M 127,127 L 148,148"/><path d="M -127,127 L -148,148"/><path d="M 63,-165 L 74,-193"/><path d="M -63,-165 L -74,-193"/><path d="M 63,165 L 74,193"/><path d="M -63,165 L -74,193"/><path d="M 165,-63 L 193,-74"/><path d="M -165,-63 L -193,-74"/><path d="M 165,63 L 193,74"/><path d="M -165,63 L -193,74"/>
+</g>
+<circle cx="0" cy="0" r="10" fill="#c4a043" opacity="0.7"/>
+</g>
+<!-- SMALL GEAR — top right -->
+<g transform="translate(1100, 300)">
+<circle cx="0" cy="0" r="100" stroke="#c4a043" stroke-width="2" fill="none" opacity="0.35"/><circle cx="0" cy="0" r="80" stroke="#c4a043" stroke-width="0.8" fill="none" opacity="0.2"/>
+<circle cx="0" cy="0" r="30" stroke="#c4a043" stroke-width="1.2" fill="none" opacity="0.3"/>
+<g stroke="#c4a043" stroke-width="1.5" fill="none"><path d="M 0,-100 L 0,-120"/><path d="M 0,100 L 0,120"/><path d="M -100,0 L -120,0"/><path d="M 100,0 L 120,0"/><path d="M 71,-71 L 85,-85"/><path d="M -71,-71 L -85,-85"/><path d="M 71,71 L 85,85"/><path d="M -71,71 L -85,85"/>
+</g>
+<circle cx="0" cy="0" r="7" fill="#c4a043" opacity="0.6"/>
+</g>
+<!-- Chain links between gears -->
+<g stroke="#c4a043" stroke-width="1" fill="none" opacity="0.25"><path d="M 700,700 Q 750,750 800,700"/><path d="M 800,700 Q 850,650 900,600"/><path d="M 1050,500 Q 1100,450 1150,400"/>
+</g>
+<!-- Clock hands — center of big gear -->
+<g transform="translate(400, 700)" stroke="#c4a043" fill="none"><line x1="0" y1="0" x2="0" y2="-140" stroke-width="3" opacity="0.7"/><line x1="0" y1="0" x2="100" y2="60" stroke-width="2" opacity="0.5"/><circle cx="0" cy="0" r="6" fill="#c4a043" opacity="0.8"/>
+</g>
+<!-- Roman numerals faded around big gear -->
+<g fill="#c4a043" font-family="Georgia, serif" opacity="0.15"><text x="390" y="340" font-size="20">XII</text><text x="700" y="710" font-size="20">III</text><text x="390" y="1080" font-size="20">VI</text><text x="80" y="710" font-size="20">IX</text>
+</g>
+<!-- Mist / dust -->
+<ellipse cx="700" cy="700" rx="400" ry="200" fill="#604030" opacity="0.05" filter="url(#hb)"/>
+</svg></body></html>

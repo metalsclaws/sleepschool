@@ -1,0 +1,119 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>SleepSchool E15 - The Science of Dreams</title><style>*{margin:0;padding:0}body{background:#03040d;display:flex;justify-content:center;align-items:center;min-height:100vh}</style></head><body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+<defs>
+<filter id="hb"><feGaussianBlur stdDeviation="40"/></filter>
+<filter id="mb"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="gl"><feGaussianBlur stdDeviation="5"/></filter>
+<filter id="sg"><feGaussianBlur stdDeviation="3"/></filter>
+<radialGradient id="nebula1" cx="30%" cy="40%" r="50%"><stop offset="0%" stop-color="#6a3a8a" stop-opacity="0.3"/><stop offset="100%" stop-color="#03040d" stop-opacity="0"/></radialGradient>
+<radialGradient id="nebula2" cx="70%" cy="60%" r="45%"><stop offset="0%" stop-color="#c46a8a" stop-opacity="0.2"/><stop offset="100%" stop-color="#03040d" stop-opacity="0"/></radialGradient>
+<radialGradient id="nebula3" cx="50%" cy="30%" r="40%"><stop offset="0%" stop-color="#4a6aaa" stop-opacity="0.2"/><stop offset="100%" stop-color="#03040d" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1000" height="1000" fill="#03040d"/>
+<!-- Nebula colors -->
+<rect width="1000" height="1000" fill="url(#nebula1)"/>
+<rect width="1000" height="1000" fill="url(#nebula2)"/>
+<rect width="1000" height="1000" fill="url(#nebula3)"/>
+<!-- Soft purple glow -->
+<ellipse cx="500" cy="500" rx="300" ry="200" fill="#6a3a8a" opacity="0.06" filter="url(#hb)"/>
+<ellipse cx="400" cy="400" rx="200" ry="150" fill="#c46a8a" opacity="0.04" filter="url(#hb)"/>
+<!-- Stars -->
+<g fill="#fff" opacity="0.6">
+<circle cx="50" cy="30" r="1.2"/><circle cx="150" cy="80" r="1"/><circle cx="280" cy="20" r="1.5"/><circle cx="420" cy="60" r="1.1"/>
+<circle cx="580" cy="40" r="1.3"/><circle cx="700" cy="70" r="1"/><circle cx="830" cy="30" r="1.4"/><circle cx="950" cy="60" r="1.1"/>
+<circle cx="70" cy="150" r="0.8"/><circle cx="200" cy="180" r="1.2"/><circle cx="340" cy="160" r="0.9"/>
+<circle cx="500" cy="140" r="1.1"/><circle cx="650" cy="170" r="1"/><circle cx="800" cy="150" r="1.3"/>
+<circle cx="100" cy="300" r="1"/><circle cx="300" cy="280" r="0.8"/><circle cx="700" cy="290" r="1.1"/>
+<circle cx="900" cy="310" r="0.9"/><circle cx="50" cy="450" r="1.2"/><circle cx="950" cy="460" r="1"/>
+<circle cx="80" cy="600" r="0.8"/><circle cx="200" cy="650" r="1.1"/><circle cx="350" cy="700" r="0.9"/>
+<circle cx="650" cy="680" r="1"/><circle cx="800" cy="720" r="1.2"/><circle cx="920" cy="650" r="0.7"/>
+<circle cx="120" cy="800" r="1"/><circle cx="300" cy="850" r="0.8"/><circle cx="550" cy="900" r="1.1"/>
+<circle cx="750" cy="870" r="0.9"/><circle cx="900" cy="830" r="1.3"/>
+</g>
+<!-- THE FLOATING EYE - centered, large, half-closed -->
+<g>
+<!-- Eye outer shape -->
+<ellipse cx="500" cy="480" rx="180" ry="120" fill="#0a0e1e" stroke="#c4a043" stroke-width="1" opacity="0.9"/>
+<!-- Upper eyelid (half-closed, covering top half) -->
+<path d="M320,480 Q350,380 500,360 Q650,380 680,480 Q600,420 500,420 Q400,420 320,480Z" fill="#050810"/>
+<!-- Iris -->
+<ellipse cx="500" cy="470" rx="80" ry="65" fill="#c4a043" opacity="0.6"/>
+<ellipse cx="500" cy="470" rx="70" ry="55" fill="#d4b053" opacity="0.5"/>
+<!-- Iris detail -->
+<ellipse cx="500" cy="470" rx="60" ry="48" fill="#8a6a20" opacity="0.4"/>
+<ellipse cx="500" cy="470" rx="45" ry="36" fill="#c4a043" opacity="0.5"/>
+<!-- Pupil -->
+<ellipse cx="500" cy="468" rx="25" ry="30" fill="#03040d"/>
+<!-- Light reflection -->
+<ellipse cx="485" cy="455" rx="8" ry="6" fill="#fff" opacity="0.3"/>
+<circle cx="515" cy="480" r="3" fill="#fff" opacity="0.2"/>
+<!-- Eyelid shadow line -->
+<path d="M340,470 Q420,430 500,425 Q580,430 660,470" stroke="#c4a043" stroke-width="1.5" fill="none" opacity="0.4"/>
+<!-- Lower lid line -->
+<path d="M320,480 Q420,540 500,545 Q580,540 680,480" stroke="#c4a043" stroke-width="0.8" fill="none" opacity="0.3"/>
+<!-- Eyelashes (upper) -->
+<g stroke="#c4a043" stroke-width="1.5" fill="none" opacity="0.35">
+<path d="M340,465 Q330,445 325,430"/><path d="M370,445 Q358,425 350,410"/>
+<path d="M410,430 Q400,408 395,395"/><path d="M450,420 Q442,398 440,382"/>
+<path d="M490,415 Q488,392 488,375"/><path d="M520,415 Q522,392 525,375"/>
+<path d="M555,420 Q560,398 565,382"/><path d="M595,430 Q602,408 610,395"/>
+<path d="M635,445 Q645,425 655,410"/><path d="M665,465 Q675,445 680,430"/>
+</g>
+</g>
+<!-- Eye glow -->
+<ellipse cx="500" cy="480" rx="200" ry="140" fill="#c4a043" opacity="0.04" filter="url(#hb)"/>
+<!-- DREAM BUBBLES floating around the eye -->
+<!-- Bubble 1 - top left -->
+<circle cx="250" cy="300" r="40" fill="none" stroke="#6a3a8a" stroke-width="1" opacity="0.4"/>
+<circle cx="250" cy="300" r="38" fill="#6a3a8a" opacity="0.05"/>
+<path d="M230,285 Q240,290 250,285 Q260,280 270,285" stroke="#c46a8a" stroke-width="0.8" fill="none" opacity="0.3"/>
+<!-- Bubble 2 - top right -->
+<circle cx="720" cy="280" r="35" fill="none" stroke="#4a6aaa" stroke-width="1" opacity="0.4"/>
+<circle cx="720" cy="280" r="33" fill="#4a6aaa" opacity="0.05"/>
+<path d="M705,268 Q715,263 720,268 Q725,273 735,268" stroke="#6a3a8a" stroke-width="0.8" fill="none" opacity="0.3"/>
+<!-- Bubble 3 - left -->
+<circle cx="180" cy="520" r="30" fill="none" stroke="#c46a8a" stroke-width="1" opacity="0.35"/>
+<circle cx="180" cy="520" r="28" fill="#c46a8a" opacity="0.04"/>
+<!-- Bubble 4 - right -->
+<circle cx="800" cy="500" r="45" fill="none" stroke="#6a3a8a" stroke-width="1" opacity="0.35"/>
+<circle cx="800" cy="500" r="43" fill="#6a3a8a" opacity="0.05"/>
+<!-- Bubble 5 - bottom left -->
+<circle cx="300" cy="680" r="25" fill="none" stroke="#4a6aaa" stroke-width="1" opacity="0.3"/>
+<!-- Bubble 6 - bottom right -->
+<circle cx="700" cy="700" r="35" fill="none" stroke="#c46a8a" stroke-width="1" opacity="0.35"/>
+<circle cx="700" cy="700" r="33" fill="#c46a8a" opacity="0.04"/>
+<!-- Bubble 7 - small -->
+<circle cx="350" cy="200" r="15" fill="none" stroke="#c4a043" stroke-width="0.8" opacity="0.3"/>
+<!-- Bubble 8 - small -->
+<circle cx="650" cy="180" r="20" fill="none" stroke="#c4a043" stroke-width="0.8" opacity="0.3"/>
+<!-- Bubble 9 -->
+<circle cx="150" cy="400" r="18" fill="none" stroke="#6a3a8a" stroke-width="0.8" opacity="0.25"/>
+<!-- Bubble 10 -->
+<circle cx="850" cy="380" r="22" fill="none" stroke="#4a6aaa" stroke-width="0.8" opacity="0.25"/>
+<!-- Dream fragments inside bubbles -->
+<!-- Tiny moon in bubble 2 -->
+<circle cx="720" cy="275" r="8" fill="#f5ecd0" opacity="0.15"/>
+<!-- Tiny star in bubble 4 -->
+<path d="M800,494 L802,500 L808,502 L802,504 L800,510 L798,504 L792,502 L798,500Z" fill="#fff" opacity="0.15"/>
+<!-- Spiral in bubble 6 -->
+<path d="M700,695 Q705,690 710,695 Q715,700 710,705" stroke="#fff" stroke-width="0.5" fill="none" opacity="0.15"/>
+<!-- Connecting threads between bubbles (neural/dream connections) -->
+<g stroke="#6a3a8a" stroke-width="0.5" fill="none" opacity="0.15">
+<path d="M290,300 Q350,350 320,420"/><path d="M755,280 Q700,330 680,430"/>
+<path d="M210,520 Q280,560 300,620"/><path d="M755,500 Q730,600 700,665"/>
+<path d="M290,300 Q400,250 500,360"/><path d="M720,280 Q620,300 500,360"/>
+<path d="M265,300 Q200,350 180,400"/><path d="M780,500 Q830,450 850,380"/>
+</g>
+<!-- Floating symbols/scattered dream elements -->
+<g fill="#c4a043" opacity="0.2">
+<path d="M130,650 L133,643 L136,650 L129,645 L137,645Z" /><!-- star -->
+<path d="M870,200 L872,195 L874,200 L869,197 L875,197Z"/>
+<circle cx="420" cy="150" r="3"/><circle cx="580" cy="130" r="2.5"/>
+<circle cx="100" cy="700" r="2"/><circle cx="900" cy="750" r="2.5"/>
+</g>
+<!-- Nebula overlays -->
+<ellipse cx="200" cy="600" rx="150" ry="100" fill="#6a3a8a" opacity="0.03" filter="url(#mb)"/>
+<ellipse cx="800" cy="350" rx="120" ry="80" fill="#4a6aaa" opacity="0.03" filter="url(#mb)"/>
+<ellipse cx="500" cy="750" rx="180" ry="80" fill="#c46a8a" opacity="0.03" filter="url(#mb)"/>
+</svg>
+</body></html>

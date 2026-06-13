@@ -1,0 +1,73 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box;}</style></head><body>
+<svg viewBox="0 0 1400 1400" width="1400" height="1400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="bg" cx="50%" cy="70%" r="70%"><stop offset="0%" stop-color="#0a1020"/><stop offset="50%" stop-color="#060812"/><stop offset="100%" stop-color="#020408"/></radialGradient>
+<radialGradient id="sunG" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#c4a043" stop-opacity="0.4"/><stop offset="30%" stop-color="#c4a043" stop-opacity="0.15"/><stop offset="70%" stop-color="#c4a043" stop-opacity="0.03"/><stop offset="100%" stop-color="#c4a043" stop-opacity="0"/></radialGradient>
+<filter id="hb" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="45"/></filter>
+<filter id="mb" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="sg" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1400" height="1400" fill="url(#bg)"/>
+
+<!-- Stars — sparse -->
+<g fill="#fff" opacity="0.3">
+<circle cx="200" cy="80" r="0.8"/><circle cx="450" cy="120" r="1"/><circle cx="700" cy="60" r="1.2"/><circle cx="950" cy="100" r="0.9"/><circle cx="1200" cy="80" r="0.7"/><circle cx="100" cy="300" r="0.6"/><circle cx="350" cy="280" r="0.9"/><circle cx="600" cy="320" r="0.7"/><circle cx="850" cy="290" r="1"/><circle cx="1100" cy="310" r="0.8"/><circle cx="1300" cy="280" r="0.6"/>
+</g>
+
+<!-- GOLDEN RECORD — large disc -->
+<!-- Outer glow -->
+<circle cx="700" cy="650" r="300" fill="url(#sunG)"/>
+
+<!-- Record disc -->
+<circle cx="700" cy="650" r="220" fill="#c4a043" opacity="0.08" filter="url(#hb)"/>
+<circle cx="700" cy="650" r="220" fill="none" stroke="#c4a043" stroke-width="1.5" opacity="0.6"/>
+<!-- Grooves (concentric rings) -->
+<g fill="none" stroke="#c4a043" stroke-width="0.4" opacity="0.25">
+<circle cx="700" cy="650" r="50"/><circle cx="700" cy="650" r="70"/><circle cx="700" cy="650" r="90"/><circle cx="700" cy="650" r="110"/>
+<circle cx="700" cy="650" r="130"/><circle cx="700" cy="650" r="150"/><circle cx="700" cy="650" r="170"/><circle cx="700" cy="650" r="190"/>
+<circle cx="700" cy="650" r="210"/>
+</g>
+<!-- Brighter groove highlights -->
+<g fill="none" stroke="#e8d080" stroke-width="0.6" opacity="0.15">
+<circle cx="700" cy="650" r="60"/><circle cx="700" cy="650" r="80"/><circle cx="700" cy="650" r="100"/><circle cx="700" cy="650" r="120"/>
+<circle cx="700" cy="650" r="140"/><circle cx="700" cy="650" r="160"/><circle cx="700" cy="650" r="180"/><circle cx="700" cy="650" r="200"/>
+</g>
+<!-- Center label area -->
+<circle cx="700" cy="650" r="30" fill="#0a1020" stroke="#c4a043" stroke-width="1" opacity="0.8"/>
+<circle cx="700" cy="650" r="3" fill="#c4a043" opacity="0.5"/>
+
+<!-- Record sheen (diagonal light reflection) -->
+<path d="M 500,500 Q 700,450 900,500" stroke="#e8d080" stroke-width="2" fill="none" opacity="0.2" filter="url(#gl)"/>
+<path d="M 480,520 Q 700,470 920,520" stroke="#f5ecc0" stroke-width="0.8" fill="none" opacity="0.15"/>
+
+<!-- Voyager probe silhouette (tiny, below disc) -->
+<g transform="translate(700, 950) scale(0.5)" opacity="0.4">
+<!-- Body -->
+<rect x="-15" y="-30" width="30" height="60" fill="#c4a043" opacity="0.5" rx="3"/>
+<!-- Antenna dish -->
+<path d="M 0,-30 L -25,-55 L 25,-55 Z" fill="none" stroke="#c4a043" stroke-width="1.5" opacity="0.6"/>
+<!-- Boom arms -->
+<line x1="-15" y1="0" x2="-50" y2="0" stroke="#c4a043" stroke-width="1" opacity="0.4"/>
+<line x1="15" y1="0" x2="50" y2="0" stroke="#c4a043" stroke-width="1" opacity="0.4"/>
+<!-- Magnetometer boom -->
+<line x1="0" y1="30" x2="0" y2="70" stroke="#c4a043" stroke-width="0.8" opacity="0.3"/>
+<circle cx="0" cy="70" r="2" fill="#c4a043" opacity="0.4"/>
+<!-- RTG boom -->
+<line x1="0" y1="-10" x2="40" y2="-50" stroke="#c4a043" stroke-width="0.8" opacity="0.3"/>
+<rect x="35" y="-58" width="10" height="16" fill="#c4a043" opacity="0.3" rx="2"/>
+</g>
+
+<!-- Signal waves emanating from disc -->
+<g fill="none" stroke="#c4a043" stroke-width="0.6" opacity="0.15">
+<circle cx="700" cy="650" r="250"><animate attributeName="r" values="220;320;220" dur="4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.15;0;0.15" dur="4s" repeatCount="indefinite"/></circle>
+<circle cx="700" cy="650" r="280"><animate attributeName="r" values="250;380;250" dur="6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0;0.1" dur="6s" repeatCount="indefinite"/></circle>
+<circle cx="700" cy="650" r="310"><animate attributeName="r" values="280;420;280" dur="8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.07;0;0.07" dur="8s" repeatCount="indefinite"/></circle>
+</g>
+
+<!-- Bottom fade -->
+<g stroke="#c4a043" stroke-width="0.4" fill="none" opacity="0.08">
+<path d="M 0,1100 Q 200,1095 400,1100 Q 600,1105 800,1098 Q 1000,1092 1200,1100 Q 1350,1105 1400,1100"/>
+</g>
+<rect x="0" y="1100" width="1400" height="300" fill="#020408" opacity="0.4"/>
+</svg></body></html>

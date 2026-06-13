@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><style>body{margin:0;padding:0;background:#060a0e;display:flex;align-items:center;justify-content:center;height:100vh;}</style></head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1400" width="1400" height="1400">
+  <defs>
+    <linearGradient id="bg19" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2a34"/>
+      <stop offset="15%" stop-color="#0e1a22"/>
+      <stop offset="20%" stop-color="#04080e"/>
+      <stop offset="100%" stop-color="#060a0e"/>
+    </linearGradient>
+    <filter id="iceglow">
+      <feGaussianBlur stdDeviation="1.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="bioglow">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="biosoft">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="1400" fill="url(#bg19)"/>
+
+  <!-- Ice sheet — thick horizontal band at the top -->
+  <g filter="url(#iceglow)">
+    <!-- Main ice band -->
+    <rect x="0" y="0" width="1400" height="280" fill="#1a2a34" opacity="0.3"/>
+    
+    <!-- Layered lines — ice strata -->
+    <line x1="0" y1="20" x2="1400" y2="20" stroke="#8ab4c4" stroke-width="1.5" opacity="0.35"/>
+    <line x1="0" y1="60" x2="1400" y2="60" stroke="#8ab4c4" stroke-width="1" opacity="0.25"/>
+    <line x1="0" y1="100" x2="1400" y2="100" stroke="#5a8a9a" stroke-width="1.5" opacity="0.3"/>
+    <line x1="0" y1="140" x2="1400" y2="140" stroke="#8ab4c4" stroke-width="0.8" opacity="0.2"/>
+    <line x1="0" y1="180" x2="1400" y2="180" stroke="#4a7a8a" stroke-width="2" opacity="0.25"/>
+    <line x1="0" y1="220" x2="1400" y2="220" stroke="#8ab4c4" stroke-width="0.6" opacity="0.15"/>
+    <line x1="0" y1="260" x2="1400" y2="260" stroke="#5a8a9a" stroke-width="1.2" opacity="0.2"/>
+    
+    <!-- Dark bands between ice layers -->
+    <line x1="0" y1="40" x2="1400" y2="40" stroke="#0a1a22" stroke-width="3" opacity="0.4"/>
+    <line x1="0" y1="120" x2="1400" y2="120" stroke="#0a1a22" stroke-width="2" opacity="0.3"/>
+    <line x1="0" y1="200" x2="1400" y2="200" stroke="#0a1a22" stroke-width="4" opacity="0.35"/>
+    <line x1="0" y1="240" x2="1400" y2="240" stroke="#0a1a22" stroke-width="1.5" opacity="0.25"/>
+
+    <!-- Bottom edge of ice — the underside, rough -->
+    <path d="M 0,270 Q 50,280 100,275 Q 200,265 300,275 Q 400,285 500,278 Q 600,270 700,275 Q 800,282 900,275 Q 1000,268 1100,275 Q 1200,282 1300,275 Q 1350,270 1400,278 L 1400,300 L 0,300 Z"
+          fill="#060a0e" stroke="#4a7a8a" stroke-width="0.8" opacity="0.3"/>
+  </g>
+
+  <!-- Below the ice: absolute darkness -->
+
+  <!-- A single tiny bioluminescent organism -->
+  <circle cx="700" cy="1100" r="30" fill="#40d8a0" opacity="0.04" filter="url(#bioglow)">
+    <animate attributeName="opacity" values="0.04;0.08;0.04" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="700" cy="1100" r="12" fill="#40d8a0" opacity="0.1" filter="url(#bioglow)">
+    <animate attributeName="opacity" values="0.1;0.2;0.1" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="700" cy="1100" r="4" fill="#40d8a0" opacity="0.5" filter="url(#biosoft)">
+    <animate attributeName="opacity" values="0.5;0.8;0.5" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="700" cy="1100" r="1.5" fill="#80ffc0" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- The vast emptiness between ice and life -->
+  <!-- Nothing else. The scale IS the design. -->
+</svg>
+</body>
+</html>

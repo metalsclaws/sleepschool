@@ -1,0 +1,82 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box;}</style></head><body>
+<svg viewBox="0 0 1400 1400" width="1400" height="1400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a1035"/><stop offset="35%" stop-color="#3a2030"/><stop offset="70%" stop-color="#6a4020"/><stop offset="100%" stop-color="#8a5030"/></linearGradient>
+<linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#c08060" stop-opacity="0.7"/><stop offset="40%" stop-color="#8a5030" stop-opacity="0.5"/><stop offset="100%" stop-color="#4a3020" stop-opacity="0.3"/></linearGradient>
+<radialGradient id="starGlow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ffe8b0" stop-opacity="1"/><stop offset="30%" stop-color="#c4a043" stop-opacity="0.6"/><stop offset="70%" stop-color="#c4a043" stop-opacity="0.2"/><stop offset="100%" stop-color="#c4a043" stop-opacity="0"/></radialGradient>
+<filter id="hb" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="40"/></filter>
+<filter id="mb" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="sg" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<!-- Sky — big dramatic gradient -->
+<rect width="1400" height="900" fill="url(#sky)"/>
+<!-- Stars — big bold ones in desert sky -->
+<g fill="#fff">
+<circle cx="120" cy="80" r="1.5"/><circle cx="280" cy="50" r="1.2"/><circle cx="450" cy="90" r="1.8"/><circle cx="650" cy="40" r="1.3"/><circle cx="850" cy="75" r="2"/><circle cx="1050" cy="55" r="1.4"/><circle cx="1250" cy="85" r="1.7"/><circle cx="80" cy="180" r="1.1"/><circle cx="230" cy="150" r="1.5"/><circle cx="420" cy="200" r="1"/><circle cx="580" cy="170" r="1.3"/><circle cx="780" cy="190" r="1.6"/><circle cx="980" cy="160" r="1.2"/><circle cx="1180" cy="210" r="1.4"/><circle cx="1320" cy="180" r="1.1"/><circle cx="160" cy="300" r="1.3"/><circle cx="380" cy="270" r="1.6"/><circle cx="620" cy="310" r="1.1"/><circle cx="880" cy="280" r="1.5"/><circle cx="1100" cy="320" r="1.2"/><circle cx="1300" cy="290" r="1.4"/>
+</g>
+<g fill="#ffe8b0" opacity="0.8">
+<circle cx="180" cy="70" r="2.5" filter="url(#sg)"/><circle cx="500" cy="60" r="3" filter="url(#sg)"/><circle cx="900" cy="55" r="2.8" filter="url(#sg)"/><circle cx="1200" cy="70" r="2.2" filter="url(#sg)"/>
+</g>
+<!-- Milky Way band -->
+<ellipse cx="700" cy="100" rx="600" ry="80" fill="#fff" opacity="0.06" filter="url(#hb)" transform="rotate(-5,700,100)"/>
+<!-- BIG PYRAMID — dominates left -->
+<g>
+<path d="M 180,850 L 450,250 L 720,850" fill="#141018"/>
+<path d="M 180,850 L 450,250 L 720,850" stroke="#c4a043" stroke-width="1" fill="none" opacity="0.4"/>
+<!-- Edges catch starlight -->
+<path d="M 450,250 L 720,850" stroke="#e8d080" stroke-width="0.6" fill="none" opacity="0.5"/>
+<path d="M 180,850 L 450,250" stroke="#e8d080" stroke-width="0.4" fill="none" opacity="0.3"/>
+<!-- Horizontal layers / courses -->
+<g stroke="#c4a043" stroke-width="0.3" fill="none" opacity="0.15">
+<path d="M 270,600 L 630,600"/><path d="M 330,500 L 570,500"/><path d="M 380,420 L 520,420"/><path d="M 410,360 L 490,360"/>
+</g>
+</g>
+<!-- SMALL PYRAMID — right of big -->
+<g>
+<path d="M 780,850 L 950,400 L 1120,850" fill="#141018"/>
+<path d="M 780,850 L 950,400 L 1120,850" stroke="#c4a043" stroke-width="0.8" fill="none" opacity="0.35"/>
+<path d="M 950,400 L 1120,850" stroke="#e8d080" stroke-width="0.5" fill="none" opacity="0.4"/>
+</g>
+<!-- Tiny third pyramid -->
+<g>
+<path d="M 1150,850 L 1260,550 L 1370,850" fill="#141018"/><path d="M 1150,850 L 1260,550 L 1370,850" stroke="#c4a043" stroke-width="0.6" fill="none" opacity="0.25"/>
+</g>
+<!-- Sphinx silhouette — small, left foreground -->
+<g fill="#141018">
+<path d="M 60,850 L 60,780 Q 60,760 80,760 L 100,760 Q 120,760 120,780 L 120,850 Z"/><path d="M 70,770 Q 70,740 85,740 Q 100,740 100,770"/></g>
+<!-- WATER — Nile reflection, big and bold -->
+<rect x="0" y="850" width="1400" height="550" fill="url(#water)"/>
+<!-- Reflection of pyramids in water -->
+<g opacity="0.3">
+<path d="M 180,850 L 450,1100 L 720,850" fill="#c4a043"/><path d="M 780,850 L 950,1050 L 1120,850" fill="#c4a043"/>
+</g>
+<!-- Water ripples — horizontal gold lines -->
+<g stroke="#c4a043" stroke-width="0.4" fill="none" opacity="0.25">
+<path d="M 100,880 Q 250,875 400,880"/><path d="M 500,890 Q 650,885 800,890"/><path d="M 900,885 Q 1050,880 1200,885"/><path d="M 200,920 Q 350,915 500,920"/><path d="M 700,930 Q 850,925 1000,930"/><path d="M 50,960 Q 200,955 350,960"/><path d="M 600,950 Q 750,945 900,950"/><path d="M 1100,940 Q 1250,935 1400,940"/>
+</g>
+<!-- Palm tree silhouettes — right foreground, big -->
+<g fill="#0a080e">
+<path d="M 1250,850 Q 1240,750 1230,650" stroke="#0a080e" stroke-width="6" fill="none"/>
+<ellipse cx="1230" cy="650" rx="60" ry="25" transform="rotate(-10,1230,650)"/>
+<ellipse cx="1210" cy="670" rx="50" ry="20" transform="rotate(-25,1210,670)"/>
+<ellipse cx="1250" cy="660" rx="55" ry="22" transform="rotate(10,1250,660)"/>
+<ellipse cx="1220" cy="640" rx="45" ry="18" transform="rotate(-40,1220,640)"/>
+<ellipse cx="1240" cy="635" rx="50" ry="20" transform="rotate(25,1240,635)"/>
+</g>
+<!-- Distant sand dunes — subtle silhouette -->
+<path d="M 0,850 Q 100,830 200,845 Q 300,860 400,840" stroke="#1a1018" stroke-width="1" fill="none" opacity="0.4"/>
+<!-- Orion constellation — recognizable, big -->
+<g stroke="#c4a043" stroke-width="0.5" fill="none" opacity="0.4">
+<path d="M 900,120 L 920,150"/><path d="M 920,150 L 940,140"/><path d="M 940,140 L 960,170"/><path d="M 960,170 L 980,160"/><path d="M 920,150 L 950,180"/><path d="M 950,180 L 980,160"/><path d="M 950,180 L 960,210"/><path d="M 960,210 L 990,220"/>
+</g>
+<g fill="#fff" opacity="0.7">
+<circle cx="900" cy="120" r="1.5"/><circle cx="920" cy="150" r="1.2"/><circle cx="940" cy="140" r="1.8"/><circle cx="960" cy="170" r="1.3"/><circle cx="980" cy="160" r="2"/><circle cx="950" cy="180" r="1.5"/><circle cx="960" cy="210" r="1.8"/><circle cx="990" cy="220" r="1.2"/>
+</g>
+<!-- Shooting star -->
+<g stroke="#ffe8b0" stroke-width="1.5" fill="none" opacity="0.6" filter="url(#sg)">
+<path d="M 1100,150 L 1150,180"/><path d="M 1095,148 L 1100,150"/>
+</g>
+<!-- Horizon line -->
+<path d="M 0,850 L 1400,850" stroke="#c4a043" stroke-width="0.5" fill="none" opacity="0.3"/>
+</svg></body></html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><style>body{margin:0;padding:0;background:#080a06;display:flex;align-items:center;justify-content:center;height:100vh;}</style></head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1400" width="1400" height="1400">
+  <defs>
+    <radialGradient id="bg16" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0e120a"/>
+      <stop offset="100%" stop-color="#080a06"/>
+    </radialGradient>
+    <filter id="leafglow">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="rippleglow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="1400" fill="url(#bg16)"/>
+
+  <!-- Water surface — thin horizontal line -->
+  <line x1="200" y1="700" x2="1200" y2="700" stroke="#7a9a6a" stroke-width="0.8" opacity="0.15"/>
+
+  <!-- The tea leaf — camellia sinensis, simple and botanical -->
+  <g filter="url(#leafglow)" transform="translate(700, 580) rotate(-15)">
+    <!-- Main leaf shape -->
+    <path d="M 0,-80 Q 20,-60 25,-30 Q 28,0 20,30 Q 15,50 0,70 Q -15,50 -20,30 Q -28,0 -25,-30 Q -20,-60 0,-80 Z"
+          fill="none" stroke="#7a9a6a" stroke-width="1.5" opacity="0.7"/>
+    <!-- Leaf fill — very subtle -->
+    <path d="M 0,-80 Q 20,-60 25,-30 Q 28,0 20,30 Q 15,50 0,70 Q -15,50 -20,30 Q -28,0 -25,-30 Q -20,-60 0,-80 Z"
+          fill="#7a9a6a" opacity="0.04"/>
+    <!-- Central vein -->
+    <line x1="0" y1="-75" x2="0" y2="65" stroke="#7a9a6a" stroke-width="0.8" opacity="0.5"/>
+    <!-- Side veins -->
+    <path d="M 0,-50 Q 10,-42 16,-35" fill="none" stroke="#7a9a6a" stroke-width="0.4" opacity="0.3"/>
+    <path d="M 0,-50 Q -10,-42 -16,-35" fill="none" stroke="#7a9a6a" stroke-width="0.4" opacity="0.3"/>
+    <path d="M 0,-25 Q 12,-18 18,-10" fill="none" stroke="#7a9a6a" stroke-width="0.4" opacity="0.3"/>
+    <path d="M 0,-25 Q -12,-18 -18,-10" fill="none" stroke="#7a9a6a" stroke-width="0.4" opacity="0.3"/>
+    <path d="M 0,0 Q 13,8 18,18" fill="none" stroke="#7a9a6a" stroke-width="0.4" opacity="0.3"/>
+    <path d="M 0,0 Q -13,8 -18,18" fill="none" stroke="#7a9a6a" stroke-width="0.4" opacity="0.3"/>
+    <path d="M 0,25 Q 10,32 14,42" fill="none" stroke="#7a9a6a" stroke-width="0.4" opacity="0.25"/>
+    <path d="M 0,25 Q -10,32 -14,42" fill="none" stroke="#7a9a6a" stroke-width="0.4" opacity="0.25"/>
+    <!-- Stem -->
+    <path d="M 0,70 Q 2,80 5,95" fill="none" stroke="#7a9a6a" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- Ripples expanding outward — concentric ellipses -->
+  <g filter="url(#rippleglow)">
+    <ellipse cx="700" cy="700" rx="60" ry="12" fill="none" stroke="#7a9a6a" stroke-width="0.8" opacity="0.2">
+      <animate attributeName="rx" values="60;90;60" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="12;18;12" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.08;0.2" dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="700" cy="700" rx="120" ry="24" fill="none" stroke="#7a9a6a" stroke-width="0.5" opacity="0.12">
+      <animate attributeName="rx" values="120;160;120" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="24;32;24" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.12;0.04;0.12" dur="8s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="700" cy="700" rx="200" ry="40" fill="none" stroke="#7a9a6a" stroke-width="0.3" opacity="0.07"/>
+    <ellipse cx="700" cy="700" rx="300" ry="60" fill="none" stroke="#7a9a6a" stroke-width="0.2" opacity="0.04"/>
+  </g>
+
+  <!-- Vast emptiness above and below -->
+  <!-- Nothing else. Just the leaf, the line, the ripples, and the void. -->
+</svg>
+</body>
+</html>

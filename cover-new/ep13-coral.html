@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><style>body{margin:0;padding:0;background:#040a0e;display:flex;align-items:center;justify-content:center;height:100vh;}</style></head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1400" width="1400" height="1400">
+  <defs>
+    <linearGradient id="surface13" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a9aaa" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#1a5a6a" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="bg13" cx="50%" cy="15%" r="80%">
+      <stop offset="0%" stop-color="#0a1a20"/>
+      <stop offset="100%" stop-color="#040a0e"/>
+    </radialGradient>
+    <filter id="coralglow">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="particleglow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="1400" fill="url(#bg13)"/>
+
+  <!-- Surface light band at top — dawn seen from below -->
+  <rect x="0" y="0" width="1400" height="200" fill="url(#surface13)" opacity="0.5"/>
+  <!-- Thin bright line — the surface -->
+  <line x1="0" y1="60" x2="1400" y2="60" stroke="#4a9aaa" stroke-width="1.5" opacity="0.35"/>
+  <line x1="0" y1="62" x2="1400" y2="62" stroke="#4a9aaa" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Diffused surface glow -->
+  <ellipse cx="700" cy="60" rx="500" ry="40" fill="#4a9aaa" opacity="0.06" filter="url(#particleglow)"/>
+
+  <!-- Coral formation — brain coral / antler shape, dark silhouette reaching up -->
+  <g filter="url(#coralglow)">
+    <!-- Main trunk -->
+    <path d="M 680,1200 L 680,850 L 670,750 L 665,680 Q 660,620 670,580 Q 680,550 695,530 L 700,520"
+          fill="none" stroke="#0a2a30" stroke-width="4" opacity="0.9"/>
+    <path d="M 720,1200 L 720,850 L 730,750 L 735,680 Q 740,620 730,580 Q 720,550 705,530 L 700,520"
+          fill="none" stroke="#0a2a30" stroke-width="4" opacity="0.9"/>
+
+    <!-- Left branch -->
+    <path d="M 670,750 L 620,650 Q 580,600 560,550 Q 540,510 550,480"
+          fill="none" stroke="#0a2a30" stroke-width="3" opacity="0.8"/>
+    <!-- Left sub-branch -->
+    <path d="M 620,650 L 580,600 Q 560,570 530,560"
+          fill="none" stroke="#0a2a30" stroke-width="2" opacity="0.7"/>
+
+    <!-- Right branch -->
+    <path d="M 730,750 L 780,650 Q 820,600 840,550 Q 860,510 850,480"
+          fill="none" stroke="#0a2a30" stroke-width="3" opacity="0.8"/>
+    <!-- Right sub-branch -->
+    <path d="M 780,650 L 820,600 Q 840,570 870,560"
+          fill="none" stroke="#0a2a30" stroke-width="2" opacity="0.7"/>
+
+    <!-- Upper left branch -->
+    <path d="M 665,680 L 620,610 Q 590,570 570,530 Q 555,500 560,470"
+          fill="none" stroke="#0a2a30" stroke-width="2.5" opacity="0.75"/>
+
+    <!-- Upper right branch -->
+    <path d="M 735,680 L 780,610 Q 810,570 830,530 Q 845,500 840,470"
+          fill="none" stroke="#0a2a30" stroke-width="2.5" opacity="0.75"/>
+
+    <!-- Crown branches -->
+    <path d="M 695,530 L 660,470 Q 640,440 645,410" fill="none" stroke="#0a2a30" stroke-width="2" opacity="0.65"/>
+    <path d="M 705,530 L 740,470 Q 760,440 755,410" fill="none" stroke="#0a2a30" stroke-width="2" opacity="0.65"/>
+    <path d="M 700,520 L 700,400" fill="none" stroke="#0a2a30" stroke-width="2.5" opacity="0.7"/>
+  </g>
+
+  <!-- Coral edge highlights — very thin bright lines on tips -->
+  <g stroke="#1a6a7a" stroke-width="0.5" opacity="0.4">
+    <path d="M 550,480 L 548,475" fill="none"/>
+    <path d="M 560,470 L 558,465" fill="none"/>
+    <path d="M 850,480 L 852,475" fill="none"/>
+    <path d="M 840,470 L 842,465" fill="none"/>
+    <path d="M 645,410 L 643,405" fill="none"/>
+    <path d="M 755,410 L 757,405" fill="none"/>
+    <path d="M 700,400 L 700,395" fill="none"/>
+    <path d="M 530,560 L 528,557" fill="none"/>
+    <path d="M 870,560 L 872,557" fill="none"/>
+  </g>
+
+  <!-- Floating particles of light -->
+  <g filter="url(#particleglow)">
+    <circle cx="450" cy="400" r="1.5" fill="#4a9aaa" opacity="0.3">
+      <animate attributeName="cy" values="400;380;400" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.5;0.3" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="900" cy="500" r="1" fill="#4a9aaa" opacity="0.2">
+      <animate attributeName="cy" values="500;475;500" dur="10s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.4;0.2" dur="10s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="550" cy="600" r="1.2" fill="#4a9aaa" opacity="0.25">
+      <animate attributeName="cy" values="600;585;600" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="850" cy="350" r="0.8" fill="#4a9aaa" opacity="0.15">
+      <animate attributeName="cy" values="350;335;350" dur="9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="480" r="0.7" fill="#3a8a9a" opacity="0.2">
+      <animate attributeName="cy" values="480;465;480" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="800" cy="700" r="1" fill="#4a9aaa" opacity="0.15">
+      <animate attributeName="cy" values="700;680;700" dur="11s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Faint caustic patterns on the sea floor -->
+  <g stroke="#1a5a6a" stroke-width="0.3" opacity="0.08">
+    <ellipse cx="400" cy="1300" rx="150" ry="20" fill="none"/>
+    <ellipse cx="900" cy="1280" rx="120" ry="15" fill="none"/>
+    <ellipse cx="650" cy="1350" rx="100" ry="12" fill="none"/>
+  </g>
+</svg>
+</body>
+</html>

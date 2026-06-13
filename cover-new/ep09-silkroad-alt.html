@@ -1,0 +1,93 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box;}</style></head><body>
+<svg viewBox="0 0 1400 1400" width="1400" height="1400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="bg" cx="30%" cy="40%" r="80%"><stop offset="0%" stop-color="#1a1018"/><stop offset="40%" stop-color="#0e0a10"/><stop offset="100%" stop-color="#050306"/></radialGradient>
+<radialGradient id="lampG" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ffe8b0" stop-opacity="0.6"/><stop offset="30%" stop-color="#c4a043" stop-opacity="0.25"/><stop offset="70%" stop-color="#c4a043" stop-opacity="0.05"/><stop offset="100%" stop-color="#c4a043" stop-opacity="0"/></radialGradient>
+<filter id="hb" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="45"/></filter>
+<filter id="mb" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="sg" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1400" height="1400" fill="url(#bg)"/>
+
+<!-- Sparse stars -->
+<g fill="#fff" opacity="0.3">
+<circle cx="100" cy="80" r="0.7"/><circle cx="250" cy="120" r="0.9"/><circle cx="400" cy="50" r="0.6"/><circle cx="600" cy="90" r="1"/><circle cx="800" cy="60" r="0.8"/><circle cx="1000" cy="100" r="0.7"/><circle cx="1200" cy="70" r="0.9"/><circle cx="1350" cy="110" r="0.6"/>
+<circle cx="150" cy="200" r="0.8"/><circle cx="350" cy="230" r="0.6"/><circle cx="550" cy="190" r="0.9"/><circle cx="900" cy="210" r="0.7"/><circle cx="1100" cy="230" r="0.8"/>
+</g>
+
+<!-- Lantern glow -->
+<circle cx="420" cy="500" r="250" fill="url(#lampG)"/>
+<circle cx="420" cy="500" r="80" fill="#ffe8b0" opacity="0.15" filter="url(#mb)"/>
+
+<!-- LANTERN — geometric, ornate -->
+<g transform="translate(420, 350)">
+<!-- Top finial -->
+<path d="M 0,0 L -5,15 L 5,15 Z" fill="#c4a043" opacity="0.6"/>
+<!-- Chain -->
+<line x1="0" y1="-30" x2="0" y2="0" stroke="#c4a043" stroke-width="0.8" opacity="0.4"/>
+<!-- Top cap -->
+<rect x="-35" y="15" width="70" height="8" rx="3" fill="#c4a043" opacity="0.5"/>
+
+<!-- Main body — octagonal lantern -->
+<path d="M -50,23 L -60,35 L -60,200 L -50,215 L 50,215 L 60,200 L 60,35 L 50,23 Z" fill="none" stroke="#c4a043" stroke-width="1.5" opacity="0.7"/>
+<!-- Inner glow fill -->
+<path d="M -50,23 L -60,35 L -60,200 L -50,215 L 50,215 L 60,200 L 60,35 L 50,23 Z" fill="#c4a043" opacity="0.04"/>
+
+<!-- Panel divisions -->
+<line x1="-60" y1="80" x2="60" y2="80" stroke="#c4a043" stroke-width="0.5" opacity="0.4"/>
+<line x1="-60" y1="140" x2="60" y2="140" stroke="#c4a043" stroke-width="0.5" opacity="0.4"/>
+
+<!-- Cross bars -->
+<line x1="0" y1="23" x2="0" y2="215" stroke="#c4a043" stroke-width="0.4" opacity="0.3"/>
+<line x1="-60" y1="120" x2="60" y2="120" stroke="#c4a043" stroke-width="0.4" opacity="0.3"/>
+
+<!-- Inner flame -->
+<ellipse cx="0" cy="100" rx="12" ry="25" fill="#ffe8b0" opacity="0.7" filter="url(#gl)"/>
+<ellipse cx="0" cy="100" rx="6" ry="18" fill="#f5ecc0" opacity="0.9"/>
+<ellipse cx="0" cy="95" rx="3" ry="10" fill="#fff" opacity="0.6"/>
+
+<!-- Tassel -->
+<path d="M 0,215 L 0,240" stroke="#c4a043" stroke-width="0.8" opacity="0.4"/>
+<path d="M -8,240 Q 0,260 8,240" stroke="#c4a043" stroke-width="0.6" fill="none" opacity="0.35"/>
+</g>
+
+<!-- Light rays from lantern -->
+<g stroke="#ffe8b0" stroke-width="0.5" fill="none" opacity="0.15" filter="url(#sg)">
+<line x1="420" y1="450" x2="200" y2="300"/><line x1="420" y1="450" x2="280" y2="350"/><line x1="420" y1="450" x2="600" y2="300"/><line x1="420" y1="450" x2="560" y2="350"/>
+<line x1="420" y1="565" x2="200" y2="700"/><line x1="420" y1="565" x2="640" y2="700"/>
+</g>
+
+<!-- Distant caravanserai silhouettes -->
+<g fill="#0a0810" opacity="0.7">
+<path d="M 900,850 L 900,750 L 920,730 L 940,750 L 940,850 Z"/><path d="M 960,850 L 960,770 L 980,755 L 1000,770 L 1000,850 Z"/>
+<path d="M 1040,850 L 1040,780 L 1060,760 L 1080,780 L 1080,850 Z"/>
+<rect x="920" y="850" width="180" height="20"/>
+</g>
+<!-- Doorway glow -->
+<rect x="910" y="800" width="15" height="50" fill="#ffe8b0" opacity="0.08"/>
+<rect x="970" y="810" width="12" height="40" fill="#ffe8b0" opacity="0.06"/>
+<rect x="1050" y="815" width="10" height="35" fill="#ffe8b0" opacity="0.05"/>
+
+<!-- Sand dunes -->
+<path d="M 0,870 Q 200,850 400,870 Q 600,890 800,865 Q 1000,845 1200,870 Q 1350,880 1400,870" fill="#120e15" opacity="0.9"/>
+<path d="M 0,890 Q 250,875 500,890 Q 750,905 1000,885 Q 1250,870 1400,890" fill="#0e0a10" opacity="0.95"/>
+
+<!-- Footprints in sand — leading toward lantern -->
+<g fill="#c4a043" opacity="0.08">
+<ellipse cx="380" cy="870" rx="4" ry="8" transform="rotate(-5,380,870)"/><ellipse cx="390" cy="855" rx="4" ry="8" transform="rotate(5,390,855)"/>
+<ellipse cx="395" cy="840" rx="3.5" ry="7" transform="rotate(-10,395,840)"/><ellipse cx="405" cy="828" rx="3.5" ry="7" transform="rotate(8,405,828)"/>
+<ellipse cx="410" cy="816" rx="3" ry="6" transform="rotate(-5,410,816)"/><ellipse cx="418" cy="806" rx="3" ry="6" transform="rotate(3,418,806)"/>
+</g>
+
+<!-- Floating dust in lantern light -->
+<g fill="#ffe8b0" opacity="0.3">
+<circle cx="400" cy="480" r="1"><animate attributeName="cy" values="480;420;480" dur="5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0.05;0.3" dur="5s" repeatCount="indefinite"/></circle>
+<circle cx="440" cy="500" r="0.8"><animate attributeName="cy" values="500;430;500" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.25;0.03;0.25" dur="7s" repeatCount="indefinite"/></circle>
+<circle cx="380" cy="520" r="1.2"><animate attributeName="cy" values="520;450;520" dur="6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.04;0.2" dur="6s" repeatCount="indefinite"/></circle>
+</g>
+
+<!-- Bottom -->
+<path d="M 0,890 Q 200,885 400,890 Q 600,895 800,888 Q 1000,882 1200,890 Q 1350,895 1400,890" stroke="#c4a043" stroke-width="0.5" fill="none" opacity="0.1"/>
+<rect x="0" y="890" width="1400" height="510" fill="#050306" opacity="0.6"/>
+</svg></body></html>

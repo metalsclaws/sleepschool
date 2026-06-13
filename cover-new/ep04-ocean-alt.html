@@ -1,0 +1,93 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box;}</style></head><body>
+<svg viewBox="0 0 1400 1400" width="1400" height="1400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="deep" cx="50%" cy="50%" r="70%"><stop offset="0%" stop-color="#081428"/><stop offset="50%" stop-color="#040c1a"/><stop offset="100%" stop-color="#020610"/></radialGradient>
+<filter id="hb" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="45"/></filter>
+<filter id="mb" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="sg" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1400" height="1400" fill="url(#deep)"/>
+
+<!-- Deep particles — sparse -->
+<g fill="#5090b0" opacity="0.25">
+<circle cx="100" cy="150" r="1"/><circle cx="300" cy="80" r="1.2"/><circle cx="550" cy="120" r="0.9"/><circle cx="780" cy="100" r="1.3"/><circle cx="1000" cy="90" r="0.8"/><circle cx="1250" cy="130" r="1.1"/><circle cx="200" cy="300" r="0.7"/><circle cx="450" cy="280" r="1"/><circle cx="700" cy="250" r="1.2"/><circle cx="950" cy="290" r="0.8"/><circle cx="1150" cy="270" r="1"/><circle cx="350" cy="400" r="0.9"/><circle cx="600" cy="380" r="1.1"/><circle cx="850" cy="420" r="0.7"/><circle cx="1100" cy="390" r="1"/>
+</g>
+
+<!-- KELP FOREST — vertical strands from bottom -->
+<g stroke="#408060" fill="none" opacity="0.5" stroke-linecap="round">
+<!-- Main kelp stalks -->
+<path d="M 200,1400 Q 210,1200 195,1000 Q 180,800 200,600 Q 215,450 205,300" stroke-width="3"/>
+<path d="M 350,1400 Q 360,1250 345,1100 Q 330,950 355,800 Q 370,650 360,500" stroke-width="2.5"/>
+<path d="M 550,1400 Q 560,1300 545,1150 Q 530,1000 555,850 Q 570,700 555,550" stroke-width="3"/>
+<path d="M 700,1400 Q 710,1280 695,1120 Q 680,960 705,800 Q 720,650 710,480" stroke-width="3.5"/>
+<path d="M 850,1400 Q 860,1250 845,1100 Q 830,950 855,800 Q 870,650 860,520" stroke-width="2.5"/>
+<path d="M 1050,1400 Q 1060,1280 1045,1100 Q 1030,950 1055,800 Q 1070,650 1060,480" stroke-width="3"/>
+<path d="M 1200,1400 Q 1210,1200 1195,1000 Q 1180,800 1200,600 Q 1215,450 1205,320" stroke-width="2.5"/>
+</g>
+
+<!-- Kelp fronds — small leaf shapes along stalks -->
+<g fill="#408060" opacity="0.35">
+<!-- Stalk at 200 -->
+<ellipse cx="190" cy="450" rx="20" ry="6" transform="rotate(-20,190,450)"/>
+<ellipse cx="215" cy="650" rx="18" ry="5" transform="rotate(15,215,650)"/>
+<ellipse cx="185" cy="850" rx="22" ry="6" transform="rotate(-25,185,850)"/>
+<ellipse cx="210" cy="1050" rx="16" ry="5" transform="rotate(10,210,1050)"/>
+<!-- Stalk at 550 -->
+<ellipse cx="540" cy="600" rx="20" ry="6" transform="rotate(-15,540,600)"/>
+<ellipse cx="565" cy="800" rx="18" ry="5" transform="rotate(20,565,800)"/>
+<ellipse cx="535" cy="1000" rx="22" ry="6" transform="rotate(-10,535,1000)"/>
+<!-- Stalk at 700 -->
+<ellipse cx="685" cy="550" rx="22" ry="6" transform="rotate(-18,685,550)"/>
+<ellipse cx="720" cy="700" rx="20" ry="5" transform="rotate(12,720,700)"/>
+<ellipse cx="690" cy="900" rx="24" ry="6" transform="rotate(-22,690,900)"/>
+<ellipse cx="715" cy="1100" rx="18" ry="5" transform="rotate(8,715,1100)"/>
+<!-- Stalk at 1050 -->
+<ellipse cx="1040" cy="600" rx="20" ry="6" transform="rotate(15,1040,600)"/>
+<ellipse cx="1065" cy="800" rx="18" ry="5" transform="rotate(-10,1065,800)"/>
+<ellipse cx="1035" cy="1000" rx="22" ry="6" transform="rotate(20,1035,1000)"/>
+<!-- Stalk at 1200 -->
+<ellipse cx="1185" cy="450" rx="18" ry="5" transform="rotate(-20,1185,450)"/>
+<ellipse cx="1215" cy="650" rx="20" ry="6" transform="rotate(15,1215,650)"/>
+<ellipse cx="1190" cy="850" rx="16" ry="5" transform="rotate(-12,1190,850)"/>
+</g>
+
+<!-- Bioluminescent spots on kelp -->
+<g filter="url(#sg)">
+<g fill="#60d0a0" opacity="0.7">
+<circle cx="200" cy="350" r="3"/><circle cx="550" cy="600" r="3.5"/><circle cx="700" cy="500" r="4"/><circle cx="1050" cy="550" r="3"/><circle cx="1200" cy="350" r="2.5"/>
+</g>
+<g fill="#80e0c0" opacity="0.5">
+<circle cx="200" cy="650" r="2.5"/><circle cx="350" cy="550" r="2"/><circle cx="550" cy="800" r="2.5"/><circle cx="700" cy="700" r="3"/><circle cx="850" cy="650" r="2"/><circle cx="1050" cy="750" r="2.5"/>
+</g>
+</g>
+
+<!-- Small jellyfish drifting between kelp -->
+<g opacity="0.25" transform="translate(430, 500) scale(0.35)">
+<path d="M -80,0 Q -80,-60 0,-90 Q 80,-60 80,0" stroke="#60a0c0" stroke-width="2" fill="none"/>
+<g stroke="#60a0c0" stroke-width="1" fill="none"><path d="M -50,0 Q -55,80 -30,150"/><path d="M 0,0 Q 0,100 10,180"/><path d="M 50,0 Q 55,80 30,150"/></g>
+</g>
+<g opacity="0.15" transform="translate(950, 400) scale(0.25)">
+<path d="M -80,0 Q -80,-60 0,-90 Q 80,-60 80,0" stroke="#60a0c0" stroke-width="2" fill="none"/>
+<g stroke="#60a0c0" stroke-width="1" fill="none"><path d="M -50,0 Q -55,80 -30,150"/><path d="M 0,0 Q 0,100 10,180"/><path d="M 50,0 Q 55,80 30,150"/></g>
+</g>
+
+<!-- Rising bubbles -->
+<g fill="#80c8e0" opacity="0.3">
+<circle cx="200" cy="1100" r="3"><animate attributeName="cy" values="1100;200;1100" dur="12s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0.05;0.3" dur="12s" repeatCount="indefinite"/></circle>
+<circle cx="550" cy="1200" r="2"><animate attributeName="cy" values="1200;300;1200" dur="15s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.25;0.03;0.25" dur="15s" repeatCount="indefinite"/></circle>
+<circle cx="700" cy="1000" r="3.5"><animate attributeName="cy" values="1000;150;1000" dur="10s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0.05;0.3" dur="10s" repeatCount="indefinite"/></circle>
+<circle cx="1050" cy="1150" r="2"><animate attributeName="cy" values="1150;350;1150" dur="14s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.03;0.2" dur="14s" repeatCount="indefinite"/></circle>
+<circle cx="1200" cy="1050" r="2.5"><animate attributeName="cy" values="1050;250;1050" dur="11s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.25;0.04;0.25" dur="11s" repeatCount="indefinite"/></circle>
+</g>
+
+<!-- Light shafts from above -->
+<g opacity="0.06">
+<rect x="500" y="0" width="80" height="1400" fill="#80c8e0" opacity="0.15" transform="rotate(-5,540,700)"/>
+<rect x="750" y="0" width="60" height="1400" fill="#80c8e0" opacity="0.12" transform="rotate(3,780,700)"/>
+<rect x="350" y="0" width="50" height="1400" fill="#80c8e0" opacity="0.08" transform="rotate(-8,375,700)"/>
+</g>
+
+<!-- Bottom darkness -->
+<rect x="0" y="1200" width="1400" height="200" fill="#020610" opacity="0.5"/>
+</svg></body></html>

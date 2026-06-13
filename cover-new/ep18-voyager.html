@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><style>body{margin:0;padding:0;background:#08080e;display:flex;align-items:center;justify-content:center;height:100vh;}</style></head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1400" width="1400" height="1400">
+  <defs>
+    <radialGradient id="bg18" cx="45%" cy="48%" r="65%">
+      <stop offset="0%" stop-color="#101018"/>
+      <stop offset="100%" stop-color="#08080e"/>
+    </radialGradient>
+    <radialGradient id="discglow18" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c4a043" stop-opacity="0.2"/>
+      <stop offset="40%" stop-color="#c4a043" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#c4a043" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="discface18" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4b050" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#c4a043" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#a48530" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="grooveglow">
+      <feGaussianBlur stdDeviation="0.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="trajectoryglow">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="1400" fill="url(#bg18)"/>
+
+  <!-- The golden disc — tilted, seen at a slight angle -->
+  <!-- Ellipse to simulate tilt -->
+  
+  <!-- Outer glow -->
+  <ellipse cx="650" cy="700" rx="280" ry="240" fill="url(#discglow18)"/>
+
+  <!-- The disc face — elliptical (tilted) -->
+  <ellipse cx="650" cy="700" rx="220" ry="180" fill="url(#discface18)" stroke="#c4a043" stroke-width="1.5" opacity="0.8"/>
+
+  <!-- Grooves — thin parallel lines across the disc (the record grooves) -->
+  <g filter="url(#grooveglow)" opacity="0.3">
+    <!-- Inner grooves (closer together) -->
+    <ellipse cx="650" cy="700" rx="60" ry="48" fill="none" stroke="#d4b050" stroke-width="0.3"/>
+    <ellipse cx="650" cy="700" rx="75" ry="60" fill="none" stroke="#d4b050" stroke-width="0.3"/>
+    <ellipse cx="650" cy="700" rx="90" ry="72" fill="none" stroke="#d4b050" stroke-width="0.3"/>
+    <ellipse cx="650" cy="700" rx="105" ry="84" fill="none" stroke="#d4b050" stroke-width="0.3"/>
+    <ellipse cx="650" cy="700" rx="120" ry="96" fill="none" stroke="#d4b050" stroke-width="0.3"/>
+    <!-- Outer grooves -->
+    <ellipse cx="650" cy="700" rx="140" ry="112" fill="none" stroke="#d4b050" stroke-width="0.3"/>
+    <ellipse cx="650" cy="700" rx="155" ry="124" fill="none" stroke="#d4b050" stroke-width="0.3"/>
+    <ellipse cx="650" cy="700" rx="170" ry="136" fill="none" stroke="#d4b050" stroke-width="0.3"/>
+    <ellipse cx="650" cy="700" rx="185" ry="148" fill="none" stroke="#d4b050" stroke-width="0.3"/>
+    <ellipse cx="650" cy="700" rx="200" ry="160" fill="none" stroke="#d4b050" stroke-width="0.3"/>
+    <ellipse cx="650" cy="700" rx="210" ry="170" fill="none" stroke="#d4b050" stroke-width="0.25"/>
+  </g>
+
+  <!-- Disc edge highlight — the thin bright edge showing depth -->
+  <path d="M 430,700 Q 430,520 650,520 Q 870,520 870,700" fill="none" stroke="#e8c860" stroke-width="0.8" opacity="0.4"/>
+  <!-- Bottom edge (darker) -->
+  <path d="M 430,700 Q 430,880 650,880 Q 870,880 870,700" fill="none" stroke="#8a6a20" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Center label area — the "Sounds of Earth" circle -->
+  <ellipse cx="650" cy="700" rx="45" ry="36" fill="none" stroke="#c4a043" stroke-width="0.6" opacity="0.3"/>
+  <ellipse cx="650" cy="700" rx="15" ry="12" fill="none" stroke="#c4a043" stroke-width="0.4" opacity="0.2"/>
+
+  <!-- The trajectory line — extending from the disc into the void -->
+  <line x1="870" y1="700" x2="1400" y2="700" stroke="#c4a043" stroke-width="0.5" opacity="0.25" filter="url(#trajectoryglow)"/>
+  <!-- The line fades as it goes -->
+  <line x1="1100" y1="700" x2="1400" y2="700" stroke="#c4a043" stroke-width="0.3" opacity="0.1"/>
+
+  <!-- A few distant stars — the loneliest object ever made -->
+  <g fill="#c4a043" opacity="0.08">
+    <circle cx="1100" cy="200" r="0.8"/>
+    <circle cx="1200" cy="500" r="0.6"/>
+    <circle cx="1250" cy="900" r="0.7"/>
+    <circle cx="1150" cy="1100" r="0.5"/>
+  </g>
+  <g fill="#ffffff" opacity="0.06">
+    <circle cx="200" cy="300" r="0.5"/>
+    <circle cx="350" cy="1100" r="0.4"/>
+    <circle cx="100" cy="800" r="0.3"/>
+  </g>
+</svg>
+</body>
+</html>

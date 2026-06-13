@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box;}</style></head>
+<body>
+<svg viewBox="0 0 1400 1400" width="1400" height="1400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#111830"/><stop offset="40%" stop-color="#0a0e1e"/><stop offset="100%" stop-color="#040510"/>
+    </radialGradient>
+    <radialGradient id="brainGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c4a043" stop-opacity="0.25"/><stop offset="50%" stop-color="#c4a043" stop-opacity="0.08"/><stop offset="100%" stop-color="#c4a043" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="heavyBlur" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="40"/></filter>
+    <filter id="medBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="1400" height="1400" fill="url(#bg)"/>
+
+  <!-- Dense star field -->
+  <g fill="#fff" opacity="0.5">
+    <circle cx="45" cy="32" r="1"/><circle cx="120" cy="85" r="0.8"/><circle cx="200" cy="50" r="1.2"/>
+    <circle cx="310" cy="28" r="0.7"/><circle cx="380" cy="95" r="1"/><circle cx="450" cy="42" r="0.9"/>
+    <circle cx="520" cy="110" r="1.1"/><circle cx="590" cy="35" r="0.6"/><circle cx="680" cy="78" r="1"/>
+    <circle cx="750" cy="55" r="0.8"/><circle cx="830" cy="25" r="1.3"/><circle cx="910" cy="90" r="0.7"/>
+    <circle cx="980" cy="48" r="1"/><circle cx="1060" cy="105" r="0.9"/><circle cx="1130" cy="38" r="0.8"/>
+    <circle cx="1200" cy="72" r="1.1"/><circle cx="1280" cy="45" r="0.7"/><circle cx="1350" cy="95" r="1"/>
+    <circle cx="75" cy="180" r="0.8"/><circle cx="160" cy="210" r="1.2"/><circle cx="250" cy="170" r="0.6"/>
+    <circle cx="340" cy="230" r="1"/><circle cx="430" cy="185" r="0.9"/><circle cx="510" cy="240" r="0.7"/>
+    <circle cx="600" cy="195" r="1.1"/><circle cx="690" cy="225" r="0.8"/><circle cx="780" cy="175" r="1"/>
+    <circle cx="870" cy="240" r="0.6"/><circle cx="950" cy="200" r="1.2"/><circle cx="1040" cy="235" r="0.7"/>
+    <circle cx="1120" cy="180" r="0.9"/><circle cx="1210" cy="220" r="1"/><circle cx="1300" cy="190" r="0.8"/>
+    <circle cx="90" cy="310" r="1"/><circle cx="180" cy="340" r="0.7"/><circle cx="270" cy="290" r="0.9"/>
+    <circle cx="360" cy="350" r="1.1"/><circle cx="470" cy="310" r="0.6"/><circle cx="560" cy="360" r="0.8"/>
+    <circle cx="650" cy="295" r="1"/><circle cx="740" cy="340" r="0.7"/><circle cx="840" cy="305" r="1.2"/>
+    <circle cx="930" cy="355" r="0.6"/><circle cx="1020" cy="300" r="0.9"/><circle cx="1110" cy="350" r="0.8"/>
+    <circle cx="1200" cy="310" r="1"/><circle cx="1290" cy="340" r="0.7"/>
+  </g>
+  <g fill="#c4a043" opacity="0.4">
+    <circle cx="155" cy="62" r="1.5"/><circle cx="420" cy="70" r="1.3"/><circle cx="700" cy="48" r="1.8"/>
+    <circle cx="950" cy="65" r="1.4"/><circle cx="1180" cy="55" r="1.6"/><circle cx="300" cy="155" r="1.2"/>
+    <circle cx="580" cy="140" r="1.5"/><circle cx="850" cy="130" r="1.1"/><circle cx="1080" cy="160" r="1.3"/>
+    <circle cx="190" cy="270" r="1.4"/><circle cx="500" cy="280" r="1.2"/><circle cx="800" cy="260" r="1.6"/>
+    <circle cx="1100" cy="275" r="1.3"/><circle cx="1320" cy="250" r="1.1"/>
+  </g>
+
+  <!-- Nebula wisps -->
+  <ellipse cx="300" cy="150" rx="250" ry="60" fill="#1a2550" opacity="0.3" filter="url(#heavyBlur)"/>
+  <ellipse cx="1000" cy="120" rx="200" ry="50" fill="#1a2550" opacity="0.25" filter="url(#heavyBlur)"/>
+  <ellipse cx="650" cy="200" rx="350" ry="80" fill="#15203a" opacity="0.2" filter="url(#heavyBlur)"/>
+
+  <circle cx="700" cy="580" r="320" fill="url(#brainGlow)"/>
+  <circle cx="700" cy="580" r="220" fill="#c4a043" opacity="0.04" filter="url(#heavyBlur)"/>
+
+  <!-- BRAIN -->
+  <g transform="translate(700, 560)">
+    <path d="M -260,20 A 260,260 0 0,1 260,20" stroke="#c4a043" stroke-width="2" fill="none" opacity="0.75"/>
+    <path d="M 0,-240 L 0,20" stroke="#c4a043" stroke-width="1.2" fill="none" opacity="0.5" stroke-dasharray="6,4"/>
+
+    <g stroke="#c4a043" stroke-width="0.8" opacity="0.45" fill="none">
+      <path d="M -260,20 Q -250,-60 -220,-130"/><path d="M -220,-130 Q -190,-180 -140,-210"/>
+      <path d="M -140,-210 Q -80,-235 -20,-240"/><path d="M -260,20 Q -240,-30 -200,-80"/>
+      <path d="M -200,-80 Q -160,-140 -100,-175"/><path d="M -100,-175 Q -50,-200 0,-210"/>
+      <path d="M -240,-30 Q -220,-55 -200,-70 Q -180,-85 -160,-80"/>
+      <path d="M -200,-70 Q -175,-100 -150,-115 Q -125,-130 -100,-120"/>
+      <path d="M -150,-115 Q -120,-145 -90,-160 Q -60,-175 -30,-165"/>
+      <path d="M -90,-160 Q -60,-185 -30,-200 Q 0,-210 0,-195"/>
+    </g>
+    <g stroke="#c4a043" stroke-width="0.8" opacity="0.45" fill="none">
+      <path d="M 260,20 Q 250,-60 220,-130"/><path d="M 220,-130 Q 190,-180 140,-210"/>
+      <path d="M 140,-210 Q 80,-235 20,-240"/><path d="M 260,20 Q 240,-30 200,-80"/>
+      <path d="M 200,-80 Q 160,-140 100,-175"/><path d="M 100,-175 Q 50,-200 0,-210"/>
+      <path d="M 240,-30 Q 220,-55 200,-70 Q 180,-85 160,-80"/>
+      <path d="M 200,-70 Q 175,-100 150,-115 Q 125,-130 100,-120"/>
+      <path d="M 150,-115 Q 120,-145 90,-160 Q 60,-175 30,-165"/>
+      <path d="M 90,-160 Q 60,-185 30,-200 Q 0,-210 0,-195"/>
+    </g>
+    <g stroke="#c4a043" stroke-width="0.35" opacity="0.2" fill="none">
+      <path d="M -220,-130 Q -180,-100 -200,-80"/><path d="M -140,-210 Q -120,-170 -100,-175"/>
+      <path d="M 220,-130 Q 180,-100 200,-80"/><path d="M 140,-210 Q 120,-170 100,-175"/>
+    </g>
+    <g stroke="#c4a043" stroke-width="0.5" opacity="0.25" fill="none">
+      <ellipse cx="-80" cy="-60" rx="170" ry="28"/><ellipse cx="80" cy="-60" rx="170" ry="28"/>
+      <ellipse cx="-60" cy="-130" rx="130" ry="22"/><ellipse cx="60" cy="-130" rx="130" ry="22"/>
+      <ellipse cx="0" cy="-195" rx="80" ry="15"/>
+    </g>
+
+    <!-- THE CRACK -->
+    <path d="M 0,20 L 4,-30 L -3,-70 L 5,-120 L -2,-170 L 4,-220 L 0,-245" stroke="#e8d080" stroke-width="4" fill="none" opacity="0.9" filter="url(#glow)"/>
+    <path d="M 0,20 L 4,-30 L -3,-70 L 5,-120 L -2,-170 L 4,-220 L 0,-245" stroke="#f5ecc0" stroke-width="1.5" fill="none" opacity="0.85"/>
+    <path d="M 0,20 L 4,-30 L -3,-70 L 5,-120 L -2,-170 L 4,-220 L 0,-245" stroke="#c4a043" stroke-width="14" fill="none" opacity="0.12" filter="url(#medBlur)"/>
+    <g stroke="#e8d080" stroke-width="1" fill="none" opacity="0.5" filter="url(#softGlow)">
+      <path d="M 4,-30 L 30,-45 L 50,-40"/><path d="M -3,-70 L -35,-80 L -55,-75"/>
+      <path d="M 5,-120 L 35,-130 L 50,-125"/><path d="M -2,-170 L -30,-180 L -45,-175"/>
+      <path d="M 4,-220 L 20,-230 L 35,-225"/>
+    </g>
+    <g filter="url(#softGlow)">
+      <circle cx="0" cy="-240" r="5" fill="#e8d080" opacity="0.9"/><circle cx="-140" cy="-210" r="4" fill="#c4a043" opacity="0.7"/>
+      <circle cx="140" cy="-210" r="4" fill="#c4a043" opacity="0.7"/><circle cx="-220" cy="-130" r="3.5" fill="#c4a043" opacity="0.6"/>
+      <circle cx="220" cy="-130" r="3.5" fill="#c4a043" opacity="0.6"/><circle cx="0" cy="-130" r="3.5" fill="#e8d080" opacity="0.65"/>
+    </g>
+    <g filter="url(#softGlow)">
+      <circle cx="8" cy="-265" r="2" fill="#e8d080" opacity="0.7"><animate attributeName="cy" values="-265;-310;-265" dur="4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0.1;0.7" dur="4s" repeatCount="indefinite"/></circle>
+      <circle cx="-6" cy="-285" r="1.8" fill="#c4a043" opacity="0.5"><animate attributeName="cy" values="-285;-340;-285" dur="6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0.05;0.5" dur="6s" repeatCount="indefinite"/></circle>
+      <circle cx="15" cy="-300" r="2.5" fill="#e8d080" opacity="0.4"><animate attributeName="cy" values="-300;-370;-300" dur="8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.4;0.05;0.4" dur="8s" repeatCount="indefinite"/></circle>
+      <circle cx="-15" cy="-310" r="1.2" fill="#c4a043" opacity="0.45"><animate attributeName="cy" values="-310;-380;-310" dur="5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.45;0.05;0.45" dur="5s" repeatCount="indefinite"/></circle>
+      <circle cx="3" cy="-280" r="1.5" fill="#f5ecc0" opacity="0.35"><animate attributeName="cy" values="-280;-350;-280" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.35;0.05;0.35" dur="7s" repeatCount="indefinite"/></circle>
+      <circle cx="-20" cy="-330" r="1" fill="#e8d080" opacity="0.3"><animate attributeName="cy" values="-330;-400;-330" dur="9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0.05;0.3" dur="9s" repeatCount="indefinite"/></circle>
+      <circle cx="25" cy="-350" r="1.3" fill="#c4a043" opacity="0.25"><animate attributeName="cy" values="-350;-420;-350" dur="11s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.25;0.05;0.25" dur="11s" repeatCount="indefinite"/></circle>
+    </g>
+    <g stroke="#4a6fa5" stroke-width="0.6" fill="none" opacity="0.25" filter="url(#softGlow)">
+      <path d="M -200,-80 Q -150,-100 -100,-120 Q -50,-140 0,-130"/><path d="M 200,-80 Q 150,-100 100,-120 Q 50,-140 0,-130"/>
+    </g>
+  </g>
+
+  <!-- SLEEP WAVES -->
+  <g stroke="#4a6fa5" fill="none" opacity="0.3">
+    <path d="M 0,1050 Q 70,1030 140,1050 Q 210,1070 280,1050 Q 350,1030 420,1050 Q 490,1070 560,1050 Q 630,1030 700,1050 Q 770,1070 840,1050 Q 910,1030 980,1050 Q 1050,1070 1120,1050 Q 1190,1030 1260,1050 Q 1330,1070 1400,1050" stroke-width="1.2"/>
+    <path d="M 0,1080 Q 70,1060 140,1080 Q 210,1100 280,1080 Q 350,1060 420,1080 Q 490,1100 560,1080 Q 630,1060 700,1080 Q 770,1100 840,1080 Q 910,1060 980,1080 Q 1050,1100 1120,1080 Q 1190,1060 1260,1080 Q 1330,1100 1400,1080" stroke-width="1"/>
+    <path d="M 0,1110 Q 70,1095 140,1110 Q 210,1125 280,1110 Q 350,1095 420,1110 Q 490,1125 560,1110 Q 630,1095 700,1110 Q 770,1125 840,1110 Q 910,1095 980,1110 Q 1050,1125 1120,1110 Q 1190,1095 1260,1110 Q 1330,1125 1400,1110" stroke-width="0.8"/>
+    <path d="M 0,1140 Q 70,1125 140,1140 Q 210,1155 280,1140 Q 350,1125 420,1140 Q 490,1155 560,1140 Q 630,1125 700,1140 Q 770,1155 840,1140 Q 910,1125 980,1140 Q 1050,1155 1120,1140 Q 1190,1125 1260,1140 Q 1330,1155 1400,1140" stroke-width="0.6"/>
+    <path d="M 0,1165 Q 70,1150 140,1165 Q 210,1180 280,1165 Q 350,1150 420,1165 Q 490,1180 560,1165 Q 630,1150 700,1165 Q 770,1180 840,1165 Q 910,1150 980,1165 Q 1050,1180 1120,1165 Q 1190,1150 1260,1165 Q 1330,1180 1400,1165" stroke-width="0.5" opacity="0.2"/>
+  </g>
+  <g stroke="#c4a043" stroke-width="0.8" fill="none" opacity="0.35" filter="url(#softGlow)">
+    <path d="M 200,1050 L 210,1020 L 220,1060 L 230,1035 L 240,1050"/>
+    <path d="M 500,1050 L 508,1025 L 516,1060 L 524,1030 L 532,1050"/>
+    <path d="M 800,1050 L 810,1015 L 820,1065 L 830,1035 L 840,1050"/>
+    <path d="M 1100,1050 L 1108,1025 L 1116,1055 L 1124,1030 L 1132,1050"/>
+  </g>
+
+  <g fill="#c4a043" font-family="Georgia, serif" opacity="0.15">
+    <text x="250" y="850" font-size="28" transform="rotate(-15, 250, 850)">z</text>
+    <text x="280" y="800" font-size="22" transform="rotate(-10, 280, 800)">z</text>
+    <text x="300" y="760" font-size="16" transform="rotate(-5, 300, 760)">z</text>
+    <text x="1050" y="880" font-size="26" transform="rotate(10, 1050, 880)">z</text>
+    <text x="1080" y="830" font-size="20" transform="rotate(5, 1080, 830)">z</text>
+    <text x="1100" y="790" font-size="14" transform="rotate(8, 1100, 790)">z</text>
+  </g>
+
+  <path d="M 0,1200 Q 200,1195 400,1200 Q 600,1205 800,1198 Q 1000,1192 1200,1200 Q 1350,1205 1400,1200" stroke="#c4a043" stroke-width="0.6" fill="none" opacity="0.15"/>
+  <rect x="0" y="1200" width="1400" height="200" fill="#030308" opacity="0.8"/>
+</svg>
+</body>
+</html>

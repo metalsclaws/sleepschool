@@ -1,0 +1,86 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box;}</style></head><body>
+<svg viewBox="0 0 1400 1400" width="1400" height="1400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="bg" cx="50%" cy="50%" r="70%"><stop offset="0%" stop-color="#100a1a"/><stop offset="50%" stop-color="#0a0610"/><stop offset="100%" stop-color="#040306"/></radialGradient>
+<filter id="hb" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="45"/></filter>
+<filter id="mb" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="sg" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1400" height="1400" fill="url(#bg)"/>
+
+<!-- Stars -->
+<g fill="#fff" opacity="0.25">
+<circle cx="150" cy="100" r="0.8"/><circle cx="350" cy="60" r="1"/><circle cx="550" cy="110" r="0.7"/><circle cx="750" cy="50" r="1.2"/><circle cx="950" cy="80" r="0.9"/><circle cx="1150" cy="70" r="0.7"/><circle cx="1300" cy="120" r="0.8"/>
+<circle cx="250" cy="250" r="0.6"/><circle cx="450" cy="220" r="0.9"/><circle cx="700" cy="270" r="0.8"/><circle cx="900" cy="240" r="1"/><circle cx="1100" cy="260" r="0.7"/>
+</g>
+
+<!-- DOME — Florence Cathedral silhouette -->
+<g fill="#0e0a14" opacity="0.95">
+<!-- Main dome -->
+<path d="M 400,800 Q 400,400 700,300 Q 1000,400 1000,800 Z"/>
+<!-- Lantern on top -->
+<rect x="680" y="280" width="40" height="40" rx="5"/><rect x="690" y="260" width="20" height="25" rx="3"/>
+<!-- Drum -->
+<rect x="500" y="800" width="400" height="60"/>
+</g>
+
+<!-- Dome outline -->
+<g stroke="#c4a043" fill="none" opacity="0.6">
+<path d="M 400,800 Q 400,400 700,300 Q 1000,400 1000,800" stroke-width="2" filter="url(#gl)"/>
+<rect x="680" y="280" width="40" height="40" rx="5" stroke-width="1.5"/>
+<rect x="690" y="260" width="20" height="25" rx="3" stroke-width="1"/>
+<line x1="500" y1="800" x2="900" y2="800" stroke-width="1.5"/>
+</g>
+
+<!-- Dome ribs -->
+<g stroke="#c4a043" stroke-width="0.5" fill="none" opacity="0.25">
+<path d="M 550,800 Q 550,500 700,320"/><path d="M 700,800 Q 700,450 700,300"/>
+<path d="M 850,800 Q 850,500 700,320"/><path d="M 475,800 Q 475,450 700,310"/><path d="M 925,800 Q 925,450 700,310"/>
+</g>
+
+<!-- Horizontal bands on drum -->
+<g stroke="#c4a043" stroke-width="0.3" fill="none" opacity="0.2">
+<line x1="500" y1="820" x2="900" y2="820"/><line x1="500" y1="840" x2="900" y2="840"/>
+</g>
+
+<!-- Windows on drum (arched) -->
+<g stroke="#c4a043" stroke-width="0.8" fill="none" opacity="0.35">
+<path d="M 540,810 Q 540,790 555,790 Q 570,790 570,810"/><path d="M 640,810 Q 640,790 655,790 Q 670,790 670,810"/>
+<path d="M 730,810 Q 730,790 745,790 Q 760,790 760,810"/><path d="M 830,810 Q 830,790 845,790 Q 860,790 860,810"/>
+</g>
+
+<!-- Window glow -->
+<g fill="#ffe8b0" opacity="0.1" filter="url(#sg)">
+<rect x="543" y="793" width="10" height="15" rx="2"/><rect x="645" y="793" width="10" height="15" rx="2"/>
+<rect x="735" y="793" width="10" height="15" rx="2"/><rect x="835" y="793" width="10" height="15" rx="2"/>
+</g>
+
+<!-- Stars visible through dome (implied translucency) -->
+<g fill="#e8d080" opacity="0.15" filter="url(#sg)">
+<circle cx="600" cy="500" r="1.5"/><circle cx="700" cy="420" r="2"/><circle cx="800" cy="500" r="1.5"/><circle cx="650" cy="600" r="1"/><circle cx="750" cy="600" r="1"/>
+</g>
+
+<!-- Gargoyles at base -->
+<g fill="#0e0a14" stroke="#c4a043" stroke-width="0.5" opacity="0.6">
+<path d="M 500,800 L 480,790 L 500,800"/><path d="M 900,800 L 920,790 L 900,800"/>
+</g>
+
+<!-- Ground/piazza -->
+<path d="M 0,860 Q 200,855 400,860 Q 600,865 800,858 Q 1000,852 1200,860 Q 1350,865 1400,860" stroke="#c4a043" stroke-width="0.5" fill="none" opacity="0.15"/>
+<rect x="0" y="860" width="1400" height="540" fill="#080610" opacity="0.7"/>
+
+<!-- Piazza tiles (perspective lines) -->
+<g stroke="#c4a043" stroke-width="0.3" fill="none" opacity="0.08">
+<path d="M 700,860 L 0,1400"/><path d="M 700,860 L 200,1400"/><path d="M 700,860 L 400,1400"/><path d="M 700,860 L 600,1400"/><path d="M 700,860 L 800,1400"/><path d="M 700,860 L 1000,1400"/><path d="M 700,860 L 1200,1400"/><path d="M 700,860 L 1400,1400"/>
+</g>
+
+<!-- Floating dust in moonlight -->
+<g fill="#e8d080" opacity="0.2">
+<circle cx="500" cy="500" r="1"><animate attributeName="cy" values="500;430;500" dur="5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.03;0.2" dur="5s" repeatCount="indefinite"/></circle>
+<circle cx="900" cy="450" r="0.8"><animate attributeName="cy" values="450;380;450" dur="6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.15;0.02;0.15" dur="6s" repeatCount="indefinite"/></circle>
+</g>
+
+<!-- Bottom -->
+<path d="M 0,1200 Q 200,1195 400,1200 Q 600,1205 800,1198 Q 1000,1192 1200,1200 Q 1350,1205 1400,1200" stroke="#c4a043" stroke-width="0.4" fill="none" opacity="0.08"/>
+</svg></body></html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SleepSchool Cover Art — Gallery</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0a0a0f; color: #e8e0d0; font-family: Georgia, 'Times New Roman', serif; }
+h1 { text-align: center; padding: 40px 20px 10px; font-size: 28px; color: #c4a043; letter-spacing: 2px; }
+.subtitle { text-align: center; color: #888; font-size: 14px; margin-bottom: 40px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 30px; padding: 20px 40px 60px; max-width: 1400px; margin: 0 auto; }
+.episode { background: #0e0e18; border: 1px solid #1a1a28; border-radius: 8px; overflow: hidden; }
+.episode h2 { font-size: 16px; padding: 12px 16px 8px; color: #c4a043; letter-spacing: 1px; }
+.episode .covers { display: flex; gap: 8px; padding: 8px 12px 12px; flex-wrap: wrap; }
+.episode .cover { flex: 1; min-width: 180px; position: relative; }
+.episode .cover img { width: 100%; height: auto; border-radius: 4px; display: block; }
+.episode .cover .label { position: absolute; bottom: 6px; left: 6px; background: rgba(0,0,0,0.7); color: #aaa; font-size: 11px; padding: 2px 6px; border-radius: 3px; font-family: monospace; }
+.episode .cover .label.alt { color: #c4a043; }
+</style>
+</head>
+<body>
+<h1>SleepSchool Cover Art</h1>
+<p class="subtitle">Original &amp; Alternate versions for each episode</p>
+<div class="grid" id="gallery"></div>
+<script>
+const episodes = [
+  { num: '01', name: 'Your Brain on Sleep', base: 'brain', variants: ['brain', 'brain-alt'] },
+  { num: '02', name: 'The Trees That Remember', base: 'trees', variants: ['trees', 'trees-alt'] },
+  { num: '03', name: 'The Nile\'s Memory', base: 'nile', variants: ['nile', 'nile-alt'] },
+  { num: '04', name: 'The Ocean\'s Lullaby', base: 'ocean', variants: ['ocean', 'ocean-alt'] },
+  { num: '05', name: 'Stars Like Grains of Sand', base: 'stars', variants: ['stars', 'stars-alt'] },
+  { num: '06a', name: 'The Hive Mind', base: 'beehive', variants: ['beehive', 'beehive-alt'] },
+  { num: '06b', name: 'Circadian Rhythm', base: 'clocks', variants: ['clocks', 'clocks-alt'] },
+  { num: '07a', name: 'The Library of Sleep', base: 'library', variants: ['library', 'library-alt'] },
+  { num: '07b', name: 'Serengeti Sunset', base: 'serengeti', variants: ['serengeti'] },
+  { num: '08', name: 'Aurora Borealis', base: 'aurora', variants: ['aurora', 'aurora-alt'] },
+  { num: '09', name: 'The Silk Road', base: 'silkroad', variants: ['silkroad', 'silkroad-alt'] },
+  { num: '10', name: 'Bamboo', base: 'bamboo', variants: ['bamboo', 'bamboo-alt'] },
+  { num: '11a', name: 'The Butterfly Effect', base: 'butterfly', variants: ['butterfly', 'butterfly-alt'] },
+  { num: '11b', name: 'The Lighthouse', base: 'lighthouse', variants: ['lighthouse'] },
+  { num: '12a', name: 'The Bread of Life', base: 'bread', variants: ['bread', 'bread-alt'] },
+  { num: '12b', name: 'Dinosaurs', base: 'dinosaurs', variants: ['dinosaurs'] },
+  { num: '13a', name: 'Coral Dreams', base: 'coral', variants: ['coral', 'coral-alt'] },
+  { num: '13b', name: 'Zen Garden', base: 'zengarden', variants: ['zengarden'] },
+  { num: '14a', name: 'The Library at Night', base: 'library', variants: [] },
+  { num: '14b', name: 'Moonrise', base: 'moon', variants: ['moon'] },
+  { num: '15a', name: 'Dreams', base: 'dreams', variants: ['dreams'] },
+  { num: '15b', name: 'Florence', base: 'florence', variants: ['florence', 'florence-alt'] },
+  { num: '16a', name: 'The Art of Forgetting', base: 'forgetting', variants: ['forgetting'] },
+  { num: '16b', name: 'Tea Ceremony', base: 'tea', variants: ['tea'] },
+  { num: '17a', name: 'Lightning', base: 'lightning', variants: ['lightning', 'lightning-alt'] },
+  { num: '17b', name: 'Rain', base: 'rain', variants: ['rain', 'rain-alt'] },
+  { num: '18a', name: 'Voyager', base: 'voyager', variants: ['voyager', 'voyager-alt'] },
+  { num: '18b', name: 'The Writing on the Wall', base: 'writing', variants: ['writing'] },
+  { num: '19a', name: 'Glacier', base: 'glacier', variants: ['glacier', 'glacier-alt'] },
+  { num: '19b', name: 'Ice', base: 'ice', variants: ['ice'] },
+  { num: '20a', name: 'The End', base: 'end', variants: ['end'] },
+  { num: '20b', name: 'The Oak', base: 'oak', variants: ['oak', 'oak-alt'] },
+];
+
+// Filter to only show episodes that have files
+const gallery = document.getElementById('gallery');
+episodes.forEach(ep => {
+  const div = document.createElement('div');
+  div.className = 'episode';
+  let html = `<h2>Ep ${ep.num}: ${ep.name}</h2><div class="covers">`;
+  ep.variants.forEach(v => {
+    const isAlt = v.endsWith('-alt');
+    const label = isAlt ? 'ALT' : 'ORIG';
+    html += `<div class="cover"><img src="${v}.png" alt="Ep ${ep.num} ${v}" loading="lazy"><span class="label ${isAlt ? 'alt' : ''}">${label}</span></div>`;
+  });
+  html += '</div>';
+  div.innerHTML = html;
+  gallery.appendChild(div);
+});
+</script>
+</body>
+</html>

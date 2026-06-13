@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><style>body{margin:0;padding:0;background:#0a0806;display:flex;align-items:center;justify-content:center;height:100vh;}</style></head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1400" width="1400" height="1400">
+  <defs>
+    <radialGradient id="bg11" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#120e08"/>
+      <stop offset="100%" stop-color="#0a0806"/>
+    </radialGradient>
+    <filter id="wingglow">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="pathglow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="1400" fill="url(#bg11)"/>
+
+  <!-- The migration path — a thin thread across nothing -->
+  <path d="M 100,820 Q 300,780 500,750 Q 600,730 680,700 Q 700,690 720,700 Q 800,730 900,760 Q 1100,810 1300,850"
+        fill="none" stroke="#c45a20" stroke-width="0.6" opacity="0.15" filter="url(#pathglow)"/>
+  <!-- Dotted version of path — very faint -->
+  <path d="M 100,820 Q 300,780 500,750 Q 600,730 680,700 Q 700,690 720,700 Q 800,730 900,760 Q 1100,810 1300,850"
+        fill="none" stroke="#c45a20" stroke-width="0.3" opacity="0.08" stroke-dasharray="2,8"/>
+
+  <!-- Monarch butterfly — top-down, angular, not decorative -->
+  <g transform="translate(700, 680)" filter="url(#wingglow)">
+    <!-- Left forewing — angular, pointed -->
+    <path d="M -5,0 L -30,-15 L -65,-50 L -90,-70 L -95,-60 L -85,-30 L -70,-5 L -50,10 L -30,15 L -5,8 Z"
+          fill="none" stroke="#c45a20" stroke-width="1.5" opacity="0.75"/>
+    <!-- Left hindwing -->
+    <path d="M -5,8 L -30,20 L -60,40 L -75,55 L -70,60 L -55,50 L -35,30 L -15,18 L -5,12 Z"
+          fill="none" stroke="#c45a20" stroke-width="1.2" opacity="0.6"/>
+
+    <!-- Right forewing -->
+    <path d="M 5,0 L 30,-15 L 65,-50 L 90,-70 L 95,-60 L 85,-30 L 70,-5 L 50,10 L 30,15 L 5,8 Z"
+          fill="none" stroke="#c45a20" stroke-width="1.5" opacity="0.75"/>
+    <!-- Right hindwing -->
+    <path d="M 5,8 L 30,20 L 60,40 L 75,55 L 70,60 L 55,50 L 35,30 L 15,18 L 5,12 Z"
+          fill="none" stroke="#c45a20" stroke-width="1.2" opacity="0.6"/>
+
+    <!-- Body — thin elongated -->
+    <line x1="0" y1="-20" x2="0" y2="25" stroke="#c45a20" stroke-width="1.8" opacity="0.8"/>
+    <!-- Antennae -->
+    <path d="M 0,-20 Q -8,-35 -12,-42" fill="none" stroke="#c45a20" stroke-width="0.8" opacity="0.5"/>
+    <path d="M 0,-20 Q 8,-35 12,-42" fill="none" stroke="#c45a20" stroke-width="0.8" opacity="0.5"/>
+    <!-- Antenna tips -->
+    <circle cx="-12" cy="-42" r="1" fill="#c45a20" opacity="0.5"/>
+    <circle cx="12" cy="-42" r="1" fill="#c45a20" opacity="0.5"/>
+
+    <!-- Wing vein suggestions — a few lines, not many -->
+    <g stroke="#c45a20" stroke-width="0.4" opacity="0.3">
+      <line x1="-5" y1="0" x2="-70" y2="-40"/>
+      <line x1="-5" y1="5" x2="-60" y2="30"/>
+      <line x1="5" y1="0" x2="70" y2="-40"/>
+      <line x1="5" y1="5" x2="60" y2="30"/>
+    </g>
+  </g>
+
+  <!-- Vast emptiness — just a few very faint specks suggesting distance -->
+  <g fill="#c45a20" opacity="0.04">
+    <circle cx="200" cy="400" r="1"/>
+    <circle cx="1100" cy="300" r="0.8"/>
+    <circle cx="300" cy="1100" r="0.6"/>
+    <circle cx="1200" cy="900" r="0.7"/>
+  </g>
+</svg>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><style>body{margin:0;padding:0;background:#0a0806;display:flex;align-items:center;justify-content:center;height:100vh;}</style></head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1400" width="1400" height="1400">
+  <defs>
+    <radialGradient id="bg20" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#12100a"/>
+      <stop offset="100%" stop-color="#0a0806"/>
+    </radialGradient>
+    <filter id="treeglow">
+      <feGaussianBlur stdDeviation="1.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="rootglow">
+      <feGaussianBlur stdDeviation="1" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="1400" fill="url(#bg20)"/>
+
+  <!-- Ground line — thin, horizontal -->
+  <line x1="0" y1="700" x2="1400" y2="700" stroke="#6a4a2a" stroke-width="0.8" opacity="0.25"/>
+
+  <!-- Above ground: bare winter oak silhouette -->
+  <g filter="url(#treeglow)">
+    <!-- Trunk -->
+    <path d="M 690,700 L 688,620 L 685,550 L 682,480 Q 680,440 678,400 L 675,350"
+          fill="none" stroke="#6a4a2a" stroke-width="3" opacity="0.8"/>
+    <path d="M 710,700 L 712,620 L 715,550 L 718,480 Q 720,440 722,400 L 725,350"
+          fill="none" stroke="#6a4a2a" stroke-width="3" opacity="0.8"/>
+
+    <!-- Main branches — bare, angular, winter -->
+    <!-- Left major branch -->
+    <path d="M 682,480 Q 650,460 620,440 Q 580,420 540,400 Q 500,385 460,380"
+          fill="none" stroke="#6a4a2a" stroke-width="2" opacity="0.7"/>
+    <!-- Left sub-branches -->
+    <path d="M 620,440 Q 590,430 560,410 Q 530,395 500,395"
+          fill="none" stroke="#6a4a2a" stroke-width="1.5" opacity="0.5"/>
+    <path d="M 540,400 Q 520,385 490,370 Q 470,360 450,350"
+          fill="none" stroke="#6a4a2a" stroke-width="1" opacity="0.4"/>
+    <path d="M 460,380 Q 440,370 420,355 Q 400,340 380,330"
+          fill="none" stroke="#6a4a2a" stroke-width="0.8" opacity="0.3"/>
+
+    <!-- Right major branch -->
+    <path d="M 718,480 Q 750,460 780,440 Q 820,420 860,400 Q 900,385 940,380"
+          fill="none" stroke="#6a4a2a" stroke-width="2" opacity="0.7"/>
+    <!-- Right sub-branches -->
+    <path d="M 780,440 Q 810,430 840,410 Q 870,395 900,395"
+          fill="none" stroke="#6a4a2a" stroke-width="1.5" opacity="0.5"/>
+    <path d="M 860,400 Q 880,385 910,370 Q 930,360 950,350"
+          fill="none" stroke="#6a4a2a" stroke-width="1" opacity="0.4"/>
+    <path d="M 940,380 Q 960,370 980,355 Q 1000,340 1020,330"
+          fill="none" stroke="#6a4a2a" stroke-width="0.8" opacity="0.3"/>
+
+    <!-- Upper left branch -->
+    <path d="M 680,400 Q 660,380 630,360 Q 600,340 570,320"
+          fill="none" stroke="#6a4a2a" stroke-width="1.5" opacity="0.5"/>
+    <path d="M 630,360 Q 610,345 580,330 Q 560,320 540,310"
+          fill="none" stroke="#6a4a2a" stroke-width="0.8" opacity="0.35"/>
+
+    <!-- Upper right branch -->
+    <path d="M 720,400 Q 740,380 770,360 Q 800,340 830,320"
+          fill="none" stroke="#6a4a2a" stroke-width="1.5" opacity="0.5"/>
+    <path d="M 770,360 Q 790,345 820,330 Q 840,320 860,310"
+          fill="none" stroke="#6a4a2a" stroke-width="0.8" opacity="0.35"/>
+
+    <!-- Top branch -->
+    <path d="M 700,350 Q 700,320 700,290 Q 700,260 700,230"
+          fill="none" stroke="#6a4a2a" stroke-width="1.5" opacity="0.5"/>
+    <path d="M 700,290 Q 685,270 670,250"
+          fill="none" stroke="#6a4a2a" stroke-width="0.8" opacity="0.3"/>
+    <path d="M 700,290 Q 715,270 730,250"
+          fill="none" stroke="#6a4a2a" stroke-width="0.8" opacity="0.3"/>
+
+    <!-- Twig ends -->
+    <path d="M 380,330 Q 370,320 360,310" fill="none" stroke="#6a4a2a" stroke-width="0.5" opacity="0.2"/>
+    <path d="M 1020,330 Q 1030,320 1040,310" fill="none" stroke="#6a4a2a" stroke-width="0.5" opacity="0.2"/>
+    <path d="M 540,310 Q 530,300 520,290" fill="none" stroke="#6a4a2a" stroke-width="0.5" opacity="0.2"/>
+    <path d="M 860,310 Q 870,300 880,290" fill="none" stroke="#6a4a2a" stroke-width="0.5" opacity="0.2"/>
+  </g>
+
+  <!-- Below ground: root mirror — inverted tree shape -->
+  <g filter="url(#rootglow)">
+    <!-- Main root trunk -->
+    <path d="M 690,700 L 692,780 L 695,850 L 698,920 Q 700,960 702,1000 L 705,1050"
+          fill="none" stroke="#2a1a0a" stroke-width="3" opacity="0.7"/>
+    <path d="M 710,700 L 708,780 L 705,850 L 702,920 Q 700,960 698,1000 L 695,1050"
+          fill="none" stroke="#2a1a0a" stroke-width="3" opacity="0.7"/>
+
+    <!-- Left major root -->
+    <path d="M 698,920 Q 660,940 620,960 Q 580,980 540,1000 Q 500,1015 460,1020"
+          fill="none" stroke="#2a1a0a" stroke-width="2" opacity="0.6"/>
+    <path d="M 620,960 Q 590,970 560,990 Q 530,1005 500,1005"
+          fill="none" stroke="#2a1a0a" stroke-width="1.5" opacity="0.4"/>
+    <path d="M 540,1000 Q 520,1015 490,1030 Q 470,1040 450,1050"
+          fill="none" stroke="#2a1a0a" stroke-width="1" opacity="0.3"/>
+    <path d="M 460,1020 Q 440,1030 420,1045 Q 400,1055 380,1065"
+          fill="none" stroke="#2a1a0a" stroke-width="0.8" opacity="0.25"/>
+
+    <!-- Right major root -->
+    <path d="M 702,920 Q 740,940 780,960 Q 820,980 860,1000 Q 900,1015 940,1020"
+          fill="none" stroke="#2a1a0a" stroke-width="2" opacity="0.6"/>
+    <path d="M 780,960 Q 810,970 840,990 Q 870,1005 900,1005"
+          fill="none" stroke="#2a1a0a" stroke-width="1.5" opacity="0.4"/>
+    <path d="M 860,1000 Q 880,1015 910,1030 Q 930,1040 950,1050"
+          fill="none" stroke="#2a1a0a" stroke-width="1" opacity="0.3"/>
+    <path d="M 940,1020 Q 960,1030 980,1045 Q 1000,1055 1020,1065"
+          fill="none" stroke="#2a1a0a" stroke-width="0.8" opacity="0.25"/>
+
+    <!-- Lower left root -->
+    <path d="M 700,1000 Q 660,1020 630,1040 Q 600,1060 570,1080"
+          fill="none" stroke="#2a1a0a" stroke-width="1.5" opacity="0.4"/>
+    <path d="M 630,1040 Q 610,1055 580,1070 Q 560,1080 540,1090"
+          fill="none" stroke="#2a1a0a" stroke-width="0.8" opacity="0.3"/>
+
+    <!-- Lower right root -->
+    <path d="M 700,1000 Q 740,1020 770,1040 Q 800,1060 830,1080"
+          fill="none" stroke="#2a1a0a" stroke-width="1.5" opacity="0.4"/>
+    <path d="M 770,1040 Q 790,1055 820,1070 Q 840,1080 860,1090"
+          fill="none" stroke="#2a1a0a" stroke-width="0.8" opacity="0.3"/>
+
+    <!-- Tap root -->
+    <path d="M 700,1050 L 700,1100 Q 700,1130 700,1150"
+          fill="none" stroke="#2a1a0a" stroke-width="1.5" opacity="0.35"/>
+
+    <!-- Root tips -->
+    <path d="M 380,1065 Q 370,1075 360,1085" fill="none" stroke="#2a1a0a" stroke-width="0.5" opacity="0.15"/>
+    <path d="M 1020,1065 Q 1030,1075 1040,1085" fill="none" stroke="#2a1a0a" stroke-width="0.5" opacity="0.15"/>
+  </g>
+
+  <!-- Ground surface connection — thin line emphasizing the join -->
+  <line x1="680" y1="700" x2="720" y2="700" stroke="#6a4a2a" stroke-width="2" opacity="0.4"/>
+</svg>
+</body>
+</html>

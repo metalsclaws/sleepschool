@@ -1,0 +1,75 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box;}</style></head><body>
+<svg viewBox="0 0 1400 1400" width="1400" height="1400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="bg" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#1a1810"/><stop offset="40%" stop-color="#0e0c08"/><stop offset="100%" stop-color="#050402"/></radialGradient>
+<filter id="hb" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="40"/></filter>
+<filter id="mb" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="sg" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1400" height="1400" fill="url(#bg)"/>
+<!-- Few stars — warmer palette -->
+<g fill="#e8d080" opacity="0.5"><circle cx="120" cy="60" r="0.8"/><circle cx="350" cy="40" r="1"/><circle cx="600" cy="80" r="0.7"/><circle cx="900" cy="50" r="1.2"/><circle cx="1200" cy="90" r="0.9"/><circle cx="80" cy="200" r="0.6"/><circle cx="450" cy="180" r="0.8"/><circle cx="750" cy="220" r="1"/><circle cx="1100" cy="190" r="0.7"/><circle cx="1300" cy="250" r="0.9"/>
+</g>
+<!-- Single BIG tree, centered, fills most of frame -->
+<g>
+<!-- Trunk — massive, thick, central -->
+<path d="M 650,1300 Q 645,1100 640,900 Q 638,750 635,600" stroke="#1a1408" stroke-width="40" fill="none" stroke-linecap="round"/>
+<path d="M 750,1300 Q 745,1100 740,900 Q 738,750 735,600" stroke="#1a1408" stroke-width="35" fill="none" stroke-linecap="round"/>
+<path d="M 690,1300 Q 692,1100 695,900 Q 696,750 697,600" stroke="#241a08" stroke-width="28" fill="none" stroke-linecap="round"/>
+<!-- Gold heartwood lines in trunk -->
+<path d="M 685,1300 Q 688,1100 690,900 Q 691,750 692,600" stroke="#c4a043" stroke-width="3" fill="none" opacity="0.4"/>
+<path d="M 705,1300 Q 708,1100 710,900 Q 711,750 712,600" stroke="#c4a043" stroke-width="2" fill="none" opacity="0.3"/>
+<path d="M 670,1300 Q 673,1100 675,900 Q 676,750 677,600" stroke="#c4a043" stroke-width="2" fill="none" opacity="0.25"/>
+<!-- Major branches — big, spreading, bold -->
+<path d="M 635,700 Q 520,620 420,550 Q 340,500 280,450" stroke="#1a1408" stroke-width="14" fill="none" stroke-linecap="round"/>
+<path d="M 735,700 Q 850,620 950,550 Q 1030,500 1090,450" stroke="#1a1408" stroke-width="13" fill="none" stroke-linecap="round"/>
+<path d="M 665,600 Q 560,520 470,450 Q 400,390 340,330" stroke="#1a1408" stroke-width="10" fill="none" stroke-linecap="round"/>
+<path d="M 705,600 Q 810,520 900,450 Q 970,390 1030,330" stroke="#1a1408" stroke-width="9.5" fill="none" stroke-linecap="round"/>
+<path d="M 680,520 Q 600,450 520,380 Q 460,320 400,260" stroke="#1a1408" stroke-width="7" fill="none" stroke-linecap="round"/>
+<path d="M 700,520 Q 780,450 860,380 Q 920,320 980,260" stroke="#1a1408" stroke-width="6.5" fill="none" stroke-linecap="round"/>
+<path d="M 280,450 Q 230,410 180,370" stroke="#1a1408" stroke-width="6" fill="none" stroke-linecap="round"/>
+<path d="M 1090,450 Q 1140,410 1190,370" stroke="#1a1408" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+<path d="M 340,330 Q 290,280 250,230" stroke="#1a1408" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+<path d="M 1030,330 Q 1080,280 1120,230" stroke="#1a1408" stroke-width="4" fill="none" stroke-linecap="round"/>
+<!-- Gold sap lines on branches -->
+<g stroke="#c4a043" stroke-width="0.8" fill="none" opacity="0.35">
+<path d="M 635,700 Q 520,620 420,550 Q 340,500 280,450"/><path d="M 735,700 Q 850,620 950,550 Q 1030,500 1090,450"/>
+<path d="M 665,600 Q 560,520 470,450 Q 400,390 340,330"/><path d="M 705,600 Q 810,520 900,450 Q 970,390 1030,330"/>
+</g>
+<!-- Big round canopy — dense, fills top half -->
+<g fill="#1a1408">
+<ellipse cx="700" cy="350" rx="450" ry="220"/><ellipse cx="500" cy="420" rx="250" ry="150"/><ellipse cx="900" cy="420" rx="250" ry="150"/><ellipse cx="350" cy="480" rx="180" ry="120"/><ellipse cx="1050" cy="480" rx="180" ry="120"/><ellipse cx="700" cy="250" rx="300" ry="140"/>
+</g>
+<!-- Canopy gold highlights — where light catches -->
+<g fill="#c4a043" opacity="0.08">
+<ellipse cx="600" cy="280" rx="200" ry="80"/><ellipse cx="800" cy="260" rx="150" ry="60"/><ellipse cx="700" cy="180" rx="180" ry="50"/>
+</g>
+<!-- Falling leaves from canopy -->
+<g fill="#c4a043" filter="url(#sg)">
+<path d="M 500,350 Q 497,343 500,337 Q 503,343 500,350 Z" opacity="0.5"><animate attributeName="cy" values="350;450;550;650;750;850;1000;1200" dur="12s" repeatCount="indefinite"/><animate attributeName="cx" values="500;510;495;505;490;500;495;490" dur="12s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0.45;0.4;0.35;0.3;0.25;0.2;0.05" dur="12s" repeatCount="indefinite"/></path>
+<path d="M 900,300 Q 897,293 900,287 Q 903,293 900,300 Z" opacity="0.4"><animate attributeName="cy" values="300;400;500;600;700;800;950;1200" dur="15s" repeatCount="indefinite"/><animate attributeName="cx" values="900;915;895;905;890;900;895;880" dur="15s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.4;0.35;0.3;0.25;0.2;0.15;0.1;0.03" dur="15s" repeatCount="indefinite"/></path>
+<path d="M 700,400 Q 697,393 700,387 Q 703,393 700,400 Z" opacity="0.35"><animate attributeName="cy" values="400;500;600;700;800;900;1050;1200" dur="18s" repeatCount="indefinite"/><animate attributeName="cx" values="700;710;695;705;690;700;695;690" dur="18s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.35;0.3;0.25;0.2;0.18;0.15;0.1;0.03" dur="18s" repeatCount="indefinite"/></path>
+</g>
+<!-- Underground roots — visible, sprawling -->
+<g stroke="#c4a043" fill="none">
+<path d="M 650,1300 Q 600,1350 550,1390" stroke-width="2" opacity="0.45"/><path d="M 700,1300 Q 720,1360 740,1395" stroke-width="1.8" opacity="0.4"/><path d="M 750,1300 Q 800,1350 850,1390" stroke-width="2" opacity="0.45"/><path d="M 680,1300 Q 640,1350 600,1385" stroke-width="1.5" opacity="0.35"/><path d="M 720,1300 Q 760,1350 790,1390" stroke-width="1.5" opacity="0.35"/>
+<!-- Root network cross-connections -->
+<path d="M 550,1390 Q 650,1375 740,1395" stroke-width="1" opacity="0.3"/><path d="M 600,1385 Q 680,1380 790,1390" stroke-width="0.8" opacity="0.25"/>
+</g>
+<!-- Root nodes -->
+<g filter="url(#sg)">
+<circle cx="550" cy="1390" r="4" fill="#c4a043" opacity="0.7"/><circle cx="740" cy="1395" r="3.5" fill="#c4a043" opacity="0.65"/><circle cx="850" cy="1390" r="4" fill="#c4a043" opacity="0.7"/><circle cx="600" cy="1385" r="3" fill="#c4a043" opacity="0.55"/><circle cx="790" cy="1390" r="3" fill="#c4a043" opacity="0.55"/>
+<circle cx="650" cy="1380" r="2.5" fill="#c4a043" opacity="0.4"/><circle cx="700" cy="1385" r="2.5" fill="#c4a043" opacity="0.4"/>
+</g>
+<!-- Fireflies in canopy -->
+<g fill="#e8d080" filter="url(#sg)">
+<circle cx="550" cy="280" r="2" opacity="0.6"><animate attributeName="opacity" values="0.6;0.1;0.6" dur="3s" repeatCount="indefinite"/></circle>
+<circle cx="850" cy="320" r="1.5" opacity="0.5"><animate attributeName="opacity" values="0.5;0.05;0.5" dur="4s" repeatCount="indefinite"/></circle>
+<circle cx="650" cy="200" r="2" opacity="0.7"><animate attributeName="opacity" values="0.7;0.1;0.7" dur="5s" repeatCount="indefinite"/></circle>
+<circle cx="750" cy="150" r="1.8" opacity="0.4"><animate attributeName="opacity" values="0.4;0.05;0.4" dur="6s" repeatCount="indefinite"/></circle>
+<circle cx="450" cy="350" r="1.5" opacity="0.5"><animate attributeName="opacity" values="0.5;0.1;0.5" dur="3.5s" repeatCount="indefinite"/></circle>
+<circle cx="950" cy="380" r="2" opacity="0.6"><animate attributeName="opacity" values="0.6;0.05;0.6" dur="4.5s" repeatCount="indefinite"/></circle>
+</g>
+</g>
+</svg></body></html>

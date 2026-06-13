@@ -1,0 +1,74 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box;}</style></head><body>
+<svg viewBox="0 0 1400 1400" width="1400" height="1400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="bg" cx="50%" cy="55%" r="70%"><stop offset="0%" stop-color="#081820"/><stop offset="50%" stop-color="#041014"/><stop offset="100%" stop-color="#020608"/></radialGradient>
+<filter id="hb" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="45"/></filter>
+<filter id="mb" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="sg" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1400" height="1400" fill="url(#bg)"/>
+
+<!-- Deep underwater particles -->
+<g fill="#4a8a90" opacity="0.2">
+<circle cx="100" cy="200" r="1"/><circle cx="300" cy="150" r="1.2"/><circle cx="500" cy="100" r="0.8"/><circle cx="700" cy="180" r="1.5"/><circle cx="900" cy="120" r="0.9"/><circle cx="1100" cy="160" r="1.1"/><circle cx="1300" cy="140" r="0.7"/>
+<circle cx="150" cy="400" r="0.9"/><circle cx="350" cy="350" r="1.3"/><circle cx="600" cy="380" r="0.7"/><circle cx="850" cy="420" r="1"/><circle cx="1050" cy="360" r="0.8"/><circle cx="1250" cy="400" r="1.2"/>
+</g>
+
+<!-- CORAL REEF — branching from bottom -->
+<g transform="translate(700, 1400)">
+<!-- Main coral trunk -->
+<path d="M 0,0 L 0,-300 Q -20,-350 -60,-400 Q -100,-430 -80,-480" stroke="#e07070" stroke-width="4" fill="none" opacity="0.7" stroke-linecap="round"/>
+<path d="M 0,-300 Q 20,-350 60,-400 Q 100,-430 80,-480" stroke="#e07070" stroke-width="4" fill="none" opacity="0.7" stroke-linecap="round"/>
+<path d="M 0,-200 Q -40,-250 -80,-320 Q -110,-360 -140,-380" stroke="#e07070" stroke-width="3" fill="none" opacity="0.5" stroke-linecap="round"/>
+<path d="M 0,-200 Q 40,-250 80,-320 Q 110,-360 140,-380" stroke="#e07070" stroke-width="3" fill="none" opacity="0.5" stroke-linecap="round"/>
+<path d="M 0,-100 Q -30,-130 -60,-180" stroke="#e07070" stroke-width="2" fill="none" opacity="0.4" stroke-linecap="round"/>
+<path d="M 0,-100 Q 30,-130 60,-180" stroke="#e07070" stroke-width="2" fill="none" opacity="0.4" stroke-linecap="round"/>
+
+<!-- Branch tips — soft rounded endings -->
+<g filter="url(#sg)">
+<circle cx="-80" cy="-480" r="8" fill="#e07070" opacity="0.6"/><circle cx="80" cy="-480" r="8" fill="#e07070" opacity="0.6"/>
+<circle cx="-140" cy="-380" r="6" fill="#d06060" opacity="0.5"/><circle cx="140" cy="-380" r="6" fill="#d06060" opacity="0.5"/>
+<circle cx="-60" cy="-180" r="5" fill="#c05050" opacity="0.4"/><circle cx="60" cy="-180" r="5" fill="#c05050" opacity="0.4"/>
+</g>
+
+<!-- Secondary corals (right) -->
+<path d="M 400,0 L 380,-200 Q 360,-280 330,-350 Q 310,-380 320,-420" stroke="#c05050" stroke-width="3" fill="none" opacity="0.5" stroke-linecap="round"/>
+<path d="M 380,-200 Q 420,-260 450,-320 Q 470,-350 460,-390" stroke="#c05050" stroke-width="2.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+<circle cx="320" cy="-420" r="7" fill="#c05050" opacity="0.5" filter="url(#sg)"/>
+<circle cx="460" cy="-390" r="6" fill="#c05050" opacity="0.4" filter="url(#sg)"/>
+
+<!-- Secondary corals (left) -->
+<path d="M -300,0 L -280,-180 Q -260,-260 -230,-320 Q -210,-350 -220,-400" stroke="#d06060" stroke-width="3" fill="none" opacity="0.5" stroke-linecap="round"/>
+<path d="M -280,-180 Q -320,-240 -350,-300 Q -370,-330 -360,-370" stroke="#d06060" stroke-width="2" fill="none" opacity="0.4" stroke-linecap="round"/>
+<circle cx="-220" cy="-400" r="7" fill="#d06060" opacity="0.5" filter="url(#sg)"/>
+<circle cx="-360" cy="-370" r="5" fill="#d06060" opacity="0.4" filter="url(#sg)"/>
+
+<!-- Brain coral mound -->
+<path d="M 200,0 Q 180,-30 170,-60 Q 165,-90 180,-110 Q 200,-130 220,-120 Q 240,-110 250,-90 Q 260,-60 250,-30 Q 240,-10 220,0 Z" fill="#d06060" opacity="0.3" stroke="#d06060" stroke-width="1" stroke-opacity="0.5"/>
+<path d="M -450,0 Q -460,-20 -455,-50 Q -445,-80 -430,-90 Q -415,-80 -410,-50 Q -405,-20 -410,0 Z" fill="#c05050" opacity="0.25" stroke="#c05050" stroke-width="0.8" stroke-opacity="0.4"/>
+</g>
+
+<!-- Small fish silhouettes -->
+<g fill="#4a8a90" opacity="0.25">
+<path d="M 300,500 Q 310,490 320,500 Q 310,510 300,500 M 290,500 L 300,500"/><path d="M 1050,600 Q 1060,590 1070,600 Q 1060,610 1050,600 M 1040,600 L 1050,600"/>
+<path d="M 500,350 Q 508,342 516,350 Q 508,358 500,350 M 492,350 L 500,350"/>
+</g>
+
+<!-- Rising bubbles -->
+<g fill="#80c8e0" opacity="0.4">
+<circle cx="650" cy="900" r="3"><animate attributeName="cy" values="900;300;900" dur="10s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.4;0.05;0.4" dur="10s" repeatCount="indefinite"/></circle>
+<circle cx="750" cy="1000" r="2.5"><animate attributeName="cy" values="1000;400;1000" dur="12s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0.03;0.3" dur="12s" repeatCount="indefinite"/></circle>
+<circle cx="600" cy="1100" r="2"><animate attributeName="cy" values="1100;500;1100" dur="8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.35;0.05;0.35" dur="8s" repeatCount="indefinite"/></circle>
+<circle cx="800" cy="1050" r="1.8"><animate attributeName="cy" values="1050;450;1050" dur="9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.25;0.03;0.25" dur="9s" repeatCount="indefinite"/></circle>
+</g>
+
+<!-- Light shafts from above -->
+<g opacity="0.04">
+<rect x="550" y="0" width="60" height="1400" fill="#80c8e0" transform="rotate(3,580,700)"/>
+<rect x="750" y="0" width="50" height="1400" fill="#80c8e0" transform="rotate(-2,775,700)"/>
+</g>
+
+<!-- Bottom darkness -->
+<rect x="0" y="1200" width="1400" height="200" fill="#020608" opacity="0.5"/>
+</svg></body></html>

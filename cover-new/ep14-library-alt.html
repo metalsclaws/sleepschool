@@ -1,0 +1,79 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box;}</style></head><body>
+<svg viewBox="0 0 1400 1400" width="1400" height="1400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0e1a"/><stop offset="50%" stop-color="#0e1220"/><stop offset="100%" stop-color="#121825"/></linearGradient>
+<radialGradient id="moonG" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#e8e0c8" stop-opacity="0.6"/><stop offset="30%" stop-color="#c4a043" stop-opacity="0.2"/><stop offset="100%" stop-color="#c4a043" stop-opacity="0"/></radialGradient>
+<filter id="hb" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="45"/></filter>
+<filter id="mb" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="sg" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1400" height="1400" fill="url(#sky)"/>
+
+<!-- Stars -->
+<g fill="#fff" opacity="0.4">
+<circle cx="100" cy="80" r="0.8"/><circle cx="300" cy="50" r="1.1"/><circle cx="500" cy="100" r="0.7"/><circle cx="700" cy="60" r="1.3"/><circle cx="900" cy="90" r="0.8"/><circle cx="1100" cy="70" r="1"/><circle cx="1300" cy="100" r="0.6"/>
+<circle cx="200" cy="200" r="0.9"/><circle cx="450" cy="230" r="0.6"/><circle cx="700" cy="180" r="1"/><circle cx="950" cy="210" r="0.7"/><circle cx="1200" cy="190" r="0.8"/>
+<circle cx="150" cy="350" r="0.7"/><circle cx="400" cy="320" r="1"/><circle cx="650" cy="360" r="0.6"/><circle cx="900" cy="340" r="0.9"/><circle cx="1150" cy="370" r="0.7"/>
+</g>
+
+<!-- CRESCENT MOON — large, upper area -->
+<circle cx="500" cy="350" r="140" fill="url(#moonG)"/>
+<circle cx="500" cy="350" r="70" fill="#e8e0c8" opacity="0.15" filter="url(#mb)"/>
+<!-- Moon body (crescent via overlapping circle) -->
+<circle cx="500" cy="350" r="55" fill="#e8e0c8" opacity="0.85" filter="url(#gl)"/>
+<circle cx="500" cy="350" r="55" fill="#f5f0e0" opacity="0.6"/>
+<!-- Shadow circle to create crescent -->
+<circle cx="535" cy="340" r="50" fill="#0a0e1a"/>
+<!-- Moon surface detail -->
+<circle cx="475" cy="340" r="5" fill="#d4c8a0" opacity="0.1"/>
+<circle cx="490" cy="360" r="3" fill="#d4c8a0" opacity="0.08"/>
+
+<!-- BOOK STACKS — forming a cityscape silhouette -->
+<g fill="#141020">
+<!-- Tall stack left -->
+<rect x="150" y="750" width="50" height="250" rx="1"/><rect x="210" y="700" width="45" height="300" rx="1"/><rect x="260" y="780" width="55" height="220" rx="1"/><rect x="320" y="720" width="40" height="280" rx="1"/>
+<!-- Medium stack center-left -->
+<rect x="380" y="800" width="60" height="200" rx="1"/><rect x="445" y="760" width="35" height="240" rx="1"/><rect x="485" y="820" width="50" height="180" rx="1"/>
+<!-- Gap for moon area -->
+<!-- Medium stack center -->
+<rect x="580" y="830" width="45" height="170" rx="1"/><rect x="630" y="790" width="55" height="210" rx="1"/>
+<!-- Tall stack center-right -->
+<rect x="700" y="710" width="40" height="290" rx="1"/><rect x="745" y="750" width="50" height="250" rx="1"/><rect x="800" y="690" width="35" height="310" rx="1"/>
+<!-- Another cluster -->
+<rect x="850" y="770" width="55" height="230" rx="1"/><rect x="910" y="720" width="40" height="280" rx="1"/><rect x="955" y="790" width="50" height="210" rx="1"/>
+<!-- Right side -->
+<rect x="1020" y="800" width="45" height="200" rx="1"/><rect x="1070" y="740" width="55" height="260" rx="1"/><rect x="1130" y="810" width="40" height="190" rx="1"/><rect x="1175" y="760" width="50" height="240" rx="1"/>
+<!-- Far right -->
+<rect x="1240" y="830" width="40" height="170" rx="1"/><rect x="1285" y="780" width="55" height="220" rx="1"/>
+</g>
+
+<!-- Book spine highlights (gold lines) -->
+<g stroke="#c4a043" stroke-width="0.5" fill="none" opacity="0.3">
+<line x1="175" y1="750" x2="175" y2="1000"/><line x1="232" y1="700" x2="232" y2="1000"/><line x1="287" y1="780" x2="287" y2="1000"/><line x1="340" y1="720" x2="340" y2="1000"/>
+<line x1="410" y1="800" x2="410" y2="1000"/><line x1="462" y1="760" x2="462" y2="1000"/><line x1="510" y1="820" x2="510" y2="1000"/>
+<line x1="602" y1="830" x2="602" y2="1000"/><line x1="657" y1="790" x2="657" y2="1000"/>
+<line x1="720" y1="710" x2="720" y2="1000"/><line x1="770" y1="750" x2="770" y2="1000"/><line x1="817" y1="690" x2="817" y2="1000"/>
+<line x1="877" y1="770" x2="877" y2="1000"/><line x1="930" y1="720" x2="930" y2="1000"/><line x1="980" y1="790" x2="980" y2="1000"/>
+<line x1="1042" y1="800" x2="1042" y2="1000"/><line x1="1097" y1="740" x2="1097" y2="1000"/><line x1="1150" y1="810" x2="1150" y2="1000"/><line x1="1200" y1="760" x2="1200" y2="1000"/>
+<line x1="1260" y1="830" x2="1260" y2="1000"/><line x1="1312" y1="780" x2="1312" y2="1000"/>
+</g>
+
+<!-- Tiny window lights in book city -->
+<g fill="#e8d080" opacity="0.25" filter="url(#sg)">
+<rect x="220" y="750" width="3" height="4"/><rect x="335" y="780" width="3" height="4"/><rect x="800" y="730" width="3" height="4"/><rect x="800" y="800" width="3" height="4"/><rect x="915" y="760" width="3" height="4"/>
+<rect x="1075" y="790" width="3" height="4"/><rect x="460" y="800" width="3" height="4"/><rect x="770" y="820" width="3" height="4"/>
+</g>
+
+<!-- Ground/water reflection -->
+<rect x="0" y="1000" width="1400" height="400" fill="#080c15" opacity="0.6"/>
+<g stroke="#c4a043" stroke-width="0.3" fill="none" opacity="0.1">
+<path d="M 100,1020 Q 250,1015 400,1020"/><path d="M 600,1025 Q 750,1020 900,1025"/><path d="M 1000,1020 Q 1150,1015 1300,1020"/>
+<path d="M 200,1050 Q 400,1045 600,1050"/><path d="M 800,1048 Q 1000,1043 1200,1048"/>
+</g>
+<!-- Moon reflection -->
+<ellipse cx="500" cy="1040" rx="25" ry="6" fill="#e8e0c8" opacity="0.08" filter="url(#mb)"/>
+
+<!-- Bottom -->
+<rect x="0" y="1100" width="1400" height="300" fill="#050810" opacity="0.5"/>
+</svg></body></html>

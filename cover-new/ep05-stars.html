@@ -1,0 +1,48 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box;}</style></head><body>
+<svg viewBox="0 0 1400 1400" width="1400" height="1400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="space" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#1a0e20"/><stop offset="30%" stop-color="#0e0815"/><stop offset="60%" stop-color="#080510"/><stop offset="100%" stop-color="#030208"/></radialGradient>
+<radialGradient id="neb1" cx="40%" cy="35%" r="45%"><stop offset="0%" stop-color="#c46040" stop-opacity="0.5"/><stop offset="30%" stop-color="#a04030" stop-opacity="0.3"/><stop offset="60%" stop-color="#803050" stop-opacity="0.15"/><stop offset="100%" stop-color="#803050" stop-opacity="0"/></radialGradient>
+<radialGradient id="neb2" cx="65%" cy="55%" r="40%"><stop offset="0%" stop-color="#d4a060" stop-opacity="0.35"/><stop offset="40%" stop-color="#b08050" stop-opacity="0.2"/><stop offset="100%" stop-color="#a07040" stop-opacity="0"/></radialGradient>
+<radialGradient id="proto" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#fff8e0" stop-opacity="1"/><stop offset="10%" stop-color="#ffe8b0" stop-opacity="0.95"/><stop offset="30%" stop-color="#ffb848" stop-opacity="0.7"/><stop offset="55%" stop-color="#e08830" stop-opacity="0.4"/><stop offset="80%" stop-color="#c06020" stop-opacity="0.15"/><stop offset="100%" stop-color="#803020" stop-opacity="0"/></radialGradient>
+<filter id="hb" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="45"/></filter>
+<filter id="mb" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="15"/></filter>
+<filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="sg" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1400" height="1400" fill="url(#space)"/>
+<!-- Dense star field — many layers -->
+<g fill="#fff" opacity="0.6"><circle cx="30" cy="20" r="0.8"/><circle cx="95" cy="60" r="1"/><circle cx="180" cy="35" r="0.7"/><circle cx="260" cy="80" r="1.2"/><circle cx="340" cy="15" r="0.9"/><circle cx="420" cy="55" r="0.6"/><circle cx="510" cy="90" r="1.1"/><circle cx="590" cy="25" r="0.8"/><circle cx="680" cy="70" r="1"/><circle cx="760" cy="40" r="0.7"/><circle cx="850" cy="85" r="1.3"/><circle cx="940" cy="30" r="0.9"/><circle cx="1020" cy="75" r="1"/><circle cx="1100" cy="20" r="0.8"/><circle cx="1180" cy="65" r="1.2"/><circle cx="1260" cy="45" r="0.7"/><circle cx="1340" cy="90" r="1"/><circle cx="60" cy="150" r="0.9"/><circle cx="150" cy="180" r="1.1"/><circle cx="230" cy="140" r="0.6"/><circle cx="330" cy="195" r="1"/><circle cx="440" cy="165" r="0.8"/><circle cx="530" cy="210" r="0.7"/><circle cx="620" cy="155" r="1.2"/><circle cx="710" cy="190" r="0.9"/><circle cx="800" cy="145" r="1"/><circle cx="890" cy="200" r="0.6"/><circle cx="980" cy="170" r="1.1"/><circle cx="1060" cy="140" r="0.8"/><circle cx="1150" cy="195" r="1"/><circle cx="1240" cy="160" r="0.7"/><circle cx="1330" cy="185" r="1.2"/><circle cx="50" cy="280" r="0.7"/><circle cx="140" cy="310" r="1"/><circle cx="240" cy="260" r="0.8"/><circle cx="350" cy="295" r="1.1"/><circle cx="460" cy="270" r="0.6"/><circle cx="560" cy="320" r="1"/><circle cx="670" cy="285" r="0.9"/><circle cx="770" cy="310" r="0.7"/><circle cx="870" cy="275" r="1.2"/><circle cx="970" cy="305" r="0.8"/><circle cx="1070" cy="260" r="1"/><circle cx="1170" cy="295" r="0.7"/><circle cx="1270" cy="280" r="1.1"/><circle cx="1360" cy="250" r="0.9"/></g>
+<g fill="#ffe8b0" opacity="0.4"><circle cx="120" cy="50" r="1.5"/><circle cx="380" cy="70" r="1.3"/><circle cx="650" cy="45" r="1.8"/><circle cx="900" cy="60" r="1.4"/><circle cx="1150" cy="55" r="1.6"/><circle cx="280" cy="170" r="1.2"/><circle cx="550" cy="150" r="1.5"/><circle cx="830" cy="140" r="1.1"/><circle cx="1080" cy="170" r="1.3"/><circle cx="170" cy="275" r="1.4"/><circle cx="480" cy="290" r="1.2"/><circle cx="760" cy="260" r="1.6"/><circle cx="1050" cy="280" r="1.3"/></g>
+<!-- Red/blue variable stars -->
+<g fill="#ff9988" opacity="0.35"><circle cx="200" cy="120" r="2"/><circle cx="1100" cy="250" r="1.8"/><circle cx="50" cy="380" r="1.5"/><circle cx="1300" cy="150" r="1.7"/></g>
+<g fill="#88aaff" opacity="0.3"><circle cx="400" cy="95" r="2.2"/><circle cx="950" cy="45" r="1.9"/><circle cx="750" cy="330" r="1.5"/><circle cx="150" cy="220" r="1.8"/></g>
+<!-- Nebula clouds — rich and layered -->
+<ellipse cx="450" cy="500" rx="500" ry="300" fill="url(#neb1)" transform="rotate(-15,450,500)"/>
+<ellipse cx="900" cy="700" rx="400" ry="250" fill="url(#neb2)" transform="rotate(10,900,700)"/>
+<ellipse cx="600" cy="400" rx="350" ry="200" fill="#a05060" opacity="0.08" filter="url(#hb)"/>
+<ellipse cx="800" cy="600" rx="300" ry="180" fill="#d4a060" opacity="0.06" filter="url(#hb)"/>
+<ellipse cx="500" cy="700" rx="280" ry="160" fill="#804060" opacity="0.07" filter="url(#hb)"/>
+<!-- Dark dust lanes -->
+<ellipse cx="650" cy="550" rx="400" ry="40" fill="#030208" opacity="0.4" transform="rotate(-8,650,550)" filter="url(#mb)"/>
+<ellipse cx="550" cy="480" rx="300" ry="25" fill="#030208" opacity="0.3" transform="rotate(5,550,480)" filter="url(#mb)"/>
+<!-- Accretion streams — matter flowing inward -->
+<g stroke="#c4a043" fill="none" opacity="0.2" filter="url(#sg)"><path d="M 300,350 Q 450,400 550,500 Q 620,570 680,620" stroke-width="0.8"/><path d="M 1100,380 Q 950,440 850,530 Q 780,600 720,650" stroke-width="0.7"/><path d="M 200,600 Q 350,580 480,550 Q 580,540 650,550" stroke-width="0.6"/><path d="M 1200,650 Q 1050,620 900,580 Q 800,560 750,570" stroke-width="0.6"/><path d="M 400,900 Q 500,800 580,700 Q 630,640 670,600" stroke-width="0.5"/><path d="M 1000,850 Q 900,780 820,700 Q 770,650 730,620" stroke-width="0.5"/></g>
+<!-- Hot spots along accretion -->
+<g filter="url(#sg)"><circle cx="550" cy="500" r="2.5" fill="#ffd080" opacity="0.6"/><circle cx="850" cy="530" r="2" fill="#ffc060" opacity="0.5"/><circle cx="480" cy="550" r="1.8" fill="#ffe0a0" opacity="0.45"/><circle cx="680" cy="620" r="3" fill="#ffe080" opacity="0.7"/><circle cx="900" cy="580" r="1.5" fill="#ffc060" opacity="0.4"/><circle cx="750" cy="570" r="2" fill="#ffd070" opacity="0.55"/></g>
+<!-- Protostar — central bright object -->
+<circle cx="700" cy="600" r="180" fill="url(#proto)"/>
+<circle cx="700" cy="600" r="100" fill="#ffe8b0" opacity="0.3" filter="url(#hb)"/>
+<circle cx="700" cy="600" r="40" fill="#fff8e0" opacity="0.9" filter="url(#gl)"/>
+<circle cx="700" cy="600" r="15" fill="#fff" opacity="1"/>
+<!-- Accretion disk — tilted ellipse -->
+<g stroke="#c4a043" fill="none" opacity="0.3" filter="url(#sg)"><ellipse cx="700" cy="600" rx="280" ry="80" transform="rotate(-15,700,600)" stroke-width="1.5"/><ellipse cx="700" cy="600" rx="320" ry="95" transform="rotate(-15,700,600)" stroke-width="0.8" opacity="0.2"/><ellipse cx="700" cy="600" rx="220" ry="60" transform="rotate(-15,700,600)" stroke-width="1.2" opacity="0.25"/></g>
+<!-- Bipolar jets from protostar -->
+<g stroke="#4a8faa" fill="none" opacity="0.15" filter="url(#gl)"><path d="M 700,600 Q 695,450 690,300 Q 688,200 685,100" stroke-width="2"/><path d="M 700,600 Q 705,750 710,900 Q 712,1000 715,1100" stroke-width="2"/><path d="M 695,450 Q 680,380 670,320" stroke-width="0.8" opacity="0.1"/><path d="M 705,750 Q 720,820 730,880" stroke-width="0.8" opacity="0.1"/></g>
+<!-- Jet glow nodes -->
+<g filter="url(#sg)"><circle cx="690" cy="300" r="3" fill="#6ab0d0" opacity="0.4"/><circle cx="688" cy="200" r="2" fill="#6ab0d0" opacity="0.3"/><circle cx="710" cy="900" r="3" fill="#6ab0d0" opacity="0.4"/><circle cx="712" cy="1000" r="2" fill="#6ab0d0" opacity="0.3"/></g>
+<!-- Background mid-field stars -->
+<g fill="#fff" opacity="0.35"><circle cx="80" cy="420" r="0.6"/><circle cx="210" cy="480" r="0.8"/><circle cx="350" cy="440" r="0.5"/><circle cx="470" cy="500" r="0.7"/><circle cx="830" cy="450" r="0.6"/><circle cx="950" cy="500" r="0.8"/><circle cx="1080" cy="460" r="0.5"/><circle cx="1200" cy="430" r="0.7"/><circle cx="1320" cy="480" r="0.6"/><circle cx="100" cy="700" r="0.7"/><circle cx="250" cy="750" r="0.5"/><circle cx="1100" cy="720" r="0.6"/><circle cx="1250" cy="780" r="0.8"/><circle cx="1350" cy="650" r="0.5"/><circle cx="50" cy="900" r="0.6"/><circle cx="200" cy="1000" r="0.8"/><circle cx="380" cy="1100" r="0.5"/><circle cx="500" cy="1200" r="0.7"/><circle cx="900" cy="1150" r="0.6"/><circle cx="1050" cy="1050" r="0.8"/><circle cx="1200" cy="950" r="0.5"/><circle cx="1300" cy="1100" r="0.7"/></g>
+<!-- Deep field bottom — more stars fading -->
+<g fill="#ffe8b0" opacity="0.2"><circle cx="70" cy="1200" r="0.8"/><circle cx="200" cy="1280" r="0.6"/><circle cx="350" cy="1350" r="0.9"/><circle cx="500" cy="1250" r="0.7"/><circle cx="650" cy="1320" r="0.5"/><circle cx="800" cy="1280" r="0.8"/><circle cx="950" cy="1350" r="0.6"/><circle cx="1100" cy="1230" r="0.9"/><circle cx="1250" cy="1300" r="0.7"/><circle cx="1350" cy="1200" r="0.5"/></g>
+</svg></body></html>

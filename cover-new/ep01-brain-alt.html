@@ -1,0 +1,118 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box;}</style></head><body>
+<svg viewBox="0 0 1400 1400" width="1400" height="1400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="bg" cx="50%" cy="50%" r="70%"><stop offset="0%" stop-color="#0c1020"/><stop offset="50%" stop-color="#070a14"/><stop offset="100%" stop-color="#020408"/></radialGradient>
+<radialGradient id="pulse" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#e8d080" stop-opacity="0.3"/><stop offset="40%" stop-color="#c4a043" stop-opacity="0.1"/><stop offset="100%" stop-color="#c4a043" stop-opacity="0"/></radialGradient>
+<filter id="hb" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="50"/></filter>
+<filter id="mb" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>
+<filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="sg" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1400" height="1400" fill="url(#bg)"/>
+
+<!-- Sparse stars -->
+<g fill="#fff" opacity="0.35">
+<circle cx="80" cy="60" r="0.7"/><circle cx="200" cy="140" r="0.9"/><circle cx="340" cy="50" r="0.6"/><circle cx="500" cy="100" r="1.1"/><circle cx="650" cy="70" r="0.8"/><circle cx="800" cy="130" r="0.7"/><circle cx="950" cy="45" r="1"/><circle cx="1100" cy="90" r="0.6"/><circle cx="1250" cy="60" r="0.8"/><circle cx="1350" cy="120" r="0.7"/>
+<circle cx="150" cy="250" r="0.6"/><circle cx="380" cy="220" r="0.8"/><circle cx="600" cy="280" r="0.5"/><circle cx="850" cy="240" r="0.9"/><circle cx="1050" cy="270" r="0.7"/><circle cx="1300" cy="230" r="0.6"/>
+</g>
+
+<!-- Central glow -->
+<circle cx="700" cy="700" r="350" fill="url(#pulse)"/>
+
+<!-- NEURAL NETWORK — distributed nodes connected by filaments -->
+<!-- Outer ring of major nodes -->
+<g filter="url(#sg)">
+<circle cx="700" cy="350" r="7" fill="#e8d080" opacity="0.9"/>
+<circle cx="920" cy="420" r="6" fill="#c4a043" opacity="0.8"/>
+<circle cx="1020" cy="580" r="5.5" fill="#c4a043" opacity="0.75"/>
+<circle cx="1000" cy="770" r="6" fill="#e8d080" opacity="0.8"/>
+<circle cx="880" cy="920" r="5" fill="#c4a043" opacity="0.7"/>
+<circle cx="700" cy="1000" r="6.5" fill="#c4a043" opacity="0.75"/>
+<circle cx="520" cy="920" r="5" fill="#c4a043" opacity="0.7"/>
+<circle cx="400" cy="770" r="6" fill="#e8d080" opacity="0.8"/>
+<circle cx="380" cy="580" r="5.5" fill="#c4a043" opacity="0.75"/>
+<circle cx="480" cy="420" r="6" fill="#c4a043" opacity="0.8"/>
+</g>
+
+<!-- Inner ring of secondary nodes -->
+<g filter="url(#sg)">
+<circle cx="700" cy="500" r="5" fill="#f5ecc0" opacity="0.85"/>
+<circle cx="830" cy="530" r="4.5" fill="#e8d080" opacity="0.75"/>
+<circle cx="880" cy="650" r="4" fill="#c4a043" opacity="0.7"/>
+<circle cx="830" cy="770" r="4.5" fill="#e8d080" opacity="0.75"/>
+<circle cx="700" cy="830" r="4" fill="#c4a043" opacity="0.65"/>
+<circle cx="570" cy="770" r="4.5" fill="#e8d080" opacity="0.75"/>
+<circle cx="520" cy="650" r="4" fill="#c4a043" opacity="0.7"/>
+<circle cx="570" cy="530" r="4.5" fill="#e8d080" opacity="0.75"/>
+</g>
+
+<!-- Core node -->
+<circle cx="700" cy="660" r="9" fill="#f5ecc0" opacity="0.95" filter="url(#gl)"/>
+<circle cx="700" cy="660" r="9" fill="#e8d080" opacity="0.7"/>
+<circle cx="700" cy="660" r="25" fill="#e8d080" opacity="0.08" filter="url(#mb)"/>
+
+<!-- Connections — outer ring -->
+<g stroke="#c4a043" stroke-width="0.8" fill="none" opacity="0.4">
+<path d="M 700,350 L 920,420"/><path d="M 920,420 L 1020,580"/><path d="M 1020,580 L 1000,770"/><path d="M 1000,770 L 880,920"/><path d="M 880,920 L 700,1000"/><path d="M 700,1000 L 520,920"/><path d="M 520,920 L 400,770"/><path d="M 400,770 L 380,580"/><path d="M 380,580 L 480,420"/><path d="M 480,420 L 700,350"/>
+</g>
+
+<!-- Connections — outer to inner -->
+<g stroke="#c4a043" stroke-width="0.5" fill="none" opacity="0.25">
+<path d="M 700,350 L 700,500"/><path d="M 920,420 L 830,530"/><path d="M 1020,580 L 880,650"/><path d="M 1000,770 L 830,770"/><path d="M 880,920 L 700,830"/><path d="M 520,920 L 570,770"/><path d="M 400,770 L 520,650"/><path d="M 380,580 L 570,530"/><path d="M 480,420 L 570,530"/><path d="M 920,420 L 830,530"/>
+</g>
+
+<!-- Connections — inner ring -->
+<g stroke="#e8d080" stroke-width="0.4" fill="none" opacity="0.2">
+<path d="M 700,500 L 830,530"/><path d="M 830,530 L 880,650"/><path d="M 880,650 L 830,770"/><path d="M 830,770 L 700,830"/><path d="M 700,830 L 570,770"/><path d="M 570,770 L 520,650"/><path d="M 520,650 L 570,530"/><path d="M 570,530 L 700,500"/>
+</g>
+
+<!-- Connections — inner to core -->
+<g stroke="#f5ecc0" stroke-width="0.3" fill="none" opacity="0.15">
+<path d="M 700,500 L 700,660"/><path d="M 830,530 L 700,660"/><path d="M 880,650 L 700,660"/><path d="M 830,770 L 700,660"/><path d="M 700,830 L 700,660"/><path d="M 570,770 L 700,660"/><path d="M 520,650 L 700,660"/><path d="M 570,530 L 700,660"/>
+</g>
+
+<!-- Cross-connections (neural mesh) -->
+<g stroke="#c4a043" stroke-width="0.25" fill="none" opacity="0.12">
+<path d="M 480,420 L 830,530"/><path d="M 920,420 L 570,530"/><path d="M 380,580 L 830,770"/><path d="M 1020,580 L 570,770"/><path d="M 700,350 L 700,830"/><path d="M 400,770 L 880,920"/><path d="M 1000,770 L 520,920"/>
+</g>
+
+<!-- Tiny satellite nodes -->
+<g fill="#c4a043" opacity="0.45">
+<circle cx="620" cy="380" r="2"/><circle cx="810" cy="370" r="2.2"/><circle cx="960" cy="500" r="1.8"/><circle cx="990" cy="680" r="2"/><circle cx="940" cy="850" r="1.8"/><circle cx="790" cy="960" r="2"/><circle cx="610" cy="960" r="1.8"/><circle cx="450" cy="850" r="2"/><circle cx="420" cy="680" r="1.8"/><circle cx="450" cy="500" r="2"/>
+</g>
+
+<!-- Satellite connections -->
+<g stroke="#c4a043" stroke-width="0.2" fill="none" opacity="0.15">
+<path d="M 620,380 L 700,350"/><path d="M 620,380 L 700,500"/><path d="M 810,370 L 920,420"/><path d="M 810,370 L 830,530"/><path d="M 960,500 L 1020,580"/><path d="M 960,500 L 880,650"/><path d="M 990,680 L 1000,770"/><path d="M 990,680 L 880,650"/><path d="M 940,850 L 880,920"/><path d="M 940,850 L 830,770"/><path d="M 790,960 L 700,1000"/><path d="M 790,960 L 700,830"/><path d="M 610,960 L 520,920"/><path d="M 610,960 L 700,830"/><path d="M 450,850 L 400,770"/><path d="M 450,850 L 570,770"/><path d="M 420,680 L 380,580"/><path d="M 420,680 L 520,650"/><path d="M 450,500 L 480,420"/><path d="M 450,500 L 570,530"/>
+</g>
+
+<!-- Pulsing animation on core -->
+<circle cx="700" cy="660" r="15" fill="none" stroke="#e8d080" stroke-width="1" opacity="0.5">
+<animate attributeName="r" values="15;35;15" dur="3s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="0.5;0;0.5" dur="3s" repeatCount="indefinite"/>
+</circle>
+<circle cx="700" cy="660" r="20" fill="none" stroke="#c4a043" stroke-width="0.6" opacity="0.3">
+<animate attributeName="r" values="20;50;20" dur="5s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="0.3;0;0.3" dur="5s" repeatCount="indefinite"/>
+</circle>
+
+<!-- Floating particles drifting upward from core -->
+<g fill="#e8d080">
+<circle cx="700" cy="660" r="1.5" opacity="0.6"><animate attributeName="cy" values="660;550;660" dur="4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;0;0.6" dur="4s" repeatCount="indefinite"/></circle>
+<circle cx="720" cy="660" r="1" opacity="0.4"><animate attributeName="cy" values="660;520;660" dur="5.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.4;0;0.4" dur="5.5s" repeatCount="indefinite"/></circle>
+<circle cx="680" cy="660" r="1.2" opacity="0.5"><animate attributeName="cy" values="660;480;660" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0;0.5" dur="7s" repeatCount="indefinite"/></circle>
+<circle cx="710" cy="660" r="0.8" opacity="0.35"><animate attributeName="cy" values="660;440;660" dur="6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.35;0;0.35" dur="6s" repeatCount="indefinite"/></circle>
+<circle cx="690" cy="660" r="1.3" opacity="0.45"><animate attributeName="cy" values="660;500;660" dur="8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.45;0;0.45" dur="8s" repeatCount="indefinite"/></circle>
+</g>
+
+<!-- Subtle horizontal wave lines at bottom -->
+<g stroke="#4a6fa5" stroke-width="0.6" fill="none" opacity="0.15">
+<path d="M 0,1200 Q 100,1185 200,1200 Q 300,1215 400,1200 Q 500,1185 600,1200 Q 700,1215 800,1200 Q 900,1185 1000,1200 Q 1100,1215 1200,1200 Q 1300,1185 1400,1200"/>
+<path d="M 0,1230 Q 100,1218 200,1230 Q 300,1242 400,1230 Q 500,1218 600,1230 Q 700,1242 800,1230 Q 900,1218 1000,1230 Q 1100,1242 1200,1230 Q 1300,1218 1400,1230"/>
+<path d="M 0,1255 Q 100,1245 200,1255 Q 300,1265 400,1255 Q 500,1245 600,1255 Q 700,1265 800,1255 Q 900,1245 1000,1255 Q 1100,1265 1200,1255 Q 1300,1245 1400,1255"/>
+</g>
+
+<!-- Bottom fade -->
+<rect x="0" y="1250" width="1400" height="150" fill="#020408" opacity="0.7"/>
+<path d="M 0,1250 Q 200,1245 400,1250 Q 600,1255 800,1248 Q 1000,1242 1200,1250 Q 1350,1255 1400,1250" stroke="#c4a043" stroke-width="0.5" fill="none" opacity="0.12"/>
+</svg></body></html>

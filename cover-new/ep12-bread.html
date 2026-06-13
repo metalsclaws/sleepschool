@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><style>body{margin:0;padding:0;background:#0a0908;display:flex;align-items:center;justify-content:center;height:100vh;}</style></head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1400" width="1400" height="1400">
+  <defs>
+    <radialGradient id="bg12" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#14120a"/>
+      <stop offset="100%" stop-color="#0a0908"/>
+    </radialGradient>
+    <filter id="wheatglow">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="headglow">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="1400" fill="url(#bg12)"/>
+
+  <!-- Single stalk of wheat — architectural, vertical, centered -->
+  <g filter="url(#wheatglow)">
+    <!-- The stem — tall, thin, vertical -->
+    <line x1="700" y1="350" x2="700" y2="1150" stroke="#b8a060" stroke-width="1.5" opacity="0.8"/>
+
+    <!-- Wheat head / grain — at the top -->
+    <g filter="url(#headglow)">
+      <!-- Central rachis of the ear -->
+      <line x1="700" y1="180" x2="700" y2="350" stroke="#b8a060" stroke-width="1.2" opacity="0.7"/>
+
+      <!-- Spikelets — paired, alternating, angular -->
+      <!-- Top pair -->
+      <path d="M 700,195 L 685,210 L 690,215 Z" fill="#b8a060" opacity="0.7"/>
+      <path d="M 700,195 L 715,210 L 710,215 Z" fill="#b8a060" opacity="0.7"/>
+      <!-- Awns extending up -->
+      <line x1="685" y1="210" x2="678" y2="175" stroke="#b8a060" stroke-width="0.5" opacity="0.5"/>
+      <line x1="715" y1="210" x2="722" y2="175" stroke="#b8a060" stroke-width="0.5" opacity="0.5"/>
+
+      <!-- Second pair -->
+      <path d="M 700,220 L 687,235 L 692,240 Z" fill="#b8a060" opacity="0.65"/>
+      <path d="M 700,220 L 713,235 L 708,240 Z" fill="#b8a060" opacity="0.65"/>
+      <line x1="687" y1="235" x2="680" y2="200" stroke="#b8a060" stroke-width="0.5" opacity="0.4"/>
+      <line x1="713" y1="235" x2="720" y2="200" stroke="#b8a060" stroke-width="0.5" opacity="0.4"/>
+
+      <!-- Third pair -->
+      <path d="M 700,245 L 689,260 L 694,264 Z" fill="#b8a060" opacity="0.6"/>
+      <path d="M 700,245 L 711,260 L 706,264 Z" fill="#b8a060" opacity="0.6"/>
+
+      <!-- Fourth pair -->
+      <path d="M 700,270 L 690,285 L 695,289 Z" fill="#b8a060" opacity="0.55"/>
+      <path d="M 700,270 L 710,285 L 705,289 Z" fill="#b8a060" opacity="0.55"/>
+
+      <!-- Fifth pair -->
+      <path d="M 700,295 L 692,308 L 696,312 Z" fill="#b8a060" opacity="0.5"/>
+      <path d="M 700,295 L 708,308 L 704,312 Z" fill="#b8a060" opacity="0.5"/>
+
+      <!-- Sixth pair -->
+      <path d="M 700,318 L 694,330 L 697,333 Z" fill="#b8a060" opacity="0.45"/>
+      <path d="M 700,318 L 706,330 L 703,333 Z" fill="#b8a060" opacity="0.45"/>
+    </g>
+
+    <!-- Small leaf node near middle -->
+    <path d="M 700,750 Q 690,745 685,760 Q 688,770 700,765" fill="none" stroke="#b8a060" stroke-width="0.8" opacity="0.25"/>
+  </g>
+
+  <!-- Subtle grain dust at the base -->
+  <g fill="#b8a060" opacity="0.05">
+    <circle cx="695" cy="1140" r="1.5"/>
+    <circle cx="708" cy="1155" r="1"/>
+    <circle cx="690" cy="1160" r="0.8"/>
+    <circle cx="715" cy="1148" r="1.2"/>
+    <circle cx="685" cy="1150" r="0.6"/>
+  </g>
+</svg>
+</body>
+</html>

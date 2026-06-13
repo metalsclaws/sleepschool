@@ -1,0 +1,105 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box;}</style></head><body>
+<svg viewBox="0 0 1400 1400" width="1400" height="1400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="bg" cx="50%" cy="60%" r="70%"><stop offset="0%" stop-color="#1a1508"/><stop offset="50%" stop-color="#0e0c06"/><stop offset="100%" stop-color="#050402"/></radialGradient>
+<radialGradient id="hexG" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#c4a043" stop-opacity="0.3"/><stop offset="50%" stop-color="#c4a043" stop-opacity="0.1"/><stop offset="100%" stop-color="#c4a043" stop-opacity="0"/></radialGradient>
+<filter id="hb" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="45"/></filter>
+<filter id="mb" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="sg" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1400" height="1400" fill="url(#bg)"/>
+
+<!-- Sparse background stars -->
+<g fill="#c4a043" opacity="0.3">
+<circle cx="120" cy="100" r="0.8"/><circle cx="340" cy="60" r="1"/><circle cx="580" cy="120" r="0.7"/><circle cx="800" cy="80" r="1.1"/><circle cx="1050" cy="100" r="0.8"/><circle cx="1280" cy="70" r="0.9"/><circle cx="200" cy="250" r="0.6"/><circle cx="450" cy="220" r="0.9"/><circle cx="700" cy="280" r="0.7"/><circle cx="950" cy="240" r="1"/><circle cx="1150" cy="260" r="0.6"/>
+</g>
+
+<!-- Central glow -->
+<circle cx="700" cy="700" r="350" fill="url(#hexG)"/>
+
+<!-- HONEYCOMB PATTERN — concentric rings of hexagons -->
+<!-- Center hex -->
+<polygon points="700,660 735,680 735,720 700,740 665,720 665,680" fill="none" stroke="#e8d080" stroke-width="2" opacity="0.9" filter="url(#gl)"/>
+<polygon points="700,660 735,680 735,720 700,740 665,720 665,680" fill="#e8d080" opacity="0.15"/>
+<!-- Center dot -->
+<circle cx="700" cy="700" r="4" fill="#f5ecc0" opacity="0.9" filter="url(#sg)"/>
+
+<!-- Ring 1 (6 hexagons) -->
+<g fill="none" stroke="#c4a043" stroke-width="1.2" opacity="0.6">
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(0,-80)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(69,40)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(69,120)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(0,160)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(-69,120)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(-69,40)"/>
+</g>
+
+<!-- Ring 1 fills (subtle) -->
+<g fill="#c4a043" opacity="0.04">
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(0,-80)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(69,40)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(69,120)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(0,160)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(-69,120)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(-69,40)"/>
+</g>
+
+<!-- Ring 2 (12 hexagons) -->
+<g fill="none" stroke="#c4a043" stroke-width="0.8" opacity="0.35">
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(0,-160)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(138,-40)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(138,120)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(138,200)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(69,280)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(-69,280)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(-138,200)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(-138,120)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(-138,-40)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(-69,-120)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(69,-120)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(0,240)"/>
+</g>
+
+<!-- Ring 2 node dots -->
+<g fill="#c4a043" opacity="0.5" filter="url(#sg)">
+<circle cx="700" cy="540" r="2.5"/><circle cx="838" cy="660" r="2.5"/><circle cx="838" cy="820" r="2.5"/>
+<circle cx="700" cy="940" r="2.5"/><circle cx="769" cy="980" r="2.5"/><circle cx="631" cy="980" r="2.5"/>
+<circle cx="562" cy="900" r="2.5"/><circle cx="562" cy="820" r="2.5"/><circle cx="562" cy="660" r="2.5"/>
+<circle cx="631" cy="580" r="2.5"/><circle cx="769" cy="580" r="2.5"/>
+</g>
+
+<!-- Ring 3 (faint, partial) -->
+<g fill="none" stroke="#c4a043" stroke-width="0.4" opacity="0.15">
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(0,-240)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(207,0)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(207,160)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(0,320)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(-207,160)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(-207,0)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(138,360)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(-138,360)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(138,-200)"/>
+<polygon points="700,620 735,640 735,680 700,700 665,680 665,640" transform="translate(-138,-200)"/>
+</g>
+
+<!-- Hex vertex glow dots on ring 1 -->
+<g fill="#e8d080" opacity="0.7" filter="url(#sg)">
+<circle cx="700" cy="620" r="3"/><circle cx="769" cy="740" r="3"/><circle cx="769" cy="820" r="3"/>
+<circle cx="700" cy="860" r="3"/><circle cx="631" cy="820" r="3"/><circle cx="631" cy="740" r="3"/>
+</g>
+
+<!-- Honey dripping animation -->
+<g fill="#e8d080" opacity="0.5">
+<circle cx="700" cy="700" r="2"><animate attributeName="r" values="2;5;2" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0.8;0.5" dur="3s" repeatCount="indefinite"/></circle>
+<circle cx="700" cy="760" r="1.5" opacity="0.3"><animate attributeName="cy" values="760;900;760" dur="6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0;0.3" dur="6s" repeatCount="indefinite"/></circle>
+<circle cx="665" cy="740" r="1" opacity="0.25"><animate attributeName="cy" values="740;880;740" dur="5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.25;0;0.25" dur="5s" repeatCount="indefinite"/></circle>
+<circle cx="735" cy="720" r="1.2" opacity="0.2"><animate attributeName="cy" values="720;860;720" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0;0.2" dur="7s" repeatCount="indefinite"/></circle>
+</g>
+
+<!-- Bottom accent -->
+<g stroke="#c4a043" stroke-width="0.4" fill="none" opacity="0.1">
+<path d="M 0,1250 Q 200,1240 400,1250 Q 600,1260 800,1248 Q 1000,1240 1200,1250 Q 1350,1255 1400,1250"/>
+</g>
+<rect x="0" y="1250" width="1400" height="150" fill="#050402" opacity="0.5"/>
+</svg></body></html>

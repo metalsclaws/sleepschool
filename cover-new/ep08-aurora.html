@@ -1,0 +1,106 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>SleepSchool E08 - What Makes the Northern Lights</title><style>*{margin:0;padding:0}body{background:#03040d;display:flex;justify-content:center;align-items:center;min-height:100vh}</style></head><body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+<defs>
+<filter id="hb"><feGaussianBlur stdDeviation="40"/></filter>
+<filter id="mb"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="gl"><feGaussianBlur stdDeviation="5"/></filter>
+<filter id="sg"><feGaussianBlur stdDeviation="3"/></filter>
+<linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#020510"/><stop offset="100%" stop-color="#0a0e1e"/></linearGradient>
+</defs>
+<rect width="1000" height="1000" fill="url(#skyG)"/>
+<!-- Stars -->
+<g fill="#fff" opacity="0.7"><circle cx="50" cy="30" r="1.2"/><circle cx="150" cy="60" r="1"/><circle cx="280" cy="20" r="1.5"/><circle cx="400" cy="50" r="1.1"/><circle cx="520" cy="35" r="1.3"/><circle cx="650" cy="55" r="1"/><circle cx="780" cy="25" r="1.4"/><circle cx="900" cy="45" r="1.2"/><circle cx="100" cy="100" r="0.8"/><circle cx="350" cy="80" r="1"/><circle cx="600" cy="90" r="0.9"/><circle cx="850" cy="70" r="1.1"/><circle cx="950" cy="40" r="0.7"/><circle cx="70" cy="150" r="1"/><circle cx="220" cy="130" r="0.8"/><circle cx="470" cy="120" r="1.2"/><circle cx="730" cy="140" r="0.9"/><circle cx="920" cy="110" r="1"/><circle cx="180" cy="200" r="1.1"/><circle cx="440" cy="180" r="0.8"/><circle cx="830" cy="190" r="1.3"/><circle cx="60" cy="250" r="0.9"/><circle cx="300" cy="240" r="1"/><circle cx="570" cy="260" r="1.2"/><circle cx="760" cy="230" r="0.7"/></g>
+<!-- AURORA CURTAINS - BIG, sweeping, thick ribbons -->
+<!-- Green base glow -->
+<g filter="url(#hb)">
+<path d="M100,50 Q200,150 150,350 Q130,450 200,550 Q250,620 180,700 L220,700 Q300,600 260,500 Q230,400 260,300 Q300,180 200,50Z" fill="#4a8faa" opacity="0.15"/>
+</g>
+<!-- Green curtain 1 - left -->
+<g filter="url(#mb)">
+<path d="M100,80 Q180,200 140,350 Q120,450 180,550 Q220,620 160,700" stroke="#4a8faa" stroke-width="30" fill="none" opacity="0.35"/>
+<path d="M120,70 Q200,180 160,340 Q140,440 200,540 Q240,610 180,690" stroke="#4a8faa" stroke-width="18" fill="none" opacity="0.45"/>
+</g>
+<!-- Green curtain 2 - center big -->
+<g filter="url(#mb)">
+<path d="M300,40 Q400,180 350,350 Q320,480 400,600 Q460,700 380,780" stroke="#4a8faa" stroke-width="35" fill="none" opacity="0.4"/>
+<path d="M320,30 Q420,170 370,340 Q340,470 420,590 Q480,690 400,770" stroke="#4a8faa" stroke-width="20" fill="none" opacity="0.5"/>
+</g>
+<!-- Gold aurora ribbon -->
+<g filter="url(#mb)">
+<path d="M350,60 Q430,200 380,380 Q360,500 420,620 Q470,720 400,800" stroke="#c4a043" stroke-width="22" fill="none" opacity="0.3"/>
+<path d="M370,50 Q450,190 400,370 Q380,490 440,610 Q490,710 420,790" stroke="#c4a043" stroke-width="12" fill="none" opacity="0.4"/>
+</g>
+<!-- Green curtain 3 - center right -->
+<g filter="url(#mb)">
+<path d="M500,50 Q580,180 550,360 Q530,490 580,600 Q620,700 560,780" stroke="#4a8faa" stroke-width="28" fill="none" opacity="0.35"/>
+<path d="M520,40 Q600,170 570,350 Q550,480 600,590 Q640,690 580,770" stroke="#4a8faa" stroke-width="16" fill="none" opacity="0.45"/>
+</g>
+<!-- Gold ribbon 2 -->
+<g filter="url(#mb)">
+<path d="M540,70 Q600,200 570,370 Q550,490 600,600 Q640,700 580,790" stroke="#c4a043" stroke-width="18" fill="none" opacity="0.25"/>
+</g>
+<!-- Green curtain 4 - right -->
+<g filter="url(#mb)">
+<path d="M700,60 Q770,200 740,380 Q720,500 770,620 Q810,720 750,800" stroke="#4a8faa" stroke-width="25" fill="none" opacity="0.3"/>
+<path d="M720,50 Q790,190 760,370 Q740,490 790,610 Q830,710 770,790" stroke="#4a8faa" stroke-width="14" fill="none" opacity="0.4"/>
+</g>
+<!-- Gold ribbon 3 -->
+<g filter="url(#mb)">
+<path d="M780,80 Q830,200 800,360 Q780,480 830,600 Q860,700 810,780" stroke="#c4a043" stroke-width="15" fill="none" opacity="0.25"/>
+</g>
+<!-- Thin bright lines on top of curtains -->
+<g filter="url(#gl)">
+<path d="M120,80 Q200,190 160,350 Q140,450 200,550 Q240,620 180,690" stroke="#7ecfe8" stroke-width="3" fill="none" opacity="0.5"/>
+<path d="M320,40 Q420,170 370,340 Q340,470 420,590 Q480,690 400,770" stroke="#7ecfe8" stroke-width="3" fill="none" opacity="0.55"/>
+<path d="M520,50 Q600,170 570,350 Q550,480 600,590 Q640,690 580,770" stroke="#7ecfe8" stroke-width="3" fill="none" opacity="0.5"/>
+<path d="M720,60 Q790,190 760,370 Q740,490 790,610 Q830,710 770,790" stroke="#7ecfe8" stroke-width="3" fill="none" opacity="0.45"/>
+</g>
+<!-- Gold highlights -->
+<g filter="url(#gl)">
+<path d="M360,70 Q440,200 390,370 Q370,490 430,610 Q480,710 410,790" stroke="#f0d080" stroke-width="2" fill="none" opacity="0.5"/>
+<path d="M550,70 Q610,200 580,370 Q560,490 610,600 Q650,700 590,790" stroke="#f0d080" stroke-width="2" fill="none" opacity="0.4"/>
+</g>
+<!-- Aurora diffuse glow at top -->
+<rect x="0" y="0" width="1000" height="400" fill="#4a8faa" opacity="0.03" filter="url(#hb)"/>
+<!-- Pine tree silhouettes along bottom -->
+<g fill="#050a15">
+<!-- Tree cluster left -->
+<path d="M30,900 L50,780 L70,900Z"/>
+<path d="M50,900 L75,750 L100,900Z"/>
+<path d="M80,900 L100,800 L120,900Z"/>
+<path d="M110,900 L130,770 L150,900Z"/>
+<path d="M140,900 L160,810 L180,900Z"/>
+<path d="M170,900 L190,760 L210,900Z"/>
+<path d="M200,900 L220,790 L240,900Z"/>
+<path d="M230,900 L250,820 L270,900Z"/>
+<path d="M260,900 L280,770 L300,900Z"/>
+<path d="M290,900 L310,800 L330,900Z"/>
+<path d="M320,900 L340,780 L360,900Z"/>
+<path d="M350,900 L370,750 L390,900Z"/>
+<path d="M380,900 L400,790 L420,900Z"/>
+<path d="M410,900 L430,760 L450,900Z"/>
+<path d="M440,900 L460,810 L480,900Z"/>
+<path d="M470,900 L490,780 L510,900Z"/>
+<path d="M500,900 L520,740 L540,900Z"/>
+<path d="M530,900 L550,790 L570,900Z"/>
+<path d="M560,900 L580,770 L600,900Z"/>
+<path d="M590,900 L610,810 L630,900Z"/>
+<path d="M620,900 L640,760 L660,900Z"/>
+<path d="M650,900 L670,790 L690,900Z"/>
+<path d="M680,900 L700,780 L720,900Z"/>
+<path d="M710,900 L730,750 L750,900Z"/>
+<path d="M740,900 L760,800 L780,900Z"/>
+<path d="M770,900 L790,770 L810,900Z"/>
+<path d="M800,900 L820,810 L840,900Z"/>
+<path d="M830,900 L850,780 L870,900Z"/>
+<path d="M860,900 L880,760 L900,900Z"/>
+<path d="M890,900 L910,790 L930,900Z"/>
+<path d="M920,900 L940,810 L960,900Z"/>
+<path d="M950,900 L970,780 L990,900Z"/>
+</g>
+<!-- Ground -->
+<rect x="0" y="900" width="1000" height="100" fill="#050a15"/>
+<!-- Snow ground texture -->
+<rect x="0" y="905" width="1000" height="2" fill="#1a2040" opacity="0.3"/>
+</svg>
+</body></html>

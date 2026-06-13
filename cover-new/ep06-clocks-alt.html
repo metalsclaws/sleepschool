@@ -1,0 +1,91 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box;}</style></head><body>
+<svg viewBox="0 0 1400 1400" width="1400" height="1400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="bg" cx="50%" cy="50%" r="70%"><stop offset="0%" stop-color="#10080a"/><stop offset="50%" stop-color="#0a0608"/><stop offset="100%" stop-color="#040305"/></radialGradient>
+<filter id="hb" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="45"/></filter>
+<filter id="mb" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="sg" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1400" height="1400" fill="url(#bg)"/>
+
+<!-- Stars -->
+<g fill="#fff" opacity="0.25">
+<circle cx="200" cy="100" r="0.8"/><circle cx="400" cy="60" r="1"/><circle cx="600" cy="120" r="0.7"/><circle cx="800" cy="80" r="1.2"/><circle cx="1000" cy="100" r="0.9"/><circle cx="1200" cy="70" r="0.7"/>
+<circle cx="150" cy="300" r="0.6"/><circle cx="350" cy="280" r="0.9"/><circle cx="550" cy="320" r="0.7"/><circle cx="750" cy="290" r="1"/><circle cx="950" cy="310" r="0.8"/><circle cx="1150" cy="280" r="0.6"/>
+</g>
+
+<!-- CLOCK FACE — minimal, centered -->
+<g transform="translate(700, 700)">
+<!-- Face glow -->
+<circle cx="0" cy="0" r="320" fill="#c4a043" opacity="0.03" filter="url(#hb)"/>
+
+<!-- Outer ring -->
+<circle cx="0" cy="0" r="300" fill="none" stroke="#c4a043" stroke-width="2" opacity="0.5" filter="url(#gl)"/>
+<circle cx="0" cy="0" r="300" fill="none" stroke="#e8d080" stroke-width="0.8" opacity="0.7"/>
+
+<!-- Inner ring -->
+<circle cx="0" cy="0" r="280" fill="none" stroke="#c4a043" stroke-width="0.5" opacity="0.2"/>
+
+<!-- Hour markers -->
+<g stroke="#c4a043" stroke-width="2" fill="none" opacity="0.6">
+<!-- 12 --><line x1="0" y1="-280" x2="0" y2="-260"/>
+<!-- 3 --><line x1="280" y1="0" x2="260" y2="0"/>
+<!-- 6 --><line x1="0" y1="280" x2="0" y2="260"/>
+<!-- 9 --><line x1="-280" y1="0" x2="-260" y2="0"/>
+</g>
+
+<!-- Minute markers (simpler) -->
+<g stroke="#c4a043" stroke-width="0.5" fill="none" opacity="0.25">
+<line x1="145" y1="-244" x2="139" y2="-234"/><line x1="274" y1="-134" x2="263" y2="-128"/>
+<line x1="274" y1="134" x2="263" y2="128"/><line x1="145" y1="244" x2="139" y2="234"/>
+<line x1="-145" y1="244" x2="-139" y2="234"/><line x1="-274" y1="134" x2="-263" y2="128"/>
+<line x1="-274" y1="-134" x2="-263" y2="-128"/><line x1="-145" y1="-244" x2="-139" y2="-234"/>
+</g>
+
+<!-- Clock hands — pointing to ~10:10 (classic watch ad pose) -->
+<!-- Hour hand (10) -->
+<line x1="0" y1="30" x2="-140" y2="-210" stroke="#e8d080" stroke-width="4" stroke-linecap="round" opacity="0.8" filter="url(#gl)"/>
+<line x1="0" y1="30" x2="-140" y2="-210" stroke="#f5ecc0" stroke-width="1.5" stroke-linecap="round" opacity="0.9"/>
+
+<!-- Minute hand (2) -->
+<line x1="0" y1="40" x2="250" y2="-130" stroke="#e8d080" stroke-width="3" stroke-linecap="round" opacity="0.7" filter="url(#gl)"/>
+<line x1="0" y1="40" x2="250" y2="-130" stroke="#f5ecc0" stroke-width="1" stroke-linecap="round" opacity="0.85"/>
+
+<!-- Second hand (sweeping) -->
+<line x1="0" y1="50" x2="-80" y2="-250" stroke="#c4a043" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+
+<!-- Center pin -->
+<circle cx="0" cy="0" r="6" fill="#e8d080" opacity="0.8" filter="url(#sg)"/>
+<circle cx="0" cy="0" r="3" fill="#f5ecc0" opacity="0.9"/>
+
+<!-- Roman numerals — subtle -->
+<g fill="#c4a043" font-family="Georgia, serif" opacity="0.2" text-anchor="middle" font-size="24">
+<text x="0" y="-235">XII</text><text x="240" y="8">III</text><text x="0" y="260">VI</text><text x="-240" y="8">IX</text>
+</g>
+
+<!-- Gears — visible through translucent face -->
+<g stroke="#c4a043" stroke-width="0.4" fill="none" opacity="0.1">
+<!-- Large gear -->
+<circle cx="80" cy="80" r="50"/><circle cx="80" cy="80" r="40"/>
+<line x1="80" y1="30" x2="80" y2="130"/><line x1="30" y1="80" x2="130" y2="80"/>
+<!-- Small gear -->
+<circle cx="-100" cy="-50" r="30"/><circle cx="-100" cy="-50" r="22"/>
+<line x1="-100" y1="-80" x2="-100" y2="-20"/><line x1="-130" y1="-50" x2="-70" y2="-50"/>
+<!-- Medium gear -->
+<circle cx="30" cy="-120" r="35"/><circle cx="30" cy="-120" r="26"/>
+</g>
+</g>
+
+<!-- Time particles floating -->
+<g fill="#e8d080" opacity="0.3">
+<circle cx="400" cy="500" r="1.2"><animate attributeName="cy" values="500;400;500" dur="6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0.03;0.3" dur="6s" repeatCount="indefinite"/></circle>
+<circle cx="1000" cy="600" r="1"><animate attributeName="cy" values="600;500;600" dur="8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.25;0.03;0.25" dur="8s" repeatCount="indefinite"/></circle>
+<circle cx="300" cy="900" r="1.5"><animate attributeName="cy" values="900;800;900" dur="5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.02;0.2" dur="5s" repeatCount="indefinite"/></circle>
+<circle cx="1100" cy="800" r="1.3"><animate attributeName="cy" values="800;700;800" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.22;0.03;0.22" dur="7s" repeatCount="indefinite"/></circle>
+</g>
+
+<!-- Bottom -->
+<path d="M 0,1200 Q 200,1195 400,1200 Q 600,1205 800,1198 Q 1000,1192 1200,1200 Q 1350,1205 1400,1200" stroke="#c4a043" stroke-width="0.4" fill="none" opacity="0.08"/>
+<rect x="0" y="1200" width="1400" height="200" fill="#040305" opacity="0.4"/>
+</svg></body></html>
