@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sleep School — Learn While You Drift | A Sleep Learning Podcast</title>
-  <meta name="description" content="Sleep School is a podcast that teaches you fascinating things — ancient history, deep science, hidden nature — narrated in a voice designed to ease you to sleep." />
-  <link rel="canonical" href="https://sleepschool.vercel.app/" />
+  <title>Sleep School: The Sleep Learning Podcast | Fascinating Stories to Drift Off To</title>
+  <meta name="description" content="Sleep School is the podcast that teaches you something fascinating every night: neuroscience, ancient history, deep ocean mysteries, narrated slowly over ambient soundscapes, designed to help you drift off. Listen free on Apple Podcasts, Spotify, or YouTube." />
+  <link rel="canonical" href="https://sleepschoolpodcast.com/" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://sleepschool.vercel.app/" />
-  <meta property="og:title" content="Sleep School — Learn While You Drift" />
-  <meta property="og:description" content="A podcast that teaches you fascinating things while putting you to sleep. Slow narration, rich stories, zero tension." />
-  <meta property="og:image" content="https://sleepschool.vercel.app/og-image.png" />
+  <meta property="og:url" content="https://sleepschoolpodcast.com/" />
+  <meta property="og:title" content="Sleep School: The Sleep Learning Podcast" />
+  <meta property="og:description" content="Fascinating stories told slowly over ambient sound. Each episode teaches you something real: neuroscience, ancient history, nature, narrated in a voice designed to help you drift off. Listen free on Apple Podcasts, Spotify, or YouTube." />
+  <meta property="og:image" content="https://sleepschoolpodcast.com/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Sleep School" />
@@ -21,25 +21,102 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Sleep School — Learn While You Drift" />
-  <meta name="twitter:description" content="A podcast that teaches you fascinating things while putting you to sleep. Slow narration, rich stories, zero tension." />
-  <meta name="twitter:image" content="https://sleepschool.vercel.app/og-image.png" />
+  <meta name="twitter:title" content="Sleep School: The Sleep Learning Podcast" />
+  <meta name="twitter:description" content="Fascinating stories told slowly over ambient sound. Each episode teaches you something real, narrated in a voice designed to help you drift off." />
+  <meta name="twitter:image" content="https://sleepschoolpodcast.com/og-image.png" />
+  <meta name="twitter:site" content="@SleepSchoolPod" />
+  <meta name="twitter:creator" content="@SleepSchoolPod" />
 
-  <!-- JSON-LD Structured Data -->
+  <!-- JSON-LD: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Sleep School",
+    "url": "https://sleepschoolpodcast.com/",
+    "description": "The sleep learning podcast. Fascinating stories about science, history, and nature, narrated slowly over ambient soundscapes to help you drift off."
+  }
+  </script>
+
+  <!-- JSON-LD: PodcastSeries -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "PodcastSeries",
     "name": "Sleep School",
-    "description": "A podcast that teaches you fascinating things while putting you to sleep. Slow narration, rich stories, zero tension.",
-    "url": "https://sleepschool.vercel.app/",
-    "image": "https://sleepschool.vercel.app/og-image.png",
+    "description": "The sleep learning podcast. Fascinating stories about science, history, and nature, narrated slowly over ambient soundscapes to help you drift off.",
+    "url": "https://sleepschoolpodcast.com/",
+    "image": "https://sleepschoolpodcast.com/og-image.png",
     "inLanguage": "en",
-    "genre": "Education"
+    "genre": "Education",
+    "author": {
+      "@type": "Person",
+      "name": "Solomon Somnus"
+    },
+    "webFeed": "https://sleepschoolpodcast.com/rss.xml"
   }
   </script>
 
-  <meta name="robots" content="index, follow" />
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can you really learn while you sleep?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Research shows that the sleeping brain continues processing information it heard before sleep. Sleep School episodes are designed around this science: slow narration at around 120 words per minute, a consistent opening ritual, and zero tension or cliffhangers. Listeners report better recall of topics they heard during Sleep School episodes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a sleep learning podcast?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A sleep learning podcast delivers genuinely interesting content (science, history, nature) in a calm, slow-paced format designed to be listened to as you fall asleep. Unlike audiobooks or regular podcasts, every episode avoids cliffhangers, tension, or unresolved endings."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Sleep School free to listen to?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Sleep School is completely free on Apple Podcasts, Spotify, and YouTube. New episodes are released throughout the season."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is Sleep School different from other sleep podcasts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sleep School teaches you real things. Each episode covers a genuine topic (how stars are born, what happens in your brain during sleep, the secret life of octopuses) rather than fictional stories or guided meditation. The narration is deliberately slow (around 120 words per minute) with extended pauses, over ambient soundscapes."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: PodcastEpisode for ep01 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PodcastEpisode",
+    "name": "What Happens in Your Brain When You Sleep",
+    "description": "Every night, your brain runs a carefully choreographed sequence. From Stage 1 drowsiness through deep sleep to the vivid theatre of REM. We trace everything your brain quietly does while you sleep.",
+    "url": "https://sleepschoolpodcast.com/ep01-what-happens-in-your-brain-when-you-sleep",
+    "episodeNumber": 1,
+    "partOfSeries": {
+      "@type": "PodcastSeries",
+      "name": "Sleep School",
+      "url": "https://sleepschoolpodcast.com/"
+    }
+  }
+  </script>
+
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <meta name="theme-color" content="#03040d" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -349,6 +426,16 @@
     .hero-title em {
       font-style: italic;
       color: var(--accent);
+    }
+    .hero-subline {
+      display: block;
+      font-family: 'Outfit', system-ui, sans-serif;
+      font-size: 0.45em;
+      font-weight: 300;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-top: 14px;
     }
     .hero-desc {
       font-size: 1.05rem;
@@ -753,6 +840,25 @@
 
 
 
+    /* Episode detail button */
+    .ep-detail-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      margin-top: 10px;
+      padding: 4px 0;
+      transition: color 0.2s, gap 0.2s;
+    }
+    .ep-detail-btn:hover {
+      color: #fff;
+      gap: 6px;
+    }
+
     /* ─── FORMAT ────────────────────────────────────────── */
     #format {
       padding: 100px 0;
@@ -1038,12 +1144,13 @@
       <div class="container">
         <div class="hero-inner">
           <div class="hero-text">
-            <span class="hero-eyebrow fade-up">A podcast for drifting minds</span>
+            <span class="hero-eyebrow fade-up">The educational sleep podcast</span>
             <h1 class="hero-title fade-up fade-up-delay-1">
               Learn while you<br><em>fall asleep</em>
+              <span class="hero-subline">The educational sleep podcast</span>
             </h1>
             <p class="hero-desc fade-up fade-up-delay-2">
-              Fascinating stories told slowly. Each episode teaches you something real, ancient history, deep science, hidden nature, narrated in a voice designed to ease you under.
+              Fascinating stories about science, history, and nature, narrated slowly over ambient soundscapes. Each episode teaches you something real, designed to help you drift off.
             </p>
             <div class="hero-actions fade-up fade-up-delay-3">
               <a href="#episodes" class="btn-primary">
@@ -1079,7 +1186,7 @@
             <div class="cover-wrap">
               <div class="cover-glow"></div>
               <div class="cover-img">
-                <canvas id="cover-canvas" width="280" height="280"></canvas>
+                <canvas id="cover-canvas" width="280" height="280" role="img" aria-label="Sleep School podcast cover art showing a night sky with stars"></canvas>
               </div>
             </div>
 
@@ -1163,7 +1270,7 @@
         <div class="episodes-grid fade-up">
 
           <div class="episode-card" data-ep="01">
-            <div class="ep-thumb"><img src="thumbs/ep01.png" alt="Episode 1: What Happens in Your Brain When You Sleep" loading="lazy"></div>
+            <div class="ep-thumb"><img src="thumbs/ep01.jpg" alt="Episode 1: What Happens in Your Brain When You Sleep" loading="lazy"></div>
             <div class="ep-info">
               <span class="ep-title-row"><span class="ep-number">01</span><span class="ep-title">What Happens in Your Brain When You Sleep</span></span>
               <div class="ep-meta-row">
@@ -1171,11 +1278,12 @@
                 <span class="ep-status coming-soon"><span class="dot"></span> Coming soon</span>
               </div>
               <p class="ep-desc-text">From Stage 1 drowsiness to the strange physics of REM. Tonight we trace everything your brain quietly does while you sleep.</p>
+              <a href="/ep01-what-happens-in-your-brain-when-you-sleep" class="ep-detail-btn" data-ep-detail="01">More detail <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             </div>
           </div>
 
           <div class="episode-card" data-ep="02">
-            <div class="ep-thumb"><img src="thumbs/ep02.png" alt="Episode 2: The Secret Life of Octopuses" loading="lazy"></div>
+            <div class="ep-thumb"><img src="thumbs/ep02.jpg" alt="Episode 2: The Secret Life of Octopuses" loading="lazy"></div>
             <div class="ep-info">
               <span class="ep-title-row"><span class="ep-number">02</span><span class="ep-title">How Trees Talk to Each Other</span></span>
               <div class="ep-meta-row">
@@ -1187,7 +1295,7 @@
           </div>
 
           <div class="episode-card" data-ep="03">
-            <div class="ep-thumb"><img src="thumbs/ep03.png" alt="Episode 3: How Ancient Empires Rose and Fell" loading="lazy"></div>
+            <div class="ep-thumb"><img src="thumbs/ep03.jpg" alt="Episode 3: How Ancient Empires Rose and Fell" loading="lazy"></div>
             <div class="ep-info">
               <span class="ep-title-row"><span class="ep-number">03</span><span class="ep-title">A Day on the Nile, 3000 BC</span></span>
               <div class="ep-meta-row">
@@ -1199,7 +1307,7 @@
           </div>
 
           <div class="episode-card" data-ep="04">
-            <div class="ep-thumb"><img src="thumbs/ep04.png" alt="Episode 4: The Deep Ocean Hidden World" loading="lazy"></div>
+            <div class="ep-thumb"><img src="thumbs/ep04.jpg" alt="Episode 4: The Deep Ocean Hidden World" loading="lazy"></div>
             <div class="ep-info">
               <span class="ep-title-row"><span class="ep-number">04</span><span class="ep-title">The Deep Ocean at Midnight</span></span>
               <div class="ep-meta-row">
@@ -1211,7 +1319,7 @@
           </div>
 
           <div class="episode-card" data-ep="05">
-            <div class="ep-thumb"><img src="thumbs/ep05.png" alt="Episode 5: Why We Dream What We Dream" loading="lazy"></div>
+            <div class="ep-thumb"><img src="thumbs/ep05.jpg" alt="Episode 5: Why We Dream What We Dream" loading="lazy"></div>
             <div class="ep-info">
               <span class="ep-title-row"><span class="ep-number">05</span><span class="ep-title">How Stars Are Born</span></span>
               <div class="ep-meta-row">
@@ -1223,7 +1331,7 @@
           </div>
 
           <div class="episode-card" data-ep="06">
-            <div class="ep-thumb"><img src="thumbs/ep06.png" alt="Episode 6: The Language of Trees" loading="lazy"></div>
+            <div class="ep-thumb"><img src="thumbs/ep06.jpg" alt="Episode 6: The Language of Trees" loading="lazy"></div>
             <div class="ep-info">
               <span class="ep-title-row"><span class="ep-number">06</span><span class="ep-title">The Secret Life of a Beehive</span></span>
               <div class="ep-meta-row">
@@ -1235,7 +1343,7 @@
           </div>
 
           <div class="episode-card" data-ep="07">
-            <div class="ep-thumb"><img src="thumbs/ep07.png" alt="Episode 7: How Music Tricks Your Brain" loading="lazy"></div>
+            <div class="ep-thumb"><img src="thumbs/ep07.jpg" alt="Episode 7: How Music Tricks Your Brain" loading="lazy"></div>
             <div class="ep-info">
               <span class="ep-title-row"><span class="ep-number">07</span><span class="ep-title">The Library of Alexandria</span></span>
               <div class="ep-meta-row">
@@ -1247,7 +1355,7 @@
           </div>
 
           <div class="episode-card" data-ep="08">
-            <div class="ep-thumb"><img src="thumbs/ep08.png" alt="Episode 8: The Physics of Everyday Objects" loading="lazy"></div>
+            <div class="ep-thumb"><img src="thumbs/ep08.jpg" alt="Episode 8: The Physics of Everyday Objects" loading="lazy"></div>
             <div class="ep-info">
               <span class="ep-title-row"><span class="ep-number">08</span><span class="ep-title">The Northern Lights</span></span>
               <div class="ep-meta-row">
@@ -1259,7 +1367,7 @@
           </div>
 
           <div class="episode-card" data-ep="09">
-            <div class="ep-thumb"><img src="thumbs/ep09.png" alt="Episode 9: Why Cats Purr and Other Animal Mysteries" loading="lazy"></div>
+            <div class="ep-thumb"><img src="thumbs/ep09.jpg" alt="Episode 9: Why Cats Purr and Other Animal Mysteries" loading="lazy"></div>
             <div class="ep-info">
               <span class="ep-title-row"><span class="ep-number">09</span><span class="ep-title">The Silk Road at Night</span></span>
               <div class="ep-meta-row">
@@ -1271,7 +1379,7 @@
           </div>
 
           <div class="episode-card" data-ep="10">
-            <div class="ep-thumb"><img src="thumbs/ep10.png" alt="Episode 10: The Forgotten Women of Science" loading="lazy"></div>
+            <div class="ep-thumb"><img src="thumbs/ep10.jpg" alt="Episode 10: The Forgotten Women of Science" loading="lazy"></div>
             <div class="ep-info">
               <span class="ep-title-row"><span class="ep-number">10</span><span class="ep-title">Japanese Forest Bathing</span></span>
               <div class="ep-meta-row">
@@ -1403,8 +1511,6 @@
           </div>
 
         </div>
-      </div>
-    </section>
 
     <!-- FORMAT -->
     <section id="format">
@@ -1845,12 +1951,12 @@
       // Title text
       ctx.textAlign = 'center';
 
-      // "Sleep" — italic
+      // "Sleep": italic
       ctx.font = 'italic 300 52px "Cormorant Garamond", Georgia, serif';
       ctx.fillStyle = 'rgba(232, 234, 246, 0.95)';
       ctx.fillText('Sleep', W/2, H/2 + 4);
 
-      // "School" — italic, accent colour
+      // "School": italic, accent colour
       ctx.font = 'italic 300 52px "Cormorant Garamond", Georgia, serif';
       ctx.fillStyle = 'rgba(167, 139, 202, 0.92)';
       ctx.fillText('School', W/2, H/2 + 54);
@@ -2012,7 +2118,6 @@
     });
   </script>
 
-  <script>
     // Gentle scroll with ease ramp up/down
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
